@@ -1,0 +1,7 @@
+# 👉 ROMPIENDO LA REALIDAD VIRTUAL
+
+Crea una ilustración realista de una persona que sea la de la foto saliendo de un marco que simula una publicación de Instagram. El marco debe tener detalles como el logo de Instagram visible en la parte superior, una foto de perfil circular, el nombre de usuario @ymorgil, un símbolo de verificación azul, botones de reacción (corazón, comentar, compartir, guardar) y el contador de “likes” [Número de likes 101k] en la parte inferior.
+
+La persona debe parecer que rasga y rompe únicamente el interior del marco como si fuese papel o cartón, manteniendo intactos los bordes y elementos de la interfaz de Instagram. Las partes desgarradas deben estar solo en el área central donde aparece la foto. La persona debe estar sosteniendo un Huawei P30 como si estuviera grabando, con el flash de la cámara encendido y visible. La persona debe sonreír mientras graba. Mantén un fondo claro y minimalista para destacar el efecto 3D.
+
+El estilo debe ser amigable, juvenil, moderno y ligeramente caricaturesco, pero con detalles realistas. El Huawei debe ser claramente reconocible como el modelo P30, con sus características distintivas y el flash LED brillando intensamente.
