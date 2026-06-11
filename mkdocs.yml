@@ -24,11 +24,10 @@ nav:
    - a02: prompts/02 rode.md
    - a03: prompts/03 Modelo 4p.md
    - a04: prompts/04 prompt-varios.md
-   - a05: prompts/cuestionario.md
    - a06: prompts/imagenes.md
    - a7: prompts/misprompts.md
-   - a08: prompts/moodle.md
-   - a09: prompts/notebook.md
+   - Moodle: prompts/moodle.md
+   - NotebookLM: prompts/notebook.md
    - a10: prompts/prompt.md
 
 plugins:
