@@ -2,46 +2,46 @@ site_name: 🤖 Inteligencia Artificial (ymorgil)
 site_url: https://ymorgil.github.io/intart/
 
 theme:
-  name: material
-  language: es
-  #logo: assets/favicon.svg
-  palette:
-    - scheme: default
-      primary: deep purple
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Modo oscuro
-    - scheme: slate
-      primary: teal
-      accent: green
-      toggle:
-        icon: material/toggle-switch
-        name: Modo claro
+   name: material
+   language: es
+   #logo: assets/favicon.svg
+   palette:
+      - scheme: default
+        primary: deep purple
+        accent: indigo
+        toggle:
+           icon: material/toggle-switch-off-outline
+           name: Modo oscuro
+      - scheme: slate
+        primary: teal
+        accent: green
+        toggle:
+           icon: material/toggle-switch
+           name: Modo claro
 nav:
-  - Inicio: 01introia.md
-  - Prompts: 02prompts.md
-  - Mytop: 03mytop.md
-  - esquema: prompts/1.esquema.md
-  - a02: prompts/02 rode.md
-  - a03: prompts/03 Modelo 4p.md
-  - a04: prompts/04 prompt-varios.md
-  - a06: prompts/imagenes.md
-  - a7: prompts/misprompts.md
-  - Moodle: prompts/moodle.md
-  - NotebookLM: prompts/notebook.md
-  - a10: prompts/prompt.md
+   - Inicio: index.md
+   - Prompts: 02prompts.md
+   - Mytop: 03mitop.md
+   - esquema: prompts/1.esquema.md
+   - a02: prompts/02 rode.md
+   - a03: prompts/03 Modelo 4p.md
+   - a04: prompts/04 prompt-varios.md
+   - a06: prompts/imagenes.md
+   - a7: prompts/misprompts.md
+   - Moodle: prompts/moodle.md
+   - NotebookLM: prompts/notebook.md
+   - a09: prompts/prompt.md
 
 plugins:
-  - glightbox
+   - glightbox
 
 extra_css:
-  - assets/css/extra.css
+   - assets/css/extra.css
 
 markdown_extensions:
-  - attr_list
-  - pymdownx.highlight:
-      anchor_linenums: false
-      use_pygments: true
-  - pymdownx.superfences
-  - pymdownx.inlinehilite
+   - attr_list
+   - pymdownx.highlight:
+        anchor_linenums: false
+        use_pygments: true
+   - pymdownx.superfences
+   - pymdownx.inlinehilite
