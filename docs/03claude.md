@@ -1,20 +1,31 @@
-# 📘 Manual de uso de Claude (Anthropic)
-
-## 1. ¿Qué es Claude?
+# 📘 Claude (Anthropic)
 
 **Claude** es un asistente de inteligencia artificial creado por la empresa **Anthropic**. Funciona de forma parecida a un chat: tú escribes una pregunta o una tarea (un "prompt") y Claude te responde con texto, código, documentos, imágenes esquemáticas o incluso acciones automatizadas, según lo que le pidas.
 
-> 💡 **Importante para entender todo el manual:** Claude **no es un programa que "vive" dentro de tu ordenador**. El modelo de inteligencia artificial se ejecuta en los servidores (la nube) de Anthropic. Lo que instalamos en nuestro equipo —ya sea el navegador, la app de escritorio o una herramienta como Claude Code— es solo una **puerta de entrada** para comunicarnos con esos servidores. Esto es clave para el apartado 6, donde hablaremos de la "instalación en local".
+> 💡 **Importante** Claude **no es un programa que "vive" dentro de tu ordenador**. El modelo de inteligencia artificial se ejecuta en los servidores (la nube) de Anthropic. Lo que instalamos en nuestro equipo —ya sea el navegador, la app de escritorio o una herramienta como Claude Code— es solo una **puerta de entrada** para comunicarnos con esos servidores.
+
+**FORMATOS**
+
+| Producto | Qué es y para qué sirve |
+|---|---|
+| **Claude.ai** [web](https://claude.ai/new){target="_blank"} | Un asistente de chat general basado en conversación. Ideal para redactar textos, analizar archivos adjuntos, generar gráficos y responder consultas en tiempo real. |
+| **App de escritorio** | La versión instalada en Windows/Mac que ofrece las mismas funciones del chat web, pero integrada en el sistema operativo del computador para un acceso más cómodo. |
+| **App móvil** | La versión adaptada para teléfonos celulares que permite usar las funciones del chat a través de texto o mediante dictado por voz estés donde estés. |
+| **Claude Cowork** | Un agente autónomo integrado en la app de escritorio diseñado para trabajadores no técnicos. Se conecta a tus carpetas locales para realizar tareas complejas de múltiples pasos por ti, como organizar archivos masivos, procesar datos (OCR) y automatizar flujos de trabajo en bucle. |
+| **Claude Code** | Un agente enfocado en desarrolladores que se ejecuta desde la terminal. Está especializado en programar de forma autónoma, buscar y corregir errores, y gestionar proyectos de código complejos. |
+| **API de Claude** | Una interfaz técnica diseñada para programadores que permite conectar los modelos de inteligencia artificial de Claude directamente dentro de aplicaciones y sistemas propios. |
+
+## SKILLS
+
+## AGENTES
+
+
+##
+##
 
 Claude se puede usar en varios "formatos" o productos:
 
-| Producto | Para qué sirve | Necesita programar |
-|---|---|---|
-| **Claude.ai** (web) | Chat general, redactar, analizar archivos, generar gráficos | No |
-| **App de escritorio** | Lo mismo que la web, pero como aplicación instalada en Windows/Mac | No |
-| **App móvil** | Igual que la web, en el teléfono | No |
-| **Claude Code** | Agente especializado en programación y gestión de proyectos de código | Conocimientos básicos de terminal |
-| **API de Claude** | Conectar Claude dentro de tus propios programas | Sí, programación |
+
 
 En este manual nos centraremos sobre todo en **Claude.ai (web) y en la app de escritorio**, ya que es el punto de entrada recomendado para quien empieza, y tocaremos de forma sencilla Claude Code como introducción al mundo de los agentes.
 

@@ -20,13 +20,12 @@ theme:
            name: Modo claro
 nav:
    - Inicio: index.md
-   - Claude: claude.md
-   - Mytop: top.md
-   - esquema: prompts/1.esquema.md
-   - a06: prompts/imagenes.md
-   - a7: prompts/misprompts.md
-   - Moodle: prompts/moodle.md
-   - NotebookLM: prompts/notebook.md
+   - Prompts: 01prompts.md
+   - Top: 02top.md
+   - Claude: 03claude.md
+   - NotebookLM: 04notebook.md
+   - Moodle: 05moodle.md
+   - Imágenes: 06imagenes.md
 
 plugins:
    - glightbox

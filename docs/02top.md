@@ -1,12 +1,10 @@
-# Comparativa de Inteligencias Artificiales: Claude, ChatGPT, Gemini y Copilot
+# TOP 
+*Documento de referencia actualizado a junio de 2026. Dado que estas plataformas lanzan modelos y cambian precios con mucha frecuencia, conviene verificar los datos en las webs oficiales antes de tomar decisiones.*
 
-*Documento de referencia actualizado a junio de 2026. Dado que estas plataformas lanzan modelos y cambian precios con mucha frecuencia, conviene verificar los datos en las webs oficiales antes de tomar decisiones de compra.*
-
----
+> Quiero hcer el mismo esquema en todas modelos uso y pago 
 
 ## Claude
-
-> **Definición:** Claude es la familia de modelos de lenguaje conversacional desarrollada por **Anthropic**, una empresa de IA centrada en la seguridad y la interpretabilidad de los sistemas. Claude se utiliza como asistente conversacional (a través de Claude.ai), como agente de programación (Claude Code) y como motor de IA para desarrolladores a través de la API de Anthropic. Destaca por su enfoque en el razonamiento extendido, el manejo de contexto muy largo (hasta 1 millón de tokens) y un comportamiento orientado a la seguridad y la honestidad.
+Modelos de lenguaje conversacional desarrollada por **Anthropic**, una empresa de IA centrada en la seguridad y la interpretabilidad de los sistemas. Claude se utiliza como asistente conversacional (a través de Claude.ai), como agente de programación (Claude Code) y como motor de IA para desarrolladores a través de la API de Anthropic. Destaca por su enfoque en el razonamiento extendido, el manejo de contexto muy largo (hasta 1 millón de tokens) y un comportamiento orientado a la seguridad y la honestidad.
 
 ### Modelos actuales de Claude
 
