@@ -21,11 +21,12 @@ theme:
 nav:
    - Inicio: index.md
    - Prompts: 01prompts.md
-   - Top: 02top.md
-   - Claude: 03claude.md
-   - NotebookLM: 04notebook.md
-   - Moodle: 05moodle.md
-   - Imágenes: 06imagenes.md
+   - Claude: 02claude.md
+   - Gemini: 03gemini.md
+   - Chat GPT: 04gpt.md
+   - NotebookLM: 05notebook.md
+   - Moodle: 06moodle.md
+   - Imágenes: 07imagenes.md
 
 plugins:
    - glightbox

@@ -1,5 +1,5 @@
 # TOP 
-*Documento de referencia actualizado a junio de 2026. Dado que estas plataformas lanzan modelos y cambian precios con mucha frecuencia, conviene verificar los datos en las webs oficiales antes de tomar decisiones.*
+*Actualizado a junio de 2026. Las plataformas lanzan modelos y cambian precios con mucha frecuencia, conviene verificar en webs oficiales*
 
 > Quiero hcer el mismo esquema en todas modelos uso y pago 
 
