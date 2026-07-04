@@ -18,6 +18,10 @@ Asistente de inteligencia artificial creado por la empresa **Anthropic**. Funcio
 | **Claude Code** | Un agente enfocado en desarrolladores que se ejecuta desde la terminal. Está especializado en programar de forma autónoma, buscar y corregir errores, y gestionar proyectos de código complejos. |
 | **API de Claude** | Una interfaz técnica diseñada para programadores que permite conectar los modelos de inteligencia artificial de Claude directamente dentro de aplicaciones y sistemas propios. |
 
+**App de escritorio**
+
+![Claude](../assets/img/cla/cla-01.png) 
+
 ## Modelos
 
 Anthropic organiza sus modelos en niveles (tiers) según velocidad, coste e inteligencia: **Haiku** (rápido/económico), **Sonnet** (equilibrado), **Opus** (máxima capacidad "clásica") y, por encima de Opus, el nuevo nivel **Mythos**, cuya versión de uso general se llama **Fable 5**.
@@ -30,13 +34,16 @@ Anthropic organiza sus modelos en niveles (tiers) según velocidad, coste e inte
 | **Sonnet 4.6** | Febrero 2026 | Uso diario equilibrado: programación, redacción, análisis, flujos de trabajo de oficina; es el "punto dulce" coste-rendimiento | <cite index="5-1">Ventana de contexto de 1M de tokens</cite> · <cite index="9-1">Precio de 3,00 $ / 15,00 $ por millón de tokens</cite> |
 | **Haiku 4.5** | Octubre 2025 | Tareas rápidas y de gran volumen: clasificación, etiquetado, enrutamiento, chatbots, primeras versiones de código | <cite index="5-1">Ventana de contexto de 200K tokens</cite> · <cite index="9-1">Precio de 1,00 $ / 5,00 $ por millón de tokens de entrada/salida</cite> |
 
-## Token
+## Modalidades
+**Chat, Cowork y Code no son modelos de IA**, son tres formas distintas de interactuar con los mismos modelos (Haiku, Sonnet, Opus...), cada una pensada para un tipo de trabajo diferente.
 
-Unidad de medida básica que utilizan los modelos de Inteligencia Artificial para procesar y calcular el volumen de la información. A diferencia de los humanos, que contamos y leemos palabras completas, una IA divide el texto en fragmentos más pequeños llamados tokens, los cuales pueden ser sílabas, caracteres o palabras enteras según el idioma. Para que te hagas una idea aproximada de esta equivalencia, un grupo de 100 palabras en español suele representar alrededor de 130 o 140 tokens.
+| Superficie | Qué es | Para qué sirve | Dónde está disponible |
+|---|---|---|---|
+| **Chat** | La app conversacional clásica de Claude | Preguntas puntuales, redacción, análisis, lluvia de ideas; tú guías la conversación turno a turno | Web, móvil y escritorio; disponible en cualquier plan |
+| **Cowork** | Agente autónomo para trabajo de oficina/conocimiento | Le das una carpeta y describes un resultado; planifica y ejecuta los pasos, y te entrega un producto terminado en lugar de instrucciones (informes, hojas de cálculo, investigación, acciones en el navegador) | Solo en la app de escritorio (**Claude Desktop**); requiere un plan de **pago** (Pro/Max/Team/Enterprise) |
+| **Code** | Entorno de programación agente | Se ejecuta en tu terminal o IDE junto a tus herramientas de desarrollo habituales; entiende tu código, ejecuta pruebas, hace commits y usa herramientas como Git o servidores MCP | Terminal, VS Code, JetBrains y también una pestaña dentro de Claude Desktop; incluido en los **planes Pro y Max** |
 
-En el entorno de los desarrolladores y las plataformas de IA, el coste de los tokens se divide estrictamente entre **tokens de entrada** (lo que tú le escribes o subes a la IA) y **tokens de salida** (el texto que la IA genera como respuesta). Una regla financiera estándar en la industria actual es que los tokens de salida son hasta 5 veces más caros que los de entrada; esto se debe a que el esfuerzo técnico y la capacidad de cómputo que requiere el servidor para "pensar" y redactar una respuesta desde cero es sumamente superior al coste de simplemente leer y analizar las instrucciones que el usuario ha introducido.
-
-Para optimizar estos costes, existen herramientas como el caché de prompts (prompt caching), que almacena la información pesada o repetitiva en la memoria a corto plazo del sistema, logrando reducir hasta un 90% el coste de procesar textos que no cambian entre una consulta y otra. Asimismo, el procesamiento por lotes (Batch API) ofrece un 50% de descuento al permitir que las tareas que no son urgentes se procesen de forma asíncrona cuando los servidores están menos saturados. Finalmente, cabe destacar que este sistema de cobro por token aplica exclusivamente a los programadores que consumen la API para crear aplicaciones, ya que los usuarios finales que utilizan plataformas web o móviles suelen pagar una suscripción fija mensual con un uso integrado.
+> **Claude Chat es para pensar, Cowork es para delegar tareas de oficina, y Code es para construir/depurar software**. Comparten el mismo "motor", pero resuelven trabajos distintos: Code vive en la terminal para quien programa, mientras que Cowork vive en el escritorio para quien hace trabajo de conocimiento sin usar la línea de comandos. No es necesario elegir uno solo: muchos usuarios avanzados combinan los tres según la tarea del momento.
 
 ## Plan de pago
 
@@ -49,67 +56,71 @@ Para pasarte a un plan de pago entras en la app, pulsas tus iniciales en la esqu
 
 Puedes cancelarlo cuando quieras sin penalización, manteniendo el acceso hasta el final del periodo ya pagado. Si en algún momento necesitas más uso del que tu plan permite, Anthropic ofrece la opción de activar "**créditos de uso**" (usage credits) que se cobran a precio de API una vez agotado el límite incluido en tu suscripción, algo especialmente relevante si usas Claude Code de forma intensiva.
 
-## Modalidades
-**Chat, Cowork y Code no son modelos de IA**, son tres formas distintas de interactuar con los mismos modelos (Haiku, Sonnet, Opus...), cada una pensada para un tipo de trabajo diferente.
+### Token
 
-| Superficie | Qué es | Para qué sirve | Dónde está disponible |
-|---|---|---|---|
-| **Chat** | La app conversacional clásica de Claude | Preguntas puntuales, redacción, análisis, lluvia de ideas; tú guías la conversación turno a turno | Web, móvil y escritorio; disponible en cualquier plan |
-| **Cowork** | Agente autónomo para trabajo de oficina/conocimiento | Le das una carpeta y describes un resultado; planifica y ejecuta los pasos, y te entrega un producto terminado en lugar de instrucciones (informes, hojas de cálculo, investigación, acciones en el navegador) | Solo en la app de escritorio (**Claude Desktop**); requiere un plan de **pago** (Pro/Max/Team/Enterprise) |
-| **Code** | Entorno de programación agente | Se ejecuta en tu terminal o IDE junto a tus herramientas de desarrollo habituales; entiende tu código, ejecuta pruebas, hace commits y usa herramientas como Git o servidores MCP | Terminal, VS Code, JetBrains y también una pestaña dentro de Claude Desktop; incluido en los **planes Pro y Max** |
+Unidad de medida básica que utilizan los modelos de Inteligencia Artificial para procesar y calcular el volumen de la información. A diferencia de los humanos, que contamos y leemos palabras completas, una IA divide el texto en fragmentos más pequeños llamados tokens, los cuales pueden ser sílabas, caracteres o palabras enteras según el idioma. Para que te hagas una idea aproximada de esta equivalencia, un grupo de 100 palabras en español suele representar alrededor de 130 o 140 tokens.
 
-> **Claude Chat es para pensar, Cowork es para delegar tareas de oficina, y Code es para construir/depurar software**. Comparten el mismo "motor", pero resuelven trabajos distintos: Code vive en la terminal para quien programa, mientras que Cowork vive en el escritorio para quien hace trabajo de conocimiento sin usar la línea de comandos. No es necesario elegir uno solo: muchos usuarios avanzados combinan los tres según la tarea del momento.
+En el entorno de los desarrolladores y las plataformas de IA, el coste de los tokens se divide estrictamente entre **tokens de entrada** (lo que tú le escribes o subes a la IA) y **tokens de salida** (el texto que la IA genera como respuesta). Una regla financiera estándar en la industria actual es que los tokens de salida son hasta 5 veces más caros que los de entrada; esto se debe a que el esfuerzo técnico y la capacidad de cómputo que requiere el servidor para "pensar" y redactar una respuesta desde cero es sumamente superior al coste de simplemente leer y analizar las instrucciones que el usuario ha introducido.
 
-
-
-
-
-
-
-## 📁📁📁
-## 03 julio
-## AGENTES
-
+Para optimizar estos costes, existen herramientas como el caché de prompts (prompt caching), que almacena la información pesada o repetitiva en la memoria a corto plazo del sistema, logrando reducir hasta un 90% el coste de procesar textos que no cambian entre una consulta y otra. Asimismo, el procesamiento por lotes (Batch API) ofrece un 50% de descuento al permitir que las tareas que no son urgentes se procesen de forma asíncrona cuando los servidores están menos saturados. Finalmente, cabe destacar que este sistema de cobro por token aplica exclusivamente a los programadores que consumen la API para crear aplicaciones, ya que los usuarios finales que utilizan plataformas web o móviles suelen pagar una suscripción fija mensual con un uso integrado.
 
 ## Skills (habilidades)
+Paquetes de instrucciones y conocimiento especializado (documentos, scripts, procedimientos) que Claude carga automáticamente solo cuando son relevantes para la tarea que le pides, en lugar de tener que explicárselo todo cada vez. Representan la capacidad de la IA para entender lo que necesitas, elegir el conector o plugin adecuado para el trabajo y ejecutar la acción de forma autónoma.
 
-Las **Skills** son paquetes de instrucciones y conocimiento especializado (documentos, scripts, procedimientos) que Claude carga automáticamente solo cuando son relevantes para la tarea que le pides, en lugar de tener que explicárselo todo cada vez. <cite index="26-1">A diferencia de un Proyecto —que carga contexto de fondo siempre que abres un chat dentro de él— una Skill es específica de una tarea y se activa dinámicamente cuando hace falta, funcionando en cualquier lugar de Claude</cite>.
+- **Conectores**
+Son los puentes que unen a Claude con tus fuentes de datos. Le permiten leer, buscar y analizar información en tiempo real directamente desde plataformas como Google Drive, Notion o Salesforce, evitando que tengas que copiar y pegar archivos manualmente.
 
-**¿Dónde se encuentra el listado?** Dentro de la propia app: pulsa **"Customize"** (Personalizar) en el menú de tu cuenta y ahí encontrarás el **directorio de Skills**, con habilidades creadas por Anthropic (por ejemplo, generación mejorada de documentos Word, Excel, PowerPoint y PDF) y también las que suben partners como Notion, Figma o Atlassian, pensadas para funcionar junto con sus respectivos conectores. <cite index="26-1">Fuera de la app también existen directorios comunitarios de código abierto</cite> (por ejemplo "Awesome Claude Skills" en GitHub) donde cualquiera puede publicar y descargar skills gratuitas, aunque conviene instalar solo las de fuentes de confianza, ya que una skill puede llegar a ejecutar código.
+- **Plugins**
+Son los programas externos que le dan superpoderes a Claude. Funcionan como aplicaciones de terceros que le permiten realizar tareas que una IA de texto no puede hacer sola, como resolver cálculos complejos con Wolfram Alpha o automatizar correos a través de Zapier.
 
-**¿Funciona con el plan gratuito?** Sí. <cite index="26-1">Las Skills están disponibles para usuarios de los planes Free, Pro, Max, Team y Enterprise</cite>, aunque con un requisito técnico: <cite index="25-1">necesitas tener activada la opción "Code execution and file creation" en Settings → Capabilities</cite> (en el plan gratuito esta opción vive en tu configuración individual). Una vez activada, entras en **Customize → Skills**, activas o desactivas las que quieras usar, y Claude las aplicará automáticamente cuando detecte que encajan con tu petición (también puedes forzarlo mencionándolo explícitamente, por ejemplo: "usa mi skill de informes para generar esto").
 
----
+A diferencia de un Proyecto —que carga contexto de fondo siempre que abres un chat dentro de él— una Skill es específica de una tarea y se activa dinámicamente cuando hace falta, funcionando en cualquier lugar de Claude.
 
-## 5. Proyectos y Artefactos: para qué sirven
+**¿Dónde se encuentra las skills?** 
 
-Aunque a veces se confunden, cumplen funciones complementarias: **los Proyectos organizan el contexto, los Artefactos son el resultado**.
+1) Dentro de la propia app: pulsa **"Customize"** (Personalizar) en el menú de tu cuenta y ahí encontrarás el **directorio de Skills**, con habilidades creadas por Anthropic (por ejemplo, generación mejorada de documentos Word, Excel, PowerPoint y PDF) y también las que suben partners como Notion, Figma o Atlassian, pensadas para funcionar junto con sus respectivos conectores. 
 
-### 📁 Proyectos
-<cite index="45-1">Son espacios de trabajo dedicados que organizan archivos, conversaciones e instrucciones, preservando el contexto entre sesiones</cite>, para que no tengas que volver a explicar tu estilo, tus datos o tus reglas cada vez que abres un chat nuevo. Un Proyecto típicamente incluye:
+![Claude](../assets/img/cla/cla-02.png) 
+
+Desde consola podemos ver el listado pulsando ``/``
+
+![Claude](../assets/img/cla/cla-03.png) 
+
+2) Fuera de la app también existen directorios comunitarios de código abierto ([Awesome Claude Skills](https://awesome-skills.com/){target=blank}) donde cualquiera puede publicar y descargar skills gratuitas, aunque conviene instalar solo las de fuentes de confianza, ya que una skill puede llegar a ejecutar código.
+
+## Proyectos
+Son espacios de trabajo dedicados que organizan archivos, conversaciones e instrucciones, preservando el contexto entre sesiones, para que no tengas que volver a explicar tu estilo, tus datos o tus reglas cada vez que abres un chat nuevo. Un Proyecto típicamente incluye:
+
 - **Archivos base**: PDFs, hojas de cálculo, código, ejemplos de tu estilo de escritura, etc.
 - **Instrucciones personalizadas**: le dices a Claude qué rol adoptar y qué reglas seguir dentro de ese proyecto en concreto.
 - **Historial de chats**: todas las conversaciones relacionadas con ese tema quedan agrupadas.
 
-**Ejemplos de cuándo usarlo:**
-- Crear un proyecto "Búsqueda de empleo": subes tu CV y notas sobre empresas objetivo, y Claude genera cartas de presentación y mensajes adaptados.
-- Un proyecto "Voz de marca": subes publicaciones anteriores para que todo el contenido nuevo mantenga tu tono.
-- Un proyecto por asignatura, cliente o área de trabajo, para que el contexto de cada uno nunca se mezcle con el de otro.
+**Ejemplos de cuándo usarlo:** 
 
-### 🧩 Artefactos
-<cite index="37-1">Un artefacto se crea cuando el contenido que Claude comparte es significativo y autocontenido (normalmente más de 15 líneas), algo que probablemente quieras editar, iterar o reutilizar fuera de la conversación</cite>. Aparece en un panel independiente junto al chat y puede ser código, un documento, una página web interactiva, un diagrama, una hoja de cálculo, etc. <cite index="38-1">Los artefactos pueden incluso llamar a la API de Claude internamente, permitiendo crear microaplicaciones con inteligencia integrada, y admiten conexión con servidores MCP externos como Google Calendar, Gmail o Slack</cite>.
+- Proyecto "Búsqueda de empleo": subes tu CV y notas sobre empresas objetivo, y Claude genera cartas de presentación y mensajes adaptados.
+- Proyecto "Voz de marca": subes publicaciones anteriores para que todo el contenido nuevo mantenga tu tono.
+- Proyecto por asignatura, cliente o área de trabajo, para que el contexto de cada uno nunca se mezcle con el de otro.
 
-**Ejemplos de cuándo conviene usarlo:**
+![Claude](../assets/img/cla/cla-04.png) 
+
+
+## Artefactos
+
+Un **Artifact** es un panel lateral, independiente del hilo de chat, donde Claude renderiza contenido sustancial y autocontenido: código, documentos, diagramas o aplicaciones interactivas. La lógica de fondo no es "todo lo que genera Claude es un artefacto": el modelo decide crear uno cuando el contenido cumple una serie de criterios —tiene más de 15 líneas aproximadamente, es algo que previsiblemente vas a querer editar, iterar o reutilizar fuera de la conversación, y tiene sentido por sí mismo sin el contexto del chat. Los artefactos pueden incluso llamar a la API de Claude internamente, permitiendo crear microaplicaciones con inteligencia integrada, y admiten conexión con servidores MCP externos como Google Calendar, Gmail o Slack
+
+> Un fragmento corto de código o una respuesta conversacional normal se queda en el chat; un componente React completo o un informe en Markdown se abre en el panel.
+
+![Claude](../assets/img/cla/cla-05.png) 
+
+**Ejemplos**
+
 - Pides un dashboard interactivo de gastos a partir de una hoja de cálculo que subiste → Claude genera un Artefacto navegable, no solo texto.
 - Necesitas un componente de código reutilizable o un prototipo web → se abre como Artefacto con vista previa en vivo.
 - Quieres compartir el resultado con otra persona mediante un enlace público, sin que tenga que copiar/pegar nada del chat.
 
-**En resumen:** el Proyecto es la carpeta con memoria donde ocurre el trabajo; el Artefacto es el documento o herramienta final que sale de esa conversación.
+## 📁📁📁 3 jul
 
----
-
-## 6. "Personalizar" (Customize): ¿para qué sirve?
-
+## Personalizar (Customize)
 La sección **Customize** es donde configuras cómo quieres que Claude se comporte y qué "sabe" de ti de forma permanente, en varias capas que se combinan entre sí:
 
 1. **Instrucciones para Claude (Instructions for Claude)**: <cite index="49-1">un prompt de sistema a nivel de cuenta, que configuras una sola vez en Settings y que Claude tiene en cuenta en todos tus chats nuevos</cite> — por ejemplo, tu profesión, tu terminología habitual o cómo prefieres que te respondan.
@@ -120,6 +131,53 @@ La sección **Customize** es donde configuras cómo quieres que Claude se compor
 En la práctica, estas capas se aplican en orden: primero tus preferencias generales de cuenta, luego las instrucciones del proyecto concreto en el que estás, y por último el estilo o skill activa en ese chat — así consigues que Claude "ya te conozca" sin tener que repetir el contexto cada vez.
 
 ---
+
+
+
+## Qué es el apartado Personalizar
+
+**Personalizar** es la sección de Configuración de Claude.ai donde se agrupan los mecanismos de adaptación persistente del asistente a un usuario o a un contexto de trabajo. No es una única función, sino un conjunto de cuatro capas independientes, cada una con un alcance distinto:
+
+- **Preferencias de perfil**: instrucciones de cuenta que se inyectan en *todas* las conversaciones, tengan o no un proyecto asociado.
+- **Estilos** (*Styles*): controlan *cómo* Claude formatea y entrega la respuesta (tono, extensión, estructura), no *qué* sabe o qué contexto tiene.
+- **Instrucciones de proyecto**: mismo mecanismo que las preferencias de perfil, pero acotado a los chats de un Proyecto concreto.
+- **Skills**: comportamientos predefinidos y reutilizables (rol, reglas, formato de salida) que se activan explícitamente, en lugar de aplicarse siempre.
+
+La diferencia clave entre las cuatro es el **alcance de activación**: perfil y proyecto se aplican de forma automática y continua según el ámbito (cuenta o proyecto); estilos y Skills requieren selección activa por tu parte en cada conversación (aunque un estilo puede fijarse como predeterminado).
+
+## Mecanismo técnico de cada capa
+
+- **Preferencias de perfil**: en Configuración → Perfil, el campo "¿Qué preferencias debe considerar Claude en las respuestas?" se concatena como contexto de sistema en cada nueva conversación. No consume espacio de la ventana de contexto de forma perceptible salvo que el texto sea muy extenso.
+- **Estilos**: se definen mediante (1) objetivos, (2) audiencia, (3) voz/tono, (4) descripción general, o (5) "instrucciones personalizadas (avanzado)" —un campo de texto libre sin asistente, equivalente a un system prompt parcial centrado en formato—. Un estilo puede además entrenarse subiendo un texto de muestra: Claude infiere estructura, léxico y tono a partir de ese ejemplo y los replica.
+- **Instrucciones de proyecto**: mismo formato que el perfil, pero el scope es el Proyecto; útil cuando necesitas reglas distintas para trabajos distintos (p. ej. un tono para el repositorio docente y otro para comunicación profesional) sin que se pisen entre sí.
+- **Skills**: se crean desde Personalizar → Skills, con nombre, descripción y un bloque de "instrucciones detalladas" (rol, tono, objetivo, restricciones). A diferencia de perfil/proyecto, una Skill no se aplica sola: la activas explícitamente en el chat, lo que permite tener varias Skills especializadas y contradictorias entre sí sin conflicto, porque nunca coexisten activas por defecto.
+
+## Ejemplo práctico
+
+Un ejemplo real de instrucciones avanzadas de estilo, tal como se configuran en el campo de texto libre:
+
+> "Actúa como experto en Inteligencia Artificial y LLM. Tono técnico, sin relleno. Usa solo H2 y excepcionalmente H3. Entrega el resultado en un bloque `markdown`. Si la petición es ambigua, pregunta antes de generar."
+
+Esto es exactamente lo que tú ya tienes activo en este repositorio: son *instrucciones de perfil o de proyecto* (según dónde las hayas pegado), no un Estilo con asistente guiado ni una Skill independiente. La diferencia práctica: si las pusieras como Estilo, tendrías que seleccionar ese estilo cada vez (o fijarlo por defecto); como preferencia de perfil o de proyecto, se aplican solas sin que tengas que activarlas.
+
+## Cómo sacarles el máximo rendimiento
+
+- **No mezcles capas con el mismo propósito.** Si defines tono en preferencias de perfil y además en un Estilo activo, compiten por prioridad y el comportamiento deja de ser predecible; elige una capa por tipo de instrucción.
+- **Usa proyecto en lugar de perfil cuando el contexto no deba filtrarse a otros chats.** Las instrucciones de perfil se aplican también fuera del proyecto; si tienes instrucciones específicas de este repositorio (como las que me has dado), van mejor en instrucciones de Proyecto que en preferencias de cuenta.
+- **Reserva las Skills para tareas repetibles y bien delimitadas**, no para tu comportamiento general: una Skill de "corrector de estilo académico" tiene sentido; una Skill de "sé útil" no aporta nada que el perfil no cubra ya.
+- **Sé específico, no genérico.** Una instrucción como "sé preciso" no cambia el comportamiento; una instrucción como la del ejemplo anterior (rol + restricciones de formato + condición de cuándo preguntar) sí, porque es verificable y accionable turno a turno.
+- **Revisa periódicamente el campo de perfil.** Al aplicarse a todas las conversaciones, instrucciones obsoletas de un proyecto antiguo pueden degradar respuestas en contextos nuevos sin que sea evidente por qué.
+
+## Para llevar a clase
+
+Síntesis: "Personalizar" no es una casilla única, sino cuatro mecanismos con alcance distinto (cuenta, proyecto, sesión seleccionada, tarea activada); elegir la capa correcta para cada tipo de instrucción es más importante que la redacción del propio prompt.
+
+Ejercicio propuesto: pedir al alumnado que reproduzca el mismo objetivo de personalización (p. ej. "que Claude responda siempre citando fuentes") en las cuatro capas —perfil, estilo, proyecto y Skill— y que compare en qué casos cada una sería la elección correcta según si el comportamiento debe ser permanente, opcional, acotado a un proyecto o activable bajo demanda.
+
+
+
+
+
 
 ## 📚 Recursos
 
@@ -139,42 +197,7 @@ En la práctica, estas capas se aplican en orden: primero tus preferencias gener
 ##
 ## ## 📁📁📁
 
-Claude se puede usar en varios "formatos" o productos:
 
-
-
-En este manual nos centraremos sobre todo en **Claude.ai (web) y en la app de escritorio**, ya que es el punto de entrada recomendado para quien empieza, y tocaremos de forma sencilla Claude Code como introducción al mundo de los agentes.
-
----
-
-## 2. La interfaz de Claude: web y app
-
-Para empezar, accede a **[claude.ai](https://claude.ai)** desde tu navegador y crea una cuenta (con correo electrónico o con tu cuenta de Google). Una vez dentro, verás una interfaz dividida en estas zonas principales:
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│  [Logo Claude]                                  [Tu perfil]  │
-├───────────────┬───────────────────────────────────────────────┤
-│               │                                               │
-│  BARRA        │              ZONA DE CONVERSACIÓN             │
-│  LATERAL      │                                               │
-│               │   - Aquí aparecen tus mensajes y las           │
-│  + Nuevo chat │     respuestas de Claude                       │
-│  Chats        │                                               │
-│  recientes    │                                               │
-│  Proyectos    │                                               │
-│  Artefactos   │                                               │
-│               ├───────────────────────────────────────────────┤
-│               │  [Caja de texto para escribir tu mensaje] [➤] │
-└───────────────┴───────────────────────────────────────────────┘
-```
-
-### 2.1 Barra lateral (izquierda)
-
-- **➕ Nuevo chat:** abre una conversación en blanco. Cada chat es independiente: Claude no recuerda lo que hablasteis en otro chat (salvo que actives la memoria, ver más abajo).
-- **Chats recientes:** historial de todas tus conversaciones anteriores, para poder volver a ellas.
-- **Proyectos:** carpetas temáticas donde puedes agrupar chats, subir documentos de referencia y dar instrucciones fijas (lo veremos en el apartado 4).
-- **Artefactos:** documentos, páginas web, gráficos o programas que Claude haya generado y que se muestran en una ventana aparte, para poder editarlos o descargarlos sin que ocupen toda la conversación.
 
 ### 2.2 Zona de conversación (centro)
 
@@ -207,43 +230,6 @@ Haciendo clic en tu **foto de perfil** (arriba a la derecha) accederás al menú
 | **Privacidad y datos** | Controlar si tus conversaciones se pueden usar para mejorar el modelo |
 
 > 🎓 **Consejo para clase:** configura tus **preferencias de usuario** indicando tu nivel de conocimientos (por ejemplo, "estoy en 2º de FP de Administración de Sistemas, no programo casi nada, explícame los conceptos técnicos con analogías sencillas"). Así todas tus conversaciones futuras se adaptarán automáticamente a tu nivel.
-
----
-
-## 3. Los modelos de Claude: Haiku, Sonnet y Opus
-
-Anthropic no ofrece "una sola IA", sino **varias versiones del modelo**, pensadas para necesidades distintas. En el menú de configuración o justo encima de la caja de texto puedes elegir cuál usar. Actualmente, las tres familias principales son:
-
-| Modelo | Velocidad | Capacidad de razonamiento | Coste de uso | Para qué lo usarías |
-|---|---|---|---|---|
-| **Claude Haiku** | ⚡⚡⚡ Muy rápido | ⭐ Básica-media | 💰 Bajo | Tareas sencillas y repetitivas: resumir un texto corto, clasificar correos, responder dudas rápidas |
-| **Claude Sonnet** | ⚡⚡ Rápido | ⭐⭐ Alta | 💰💰 Medio | Uso diario general: redactar informes, programar, analizar documentos, la mayoría de tareas de clase |
-| **Claude Opus** | ⚡ Más lento | ⭐⭐⭐ Máxima | 💰💰💰 Alto | Problemas complejos: análisis profundos, razonamiento en varios pasos, tareas críticas |
-
-### 3.1 ¿Cómo elegir el modelo adecuado?
-
-Piensa en ello como elegir herramienta para un trabajo de taller:
-
-- **Haiku** es como un **destornillador eléctrico**: rapidísimo para tareas pequeñas y repetidas.
-- **Sonnet** es como una **caja de herramientas completa de uso diario**: sirve para casi todo y es el equilibrio entre velocidad y calidad. Es el modelo recomendado por defecto para la mayoría del alumnado.
-- **Opus** es como **llamar a un especialista**: tarda más y "cuesta más", pero para un problema realmente difícil (un proyecto final, depurar un fallo complejo de red, un análisis extenso) merece la pena.
-
-> ⚠️ Los nombres y números de versión cambian con el tiempo (por ejemplo, pasamos de la versión 4.5 a la 4.6, y así sucesivamente), porque Anthropic actualiza sus modelos varias veces al año. La lógica de "Haiku - Sonnet - Opus" como velocidad/calidad creciente se mantiene siempre, aunque el número concreto de versión no es lo importante para el uso diario.
-
-### 3.2 Planes de suscripción (resumen)
-
-El modelo que puedes usar también depende del **plan** que tengas contratado:
-
-| Plan | Pensado para | Qué incluye (resumen) |
-|---|---|---|
-| **Free** | Probar la herramienta | Acceso limitado, modelo principal con límites de uso bajos |
-| **Pro** | Uso individual habitual (recomendado para estudiantes) | Más uso, acceso a modelos más potentes, Proyectos ilimitados |
-| **Max** | Uso intensivo diario | Mucho más volumen de uso que Pro |
-| **Team / Enterprise** | Empresas y organizaciones | Gestión centralizada, varios usuarios, seguridad avanzada |
-
-> 📌 Los precios y límites concretos cambian con frecuencia. Antes de elegir un plan, consulta siempre la página oficial **claude.com/pricing** para ver las condiciones actualizadas.
-
----
 
 ## 4. Creación de agentes y asistentes en Claude
 
@@ -403,4 +389,4 @@ Sí, existen aplicaciones oficiales para iOS y Android con prácticamente las mi
 
 ---
 
-*Manual elaborado como guía introductoria para el alumnado de Formación Profesional de la familia de Sistemas. Los nombres de modelos, planes y precios concretos pueden cambiar con el tiempo: se recomienda consultar siempre la documentación oficial en [claude.com](https://claude.com) y [support.claude.com](https://support.claude.com) para confirmar los datos más recientes.*
+
