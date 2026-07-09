@@ -1,5 +1,5 @@
 # 📘 Claude (Anthropic)
-> Documento de referencia actualizado a **julio de 2026**. Como los modelos, precios y funciones de Claude cambian con frecuencia, conviene revisar periódicamente para confirmar que los datos siguen vigentes.
+> Documento actualizado a **julio de 2026**. Como los modelos, precios y funciones de Claude cambian con frecuencia, conviene revisar periódicamente para confirmar que los datos siguen vigentes.
 
 
 ## Claude  [WEB](https://claude.ai/new){target="_blank"} 

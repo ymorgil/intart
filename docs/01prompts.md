@@ -9,10 +9,17 @@ Un **prompt** es la instrucción que le das a una IA para indicarle qué quieres
    
 
         Actúa como [ROL]. 
-        Está dirigido a [CONTEXTO].
+        El resultado de esta tarea está dirigido a [CONTEXTO].
         Realiza [TAREA].
         Genera la respuesta en formato [FORMATO]. 
         Ten en cuenta las siguientes condiciones: [RESTRICCIONES].
+```
+Actúa como un [especifica el rol exacto, por ejemplo: Copywriter experto en SEO o Mentor de programación]. 
+El resultado de esta tarea está dirigido a [describe a tu audiencia y su situación actual, por ejemplo: emprendedores que quieren lanzar su primer negocio sin presupuesto].
+Tu objetivo principal es [describe detalladamente qué debe hacer la IA, por ejemplo: redactar un correo de ventas atractivo para promocionar un nuevo servicio].
+Para la entrega, genera la respuesta utilizando [especifica el formato visual que deseas, por ejemplo: una estructura dividida con subtítulos claros y párrafos cortos].
+Para asegurar la calidad del resultado, debes cumplir estrictamente las siguientes directrices: mantén un tono [indica el tono, por ejemplo: persuasivo pero natural], evita por completo [menciona lo que quieres evitar, por ejemplo: palabras demasiado técnicas o jerga compleja] y limita la respuesta a un máximo de [indica el límite, por ejemplo: 300 palabras].
+``` 
 
 **OTROS COMPONENTES**
 
