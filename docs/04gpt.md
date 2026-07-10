@@ -1,100 +1,265 @@
-# TOP 
-*Actualizado a junio de 2026. Las plataformas lanzan modelos y cambian precios con mucha frecuencia, conviene verificar en webs oficiales*
+# 🧠 ChatGPT (OpenAI)
 
-> Quiero hcer el mismo esquema en todas modelos uso y pago 
+> Documento actualizado a **julio de 2026**. OpenAI publica modelos y cambia precios/planes con mucha frecuencia; conviene revisar periódicamente en las webs oficiales para confirmar que los datos siguen vigentes.
 
-## Claude
-Modelos de lenguaje conversacional desarrollada por **Anthropic**, una empresa de IA centrada en la seguridad y la interpretabilidad de los sistemas. Claude se utiliza como asistente conversacional (a través de Claude.ai), como agente de programación (Claude Code) y como motor de IA para desarrolladores a través de la API de Anthropic. Destaca por su enfoque en el razonamiento extendido, el manejo de contexto muy largo (hasta 1 millón de tokens) y un comportamiento orientado a la seguridad y la honestidad.
+## ChatGPT [WEB](https://chatgpt.com/){target="_blank"}
 
-### Modelos actuales de Claude
+Asistente conversacional de **OpenAI**, uno de los productos de IA generativa más usados del mundo. Permite chatear, generar imágenes, analizar documentos, navegar por internet, escribir y depurar código (a través de Codex) y ejecutar tareas de varios pasos de forma semiautónoma ("modo agente"). Se apoya en la familia de modelos **GPT**.
 
-| Modelo | Categoría | Precio API (entrada / salida por 1M tokens) | Contexto máximo | Uso principal |
+![ChatGPT](https://commons.wikimedia.org/wiki/Special:FilePath/ChatGPT-Logo.svg)
+
+!!! note "ChatGPT tampoco vive en tu ordenador"
+
+    Igual que Claude o Gemini, el modelo se ejecuta en los servidores de OpenAI. La web, la app de escritorio o la app móvil son solo la puerta de entrada para hablar con esos modelos en la nube.
+
+**FORMATOS**
+
+| Producto | Qué es y para qué sirve |
+|---|---|
+| **ChatGPT (web/app)** | Asistente de chat general en [chatgpt.com](https://chatgpt.com/){target="_blank"} y en apps de escritorio/móvil. |
+| **GPTs personalizados** | Versiones a medida de ChatGPT con instrucciones, conocimiento y herramientas propias (ver sección dedicada más abajo). |
+| **GPT Store** | Directorio público donde cualquier usuario puede publicar y descubrir GPTs creados por otros. |
+| **Codex** | Agente de programación de OpenAI, integrado en ChatGPT, en la terminal y en editores como VS Code. |
+| **API de OpenAI** | Interfaz técnica de pago por token para integrar los modelos GPT en aplicaciones propias. |
+
+![OpenAI](https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg)
+
+## Modelos
+
+En julio de 2026, OpenAI acaba de completar el despliegue público de su generación **GPT-5.6** (lanzada el 10 de julio de 2026), que convive todavía con la generación anterior **GPT-5.5** en algunos planes.
+
+| Modelo | Categoría | Precio API aprox. (entrada / salida por 1M tokens) | Disponibilidad en ChatGPT | Uso principal |
 |---|---|---|---|---|
-| **Claude Opus 4.8** | Modelo insignia (flagship) | 5 $ / 25 $ (Modo rápido: 10 $ / 50 $) | 1.000.000 tokens | El más potente; "pensamiento adaptativo" (decide cuánto razonar según la tarea), ideal para programación compleja y agentes autónomos de larga duración |
-| **Claude Opus 4.7** | Flagship anterior | 5 $ / 25 $ | 1.000.000 tokens | Visión de alta resolución y tareas agénticas de horizonte largo |
-| **Claude Sonnet 4.6** | Equilibrado | 3 $ / 15 $ | 1.000.000 tokens | Mejor relación calidad-precio; uso diario, programación y redacción |
-| **Claude Haiku 4.5** | Rápido y económico | 1 $ / 5 $ | 200.000 tokens | Clasificación, tareas de alto volumen, respuestas instantáneas |
+| **GPT-5.6 Sol** | Razonamiento máximo especializado | 5 $ / 30 $ | Planes Pro y superiores | Afinado específicamente para biología, química y ciberseguridad; máximo rendimiento en modo agente |
+| **GPT-5.6 Terra** | Equilibrado | 2,50 $ / 15 $ | Plus, Pro, Business, Enterprise | Mejor relación rendimiento-coste para la mayoría de casos de uso en producción |
+| **GPT-5.6 Luna** | Económico | 1 $ / 6 $ | Todos los planes, incluido el gratuito | Clasificación, enrutamiento y generación estándar de alto volumen |
+| **GPT-5.5 Instant** | Modelo por defecto (generación anterior) | 5 $ / 30 $ | Todos los planes | Uso cotidiano: rapidez y comprensión de intención |
+| **GPT-5.4-Codex** | Programación agéntica | Según uso en Codex | Codex / planes de pago | Generación y refactorización de código de forma autónoma |
 
-> Nota: Anthropic presentó en junio de 2026 una nueva generación superior llamada **Mythos 5** (y su variante reforzada **Fable 5**), pero el acceso quedó temporalmente suspendido por una directiva de control de exportaciones, por lo que de momento no están disponibles para el público general.
+!!! warning "Modelos retirados"
+
+    Desde el 13 de febrero de 2026, OpenAI retiró de ChatGPT los modelos GPT-4o, GPT-4.1, GPT-4.1 mini, o4-mini y GPT-5 (Instant y Thinking): si tienes automatizaciones o documentación antigua que los mencione, revísalas porque ya no están disponibles en la interfaz de chat (el acceso por API no se ha visto afectado).
 
 ### ¿Cómo se usa y cómo se paga?
 
-- **Claude.ai (chat):** plan **Free** (gratuito, con límites de mensajes), **Pro** (~20 $/mes, o ~17 $/mes en facturación anual), **Max** (100 $ o 200 $/mes, para uso intensivo) y planes **Team/Enterprise** para empresas.
-- **API de Anthropic:** se paga **por token** consumido (no por mensaje), distinguiendo tokens de *entrada* (lo que se envía al modelo) y de *salida* (lo que el modelo genera). El caché de prompts reduce hasta un 90% el coste de tokens repetidos, y el procesamiento por lotes (*batch*) ofrece un 50% de descuento.
-- **Claude Code:** la herramienta de programación agéntica de Anthropic, consume el mismo sistema de tokens/planes que Claude.ai.
+- **Planes de ChatGPT:** **Free** (gratis, con límites estrictos), **Go** (~8 $/mes, más mensajes), **Plus** (~20 $/mes: modelos avanzados, Deep Research limitado, generación de imágenes y Sora), **Pro** (~200 $/mes: acceso ilimitado a los modelos de razonamiento Pro), **Business** (25 $/usuario/mes) y **Enterprise** (precio a medida).
+- **API de OpenAI:** facturación por token (entrada y salida por separado), igual que en Anthropic o Google.
+- **Codex:** consume el mismo sistema de tokens/planes que ChatGPT, con cuotas específicas según el plan.
 
 ---
 
-## ChatGPT
+## GPTs personalizados (Custom GPTs)
 
-> **Definición:** ChatGPT es el asistente conversacional de **OpenAI**, uno de los productos de IA generativa más usados del mundo. Permite chatear, generar imágenes, analizar documentos, navegar por internet, escribir y depurar código (a través de Codex) y ejecutar tareas de varios pasos de forma semiautónoma ("modo agente"). Se apoya en la familia de modelos **GPT**.
+![Crear GPT](https://commons.wikimedia.org/wiki/Special:FilePath/ChatGPT-Logo.svg)
 
-### Modelos actuales de ChatGPT / GPT
+Un **GPT** es una versión personalizada de ChatGPT que combina **instrucciones, conocimiento adicional y cualquier combinación de habilidades** (búsqueda web, generación de imágenes, código, conexión a apps externas). Es el equivalente directo de los **Gems** de Gemini o los **Proyectos/Skills** de Claude.
 
-| Modelo | Categoría | Precio API (entrada / salida por 1M tokens) | Disponibilidad en ChatGPT | Uso principal |
-|---|---|---|---|---|
-| **GPT-5.5 Pro** | Razonamiento máximo | 30 $ / 180 $ | Planes Pro y superiores | Tareas multipaso muy complejas, máximo rendimiento en modo agente |
-| **GPT-5.5 Instant** | Modelo por defecto | 5 $ / 30 $ | Todos los planes, incluido el gratuito | Uso cotidiano: rapidez y comprensión de intención |
-| **GPT-5.4 Thinking** | Razonamiento profundo | — (incluido en Plus y superiores) | Plus, Pro, Business, Enterprise | Verificar estrategias, código complejo, auditorías, muestra el razonamiento paso a paso |
-| **GPT-5.3-Codex** | Programación agéntica | Según uso en Codex | Codex / planes de pago | Generación y refactorización de código de forma autónoma |
-| GPT-5.4 mini / nano | Económicos | Tarifas reducidas | Solo vía API | Tareas ligeras o de alto volumen a bajo coste |
+!!! example "Definición corta"
 
-### ¿Cómo se usa y cómo se paga?
+    Un GPT es "una instancia configurada de ChatGPT": mismo modelo, pero con un rol, un tono y unas herramientas fijadas de antemano, para no tener que repetir el contexto cada vez que lo usas.
 
-- **Planes de ChatGPT:** **Free** (gratis, con anuncios y límites estrictos), **Go** (~8 $/mes, más mensajes), **Plus** (~20 $/mes, acceso a los modelos avanzados, Deep Research limitado, generación de imágenes y Sora), **Pro** (~200 $/mes, acceso ilimitado a los modelos de razonamiento Pro y al doble de contexto) y **Business/Enterprise** (precios por usuario, para empresas).
-- **API de OpenAI:** facturación **por token** (entrada y salida por separado), igual que en Anthropic. El uso vía Codex (agente de programación) también consume tokens según el modelo elegido.
+!!! warning "Requiere un plan de pago"
 
----
+    Crear y compartir GPTs propios requiere **ChatGPT Plus o superior**. Con la cuenta gratuita, al pulsar "Crear" en la sección GPTs aparece un aviso para mejorar el plan — solo se puede **usar** GPTs ya publicados por otros (por ejemplo, desde el GPT Store), no crear ni compartir los propios.
 
-## Gemini
+### Cómo crear un GPT paso a paso
 
-> **Definición:** Gemini es la familia de modelos de IA multimodal de **Google DeepMind**, integrada de forma nativa en el buscador de Google, Android, Google Workspace (Gmail, Docs, Drive) y disponible como app independiente y a través de la API en Google AI Studio / Vertex AI. Está diseñada desde el inicio para entender texto, imagen, audio, vídeo y código de forma conjunta.
+1. Abre **Explorar GPTs** en la barra lateral de ChatGPT o entra directamente en [chatgpt.com/gpts](https://chatgpt.com/gpts){target="_blank"}.
+2. Pulsa **`+ Crear`**, arriba a la derecha.
+3. Elige cómo quieres construirlo:
+      - **Creación conversacional:** describes lo que quieres y ChatGPT redacta el GPT por ti, haciéndote preguntas.
+      - **Vista de configuración:** rellenas directamente los campos (nombre, instrucciones, conocimiento...).
+4. Prueba el GPT en el panel de **Vista previa**, a la derecha, antes de darlo por terminado.
+5. Pulsa **Crear** (o **Actualizar**, si ya existe) para guardar los cambios.
 
-### Modelos actuales de Gemini
+!!! example "Lo que vimos en la propia cuenta al entrar en /gpts"
 
-| Modelo | Categoría | Precio API (salida por 1M tokens) | Contexto máximo | Uso principal |
-|---|---|---|---|---|
-| **Gemini 3.1 Deep Think** | Razonamiento extendido | Solo incluido en plan Ultra | Muy amplio | Investigación científica y problemas matemáticos/lógicos de varios pasos |
-| **Gemini 3.1 Pro** | Razonamiento avanzado | ~12 $ | 1.000.000 tokens | Análisis profundo, generación de vídeo, tareas profesionales |
-| **Gemini 3.5 Flash** | Rápido, agéntico | ~9 $ | Amplio | Programación agéntica y tareas que combinan velocidad con capacidad |
-| **Gemini 3.1 Flash-Lite** | Económico | ~1,50 $ | Amplio | Clasificación, resumen y *embeddings* en grandes volúmenes |
-| **Gemini 2.5 Flash** | Plan gratuito | — | 32.000 tokens | Versión incluida en la cuenta gratuita de Google |
+    La sección "Explorar GPT" muestra primero destacados de la semana y "Tendencias" (los GPTs más usados de la comunidad, como *Scholar GPT* o *Consensus*), organizados por pestañas: La mejor selección, Educación, Productividad, Investigación y análisis, Escritura, DALL·E... El botón **`+ Crear`** aparece siempre arriba a la derecha.
 
-### ¿Cómo se usa y cómo se paga?
+### Estructura de un GPT
 
-- **App Gemini / Google AI:** plan **Free** (usa Gemini 2.5 Flash, con contexto limitado), **Google AI Pro** (~20 $/mes: Gemini 3.1 Pro, 1M de tokens de contexto, Deep Research, NotebookLM Plus y 2 TB en Google One) y **Google AI Ultra** (dos niveles, aproximadamente 100 $ y 200 $/mes, que añaden Deep Think y mayores cuotas de uso).
-- **API (Vertex AI / Google AI Studio):** pago **por token**, con tarifas distintas de entrada y salida; si el contexto supera los 200.000 tokens se aplican tarifas de "contexto largo".
-- Integración nativa y gratuita (con límites) dentro de productos de Google como Search, Gmail o Android.
+| Campo/sección | Obligatorio | Qué contiene |
+|---|---|---|
+| **Nombre** | Sí | Título que ven los usuarios en resultados de búsqueda, en el GPT Store, en enlaces compartidos y en la parte superior del chat. |
+| **Descripción** | Sí | Resumen corto del propósito del GPT, para quién es y qué tipo de tareas resuelve; aparece en las vistas previas y en el GPT Store. |
+| **Conversation starters (mensajes de ejemplo)** | No | Prompts de ejemplo que se muestran al abrir el GPT, para orientar al usuario sobre cómo interactuar con él. |
+| **Instrucciones** | Sí | Define cómo debe comportarse: qué debe hacer, cómo responder y qué evitar. Se aplican en cada conversación. |
+| **Conocimiento** | No | Archivos que el GPT usa como material de referencia (hasta 20 archivos, 512 MB cada uno). No sustituye a las instrucciones: el conocimiento es la fuente, las instrucciones son las reglas de comportamiento. |
+| **Modelo recomendado** | No | El modelo que se sugiere por defecto al usuario al iniciar conversación con el GPT. |
+| **Capacidades** | No | Activa funciones integradas: búsqueda web, generación de imágenes, Canvas, Code Interpreter y análisis de datos, o Apps (herramientas externas conectadas). |
+| **Acciones** | No | Conexión a APIs externas definidas por ti, para que el GPT pueda consultar o modificar datos en sistemas externos (excluyente con "Apps"). |
 
----
+!!! tip "Buenas prácticas al redactar instrucciones (recomendación oficial de OpenAI)"
 
-## Copilot
+    - En flujos de varios pasos, usa una estructura explícita: "Cuando ocurra X → haz Y", separando bien las secciones.
+    - Prefiere instrucciones en positivo ("Haz X") frente a listas largas de prohibiciones ("No hagas Y").
+    - Si el GPT debe aplicar definiciones o clasificaciones concretas, incluye ejemplos breves de salidas aceptables e inaceptables.
+    - Usa encabezados y listas para que las prioridades y los pasos se distingan visualmente.
 
-> **Definición:** Copilot es el nombre que **Microsoft** utiliza para sus asistentes de IA, repartidos en dos productos diferenciados: **Microsoft 365 Copilot** (asistente de productividad integrado en Word, Excel, PowerPoint, Outlook y Teams) y **GitHub Copilot** (asistente de programación integrado en editores de código). A diferencia de Claude, ChatGPT o Gemini, Copilot no tiene un modelo propio: actúa como una capa que **orquesta modelos de distintos proveedores** (principalmente GPT de OpenAI, y en el caso de GitHub Copilot también Claude de Anthropic y Gemini de Google).
+### Ejemplo real de instrucciones para un GPT docente
 
-### Modelos disponibles según el producto Copilot
+```text
+Eres un asistente experto en Sistemas y Aplicaciones Informáticas para un
+Ciclo Formativo de Grado Superior de Formación Profesional.
 
-| Producto | Modelos que utiliza | Cómo se selecciona | Uso principal |
+Cuando el profesor te pida generar un cuestionario de evaluación:
+1. Pregunta primero el tema, el número de preguntas y el nivel de dificultad
+   si no te lo ha indicado.
+2. Genera las preguntas en formato GIFT (compatible con Moodle), con cuatro
+   opciones por pregunta y solo una correcta.
+3. Entrega el resultado en un único bloque de código, listo para copiar y
+   pegar en un archivo .txt e importarlo en Moodle.
+
+No inventes datos técnicos incorrectos: si no estás seguro de un detalle
+concreto (por ejemplo, un número de puerto o una versión de software),
+dilo explícitamente en vez de inventarlo.
+```
+
+### Probar el GPT antes de compartirlo
+
+Antes de compartir o publicar en el GPT Store, usa la **Vista previa** integrada para probar prompts reales, revisar el tono y la precisión, y afinar la configuración. Suele ser más eficaz ajustar primero las instrucciones y añadir ejemplos que añadir más herramientas de golpe.
+
+### Cómo compartir un GPT
+
+1. Abre el GPT en el editor (desde "Mis GPTs" → selecciona el GPT → **Editar GPT**).
+2. Pulsa **Compartir**.
+3. Elige el **nivel de compartición**:
+      - **Solo por invitación:** en cuentas personales, solo tú; en workspaces gestionados, también usuarios o grupos concretos.
+      - **Cualquiera del workspace con el enlace** / **Tu workspace entero** (solo en cuentas de empresa/educación).
+      - **Cualquiera con el enlace:** disponible también en cuentas personales, si la compartición pública está habilitada.
+      - **GPT Store:** lo publica de forma pública en el directorio de GPTs.
+4. Elige el **nivel de permiso**: *Puede chatear*, *Puede ver la configuración* o *Puede editar* (no todos los niveles de compartición admiten los tres permisos).
+5. Pulsa **Guardar** para aplicar los cambios de compartición.
+6. Copia el enlace del GPT si quieres enviarlo directamente (menú de tres puntos ••• → "Copiar enlace del GPT").
+
+!!! note "Enlace de ejemplo"
+
+    Un GPT compartido por enlace tiene una forma parecida a `https://chatgpt.com/g/g-<identificador>-<nombre-del-gpt>`. Si compartes el GPT directamente con una persona (en cuentas de empresa/educación), esa persona recibe además una notificación por correo con el enlace.
+
+!!! warning "En cuentas personales, solo dos opciones reales"
+
+    Para una cuenta personal (como la mayoría del profesorado usa fuera de un Workspace de empresa), solo existen dos formas reales de compartir un GPT con otras personas: **"Cualquiera con el enlace"** o publicarlo en el **GPT Store**. La compartición dirigida a usuarios/grupos concretos solo existe dentro de workspaces gestionados (ChatGPT Edu/Enterprise).
+
+### Publicar en el GPT Store
+
+Publicar hace que el GPT sea públicamente localizable dentro de ChatGPT. Al publicar, es posible que se te pida elegir una categoría, revisar cómo aparece tu nombre de creador y confirmar que el GPT cumple las políticas de OpenAI. Un GPT puede no ser apto para publicación pública si usa conexiones de apps no soportadas, si usa acciones sin una URL de política de privacidad válida, o si el workspace tiene la publicación pública desactivada.
+
+## Preguntas frecuentes sobre GPTs
+
+!!! question "¿Puedo editar un GPT después de publicarlo?"
+
+    Sí. Los cambios se guardan primero como borrador; pulsa **Actualizar** para aplicarlos a la versión pública ya compartida.
+
+!!! question "¿Puedo ver versiones anteriores de mi GPT?"
+
+    Sí, desde el menú de tres puntos (•••) del editor puedes acceder al **historial de versiones** y restaurar una anterior si algo salió mal.
+
+!!! question "¿Un GPT puede usar Acciones (APIs externas) y Apps al mismo tiempo?"
+
+    No. Un GPT puede usar **Apps** (herramientas que el usuario ya tiene conectadas) o **Acciones** (APIs que tú defines), pero no ambas combinadas en el mismo GPT.
+
+!!! question "¿Necesito verificar mi perfil de creador para publicar en el GPT Store?"
+
+    Para publicar de forma totalmente pública, sí: OpenAI puede pedir verificar tu nombre, un enlace de sitio web de un dominio verificado o perfiles sociales confirmados.
+
+### Explorar GPTs de otros usuarios (GPT Store)
+
+Aunque tengas cuenta gratuita y no puedas crear GPTs propios, sí puedes **usar** cualquier GPT ya publicado por otros. La sección "Explorar GPT" organiza los GPTs por pestañas (La mejor selección, Educación, Productividad, Investigación y análisis, Escritura, DALL·E...) y muestra rankings de "Tendencias" con los más usados por la comunidad.
+
+![GPT Store](https://commons.wikimedia.org/wiki/Special:FilePath/ChatGPT-Logo.svg)
+
+!!! example "GPTs educativos habituales en el Store"
+
+    Buscando por la categoría "Educación" suelen aparecer GPTs orientados a resumir papers académicos, generar rúbricas de evaluación, practicar idiomas con corrección de errores, o resolver dudas de una asignatura concreta citando fuentes. Antes de usar uno con datos de alumnos, revisa su descripción y quién lo ha publicado — al ser contenido de terceros, OpenAI no garantiza la exactitud de sus instrucciones internas.
+
+## Deep Research y Sora
+
+**Deep Research** es el modo de investigación autónoma de ChatGPT (disponible en Plus y superiores, con cuota limitada en Free): el modelo navega por internet de forma autónoma, contrasta varias fuentes y entrega un informe extenso con referencias, de forma similar a Deep Research en Gemini.
+
+**Sora** es el modelo de generación de vídeo de OpenAI, integrado en los planes Plus y superiores: permite generar clips cortos a partir de una descripción en texto, y también remezclar o extender vídeos ya generados.
+
+![Sora / generación de vídeo](https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg)
+
+## Codex (programación agéntica)
+
+**Codex** es el agente de programación de OpenAI: entiende una base de código, ejecuta pruebas, corrige errores y puede trabajar de forma semiautónoma sobre tareas de varios pasos, de forma parecida a Claude Code. Está disponible dentro de ChatGPT (pestaña Codex), como extensión en editores como VS Code, y en la terminal.
+
+!!! example "Ejemplo de instrucción para Codex"
+
+    ```text
+    Revisa el script scripts/generate_pptx.py de este repositorio. Quiero que
+    añadas un parámetro --dry-run que muestre por consola cuántas diapositivas
+    se generarían, sin escribir el archivo .pptx final. No cambies el
+    comportamiento por defecto cuando no se pase ese parámetro.
+    ```
+
+!!! example "Prompt para preguntarle a ChatGPT cómo compartir tu propio GPT"
+
+    ```text
+    Actúa como experto en la plataforma de GPTs de OpenAI. Tengo un GPT ya creado
+    para [tarea concreta, ej. "generar cuestionarios GIFT para Moodle"]. Explícame
+    paso a paso cómo compartirlo solo con el equipo docente de mi ciclo (sin
+    publicarlo en el GPT Store), qué opción de "nivel de compartición" debo
+    elegir en mi caso al tener una cuenta personal, y qué diferencia práctica hay
+    entre los permisos "Puede chatear" y "Puede ver la configuración".
+    ```
+
+### Otro ejemplo de instrucciones: GPT de soporte de redes y sistemas
+
+```text
+Eres un técnico senior de sistemas y redes para un ciclo de Formación
+Profesional (Administración de Sistemas Informáticos en Red).
+
+Cuando un alumno te describa una avería o un comportamiento anómalo:
+1. Pide los datos mínimos si faltan: sistema operativo, versión, y el mensaje
+   de error exacto (cópialo tal cual, no lo resumas).
+2. Propón un diagnóstico por descarte, de la causa más probable a la menos
+   probable, explicando brevemente por qué.
+3. Da los comandos exactos a ejecutar para comprobar cada hipótesis, con el
+   resultado esperado si todo va bien.
+4. Si el problema implica borrar datos o reiniciar un servicio en producción,
+   avisa explícitamente antes de dar ese paso.
+
+Responde siempre en español, con bloques de código separados por cada
+comando, y nunca inventes un comando que no existe en el sistema indicado.
+```
+
+### Diferencia entre Acciones y Apps en un GPT
+
+Es fácil confundir estas dos formas de ampliar un GPT:
+
+- **Apps** — el GPT usa herramientas que el propio usuario final ya tiene conectadas (por ejemplo, su cuenta de Google Drive o Gmail). El control de permisos recae en el usuario que chatea con el GPT.
+- **Acciones** — tú, como creador del GPT, defines una conexión a una API externa concreta (por ejemplo, consultar el estado de un servidor o crear una incidencia en un sistema de tickets). El control de qué API se llama y cómo lo defines tú, no el usuario final.
+
+Un GPT puede usar una de las dos, nunca ambas combinadas en la misma configuración.
+
+## Preguntas frecuentes adicionales
+
+!!! question "¿Puedo duplicar un GPT de otro usuario para adaptarlo?"
+
+    Solo si el creador ha dado el permiso "Puede ver la configuración" o "Puede editar" al compartirlo. Con el permiso básico "Puede chatear", solo puedes conversar con él, no ver ni copiar sus instrucciones.
+
+!!! question "¿Qué pasa si el GPT usa datos de mi organización (ChatGPT Edu/Enterprise)?"
+
+    Los administradores del workspace pueden restringir qué opciones de compartición están disponibles (por ejemplo, bloquear "Cualquiera con el enlace" para forzar que todo quede dentro del dominio educativo).
+
+!!! question "¿El GPT Store es gratuito para publicar?"
+
+    Sí, publicar en el GPT Store no tiene coste adicional más allá de tu suscripción Plus/Pro/Business, pero debes completar tu perfil de creador y cumplir las políticas de contenido de OpenAI.
+
+## Comparativa rápida con Claude y Gemini
+
+| | ChatGPT | Claude | Gemini |
 |---|---|---|---|
-| **Microsoft Copilot** (consumidor/Windows) | Modelos GPT de OpenAI (incluye un modo "Think Deeper" de razonamiento) | Automático, según el plan | Asistente general, voz, generación de imágenes, búsqueda |
-| **Microsoft 365 Copilot** (empresas) | Modelos GPT más recientes, con acceso a los datos de la organización | Automático | Redacción y análisis de documentos, correos, hojas de cálculo y reuniones dentro de Office |
-| **GitHub Copilot** (programación) | GPT-5.5, Claude Opus/Sonnet (según el plan) y Gemini 3.1 Pro | El usuario puede elegir el modelo en el chat/modo agente | Autocompletado de código, revisión de PRs, modo agente para tareas de desarrollo |
+| Personalización persistente | **GPTs** | Proyectos / Skills | Gems |
+| Directorio público | **GPT Store** | No (skills se instalan, no se "publican" igual) | No |
+| Requiere plan de pago para crear | Sí (Plus o superior) | No (Free ya permite Proyectos) | No (Free ya permite Gems) |
+| Agente de programación propio | Codex | Claude Code | — (usa Gemini vía Antigravity/IDE) |
+| Punto fuerte | Ecosistema, modo agente, adopción masiva | Razonamiento, seguridad y uso de ordenador | Integración con Google y multimodalidad |
 
-### ¿Cómo se usa y cómo se paga?
+## Recursos
 
-- **Microsoft Copilot (consumidor):** plan **Free** con funciones básicas, y **Copilot Pro** (~20 $/mes) con acceso prioritario a los modelos más recientes y herramientas adicionales.
-- **Microsoft 365 Copilot:** requiere una licencia de Microsoft 365 aparte; el coste adicional ronda los 30 $/usuario/mes.
-- **GitHub Copilot:** **Free** (uso limitado), **Pro** (10 $/mes), **Pro+** (39 $/mes, con acceso a los modelos Opus más recientes) y **Business/Enterprise** (19–39 $/usuario/mes). Desde el 1 de junio de 2026, GitHub sustituyó las cuotas fijas por un sistema de **créditos de IA** (1 crédito = 0,01 $), donde cada interacción consume créditos según los tokens reales (entrada, salida y caché) y el modelo elegido — es decir, un pago **por uso/token**, similar al de las APIs de Anthropic, OpenAI y Google.
-
----
-
-## Resumen comparativo rápido
-
-| | Claude (Anthropic) | ChatGPT (OpenAI) | Gemini (Google) | Copilot (Microsoft) |
-|---|---|---|---|---|
-| Modelo propio | Sí | Sí | Sí | No (orquesta GPT, Claude y Gemini) |
-| Modelo tope actual | Opus 4.8 | GPT-5.5 Pro | Gemini 3.1 Deep Think | Depende del producto |
-| Modelo económico | Haiku 4.5 | GPT-5.4 nano | Gemini 3.1 Flash-Lite | — |
-| Plan de pago de entrada | Pro (~20 $/mes) | Plus (~20 $/mes) | AI Pro (~20 $/mes) | Copilot Pro (~20 $/mes) |
-| Facturación API | Por token | Por token | Por token | Por token (créditos GitHub) |
-| Punto fuerte | Razonamiento, seguridad, contexto largo | Ecosistema, modo agente, adopción masiva | Integración con Google y multimodalidad | Integración profunda en Office/Windows/GitHub |
+- [Ayuda oficial: crear y editar GPTs](https://help.openai.com/en/articles/8554397-creating-and-editing-gpts){target="_blank"}
+- [Ayuda oficial: compartir y publicar GPTs](https://help.openai.com/en/articles/8798878-sharing-and-publishing-gpts){target="_blank"}
+- [GPT Store](https://chatgpt.com/gpts){target="_blank"}
+- [Precios de la API de OpenAI](https://openai.com/api/pricing/){target="_blank"}

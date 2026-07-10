@@ -27,6 +27,7 @@ nav:
    - NotebookLM: 05notebook.md
    - Moodle: 06moodle.md
    - Imágenes: 07imagenes.md
+   - Skills: 08skills.md
 
 plugins:
    - glightbox
@@ -36,8 +37,13 @@ extra_css:
 
 markdown_extensions:
    - attr_list
+   - md_in_html
+   - admonition
+   - pymdownx.details
    - pymdownx.highlight:
         anchor_linenums: false
         use_pygments: true
    - pymdownx.superfences
    - pymdownx.inlinehilite
+   - pymdownx.tabbed:
+        alternate_style: true
