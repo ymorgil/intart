@@ -1,0 +1,1310 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ymorgil.github.io/intart/05notebook/">
+      
+      
+        <link rel="prev" href="../04gpt/">
+      
+      
+        <link rel="next" href="../06moodle/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>NotebookLM - 🤖 Inteligencia Artificial (ymorgil)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#notebooklm" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="🤖 Inteligencia Artificial (ymorgil)" class="md-header__button md-logo" aria-label="🤖 Inteligencia Artificial (ymorgil)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            🤖 Inteligencia Artificial (ymorgil)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NotebookLM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo" aria-label="Modo oscuro" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="green" aria-label="Modo claro" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="🤖 Inteligencia Artificial (ymorgil)" class="md-nav__button md-logo" aria-label="🤖 Inteligencia Artificial (ymorgil)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    🤖 Inteligencia Artificial (ymorgil)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02claude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03gemini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gemini
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04gpt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat GPT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NotebookLM
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NotebookLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-cuaderno-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué es un "cuaderno" (notebook)?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-subir-fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo subir fuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-se-puede-generar-a-partir-de-un-cuaderno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué se puede generar a partir de un cuaderno
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompts-propios-se-mantienen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompts propios (se mantienen)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generar-podcast-largo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generar podcast largo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notebooklm-presentaciones-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NotebookLM presentaciones (básico)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumir-canal-de-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumir canal de YouTube
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompts-mas-famosos-de-la-comunidad-anadidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompts más famosos de la comunidad (añadidos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cinco-preguntas-esenciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cinco preguntas esenciales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deteccion-de-huecos-y-contradicciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detección de huecos y contradicciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio-overview-enfocado-version-corta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audio Overview enfocado (versión corta)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concurso-de-preguntas-con-dos-presentadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concurso de preguntas con dos presentadores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sintesis-a-traves-de-las-contradicciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Síntesis a través de las contradicciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapa-mental-de-repaso-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapa mental de repaso rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guia-de-estudio-con-autoevaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guía de estudio con autoevaluación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cronologia-para-repasar-la-evolucion-de-una-tecnologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cronología para repasar la evolución de una tecnología
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-concretos-en-el-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de uso concretos en el aula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extension-y-aplicacion-movil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extensión y aplicación móvil
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-ejecutivo-para-reuniones-de-departamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen ejecutivo para reuniones de departamento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-elegir-el-prompt-adecuado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo elegir el prompt adecuado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preguntas frecuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones-a-tener-en-cuenta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitaciones a tener en cuenta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06moodle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moodle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07imagenes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imágenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08skills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skills
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-cuaderno-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué es un "cuaderno" (notebook)?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-subir-fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo subir fuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-se-puede-generar-a-partir-de-un-cuaderno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué se puede generar a partir de un cuaderno
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompts-propios-se-mantienen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompts propios (se mantienen)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generar-podcast-largo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generar podcast largo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notebooklm-presentaciones-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NotebookLM presentaciones (básico)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumir-canal-de-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumir canal de YouTube
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompts-mas-famosos-de-la-comunidad-anadidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompts más famosos de la comunidad (añadidos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cinco-preguntas-esenciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cinco preguntas esenciales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deteccion-de-huecos-y-contradicciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detección de huecos y contradicciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio-overview-enfocado-version-corta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audio Overview enfocado (versión corta)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concurso-de-preguntas-con-dos-presentadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concurso de preguntas con dos presentadores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sintesis-a-traves-de-las-contradicciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Síntesis a través de las contradicciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapa-mental-de-repaso-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapa mental de repaso rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guia-de-estudio-con-autoevaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guía de estudio con autoevaluación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cronologia-para-repasar-la-evolucion-de-una-tecnologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cronología para repasar la evolución de una tecnología
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-concretos-en-el-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de uso concretos en el aula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extension-y-aplicacion-movil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extensión y aplicación móvil
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-ejecutivo-para-reuniones-de-departamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen ejecutivo para reuniones de departamento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-elegir-el-prompt-adecuado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo elegir el prompt adecuado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preguntas frecuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones-a-tener-en-cuenta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitaciones a tener en cuenta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="notebooklm">🧠 NotebookLM</h1>
+<blockquote>
+<p>Documento actualizado a <strong>julio de 2026</strong>.</p>
+</blockquote>
+<p>Herramienta de inteligencia artificial desarrollada por <strong>Google</strong> que actúa como un asistente personal basado en tus propios documentos. A diferencia de otros chatbots de IA (como ChatGPT o Gemini), NotebookLM no responde desde su conocimiento general sino <strong>exclusivamente desde los documentos que tú le proporcionas</strong>. Esto lo hace ideal para estudiar, investigar y trabajar con apuntes propios.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://play-lh.googleusercontent.com/qWDLmYCI4Lqzq8J-LhtvWvp1HIPkJb2lqkHjduXM7tnCo7N1tmKxnYdaX7CS2_5pkDuW=w240-h480-rw" data-desc-position="bottom"><img alt="NotebookLM" src="https://play-lh.googleusercontent.com/qWDLmYCI4Lqzq8J-LhtvWvp1HIPkJb2lqkHjduXM7tnCo7N1tmKxnYdaX7CS2_5pkDuW=w240-h480-rw"></a></p>
+<div class="admonition note">
+<p class="admonition-title">NotebookLM no \"inventa\" a partir de la nada</p>
+<p>Cuando le pides algo, NotebookLM basa su respuesta en las fuentes que hayas subido a ese cuaderno (<em>notebook</em>): PDF, Google Docs, presentaciones, páginas web, vídeos de YouTube o incluso audios. Si le preguntas algo que no está en esas fuentes, te lo indica en vez de inventar una respuesta — esto reduce mucho las alucinaciones típicas de un chatbot generalista.</p>
+</div>
+<h2 id="que-es-un-cuaderno-notebook">¿Qué es un "cuaderno" (notebook)?</h2>
+<p>Un <strong>cuaderno</strong> es el espacio de trabajo de NotebookLM: agrupa un conjunto de fuentes (documentos, enlaces, vídeos) sobre un mismo tema y, a partir de ellas, puedes pedirle generar resúmenes, preguntas de estudio, audio (podcast), vídeo o incluso un mapa mental. Puedes tener tantos cuadernos como temas distintos trabajes, por ejemplo uno por cada unidad de trabajo del ciclo.</p>
+<div class="admonition tip">
+<p class="admonition-title">Organización recomendada para un docente</p>
+<p>Crea un cuaderno por tema o unidad didáctica (ej. "UT03 Virtualización") y sube ahí todos los apuntes, diapositivas y enlaces relacionados. Así, cuando generes un podcast o un cuestionario, NotebookLM solo mezclará información de ese tema concreto y no de todo tu Google Drive.</p>
+</div>
+<h2 id="como-subir-fuentes">Cómo subir fuentes</h2>
+<ol>
+<li>Entra en <a href="https://notebooklm.google/" target="_blank">notebooklm.google</a> y crea un cuaderno nuevo o abre uno existente.</li>
+<li>Pulsa <strong>Añadir fuente</strong>.</li>
+<li>Elige el origen: subir archivo (PDF, .docx, .txt, audio), pegar un enlace de Google Docs/Slides, pegar la URL de un sitio web, o pegar el enlace de un vídeo de YouTube.</li>
+<li>Repite para cada documento relacionado con el tema del cuaderno.</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://chatpdf.com/apple-touch-icon.png" data-desc-position="bottom"><img alt="Fuentes NotebookLM" src="https://chatpdf.com/apple-touch-icon.png"></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Límite de fuentes</p>
+<p>Cada cuaderno admite un número limitado de fuentes (varía según el plan: Free vs. NotebookLM Plus, incluido en Google AI Pro/Ultra). Si tu tema es muy amplio, agrupa el contenido en varios cuadernos temáticos en lugar de intentar meterlo todo en uno solo.</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://wpforms.com/wp-content/uploads/2024/08/google-ai-studio-logo.png" data-desc-position="bottom"><img alt="Google AI" src="https://wpforms.com/wp-content/uploads/2024/08/google-ai-studio-logo.png"></a></p>
+<h2 id="que-se-puede-generar-a-partir-de-un-cuaderno">Qué se puede generar a partir de un cuaderno</h2>
+<table>
+<thead>
+<tr>
+<th>Formato de salida</th>
+<th>Para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Audio Overview (podcast)</strong></td>
+<td>Conversación entre dos voces sintéticas que comentan las fuentes; ideal para repasar en el coche o mientras haces otra tarea.</td>
+</tr>
+<tr>
+<td><strong>Video Overview</strong></td>
+<td>Versión con diapositivas generadas automáticamente, sincronizadas con una narración.</td>
+</tr>
+<tr>
+<td><strong>Guía de estudio</strong></td>
+<td>Resumen estructurado con conceptos clave, términos y preguntas de autoevaluación.</td>
+</tr>
+<tr>
+<td><strong>Mapa mental</strong></td>
+<td>Esquema visual interactivo con las ideas principales y sus relaciones.</td>
+</tr>
+<tr>
+<td><strong>Cronología / Informe</strong></td>
+<td>Ordena los hechos o datos de las fuentes en una línea temporal o en un informe formal.</td>
+</tr>
+<tr>
+<td><strong>Chat con citas</strong></td>
+<td>Preguntas y respuestas directas sobre las fuentes, cada respuesta con la cita exacta de dónde sale la información.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="prompts-propios-se-mantienen">Prompts propios (se mantienen)</h2>
+<p>Los siguientes prompts son los que ya usaba el autor de este documento; se mantienen tal cual, cada uno como sección de nivel 2 (<code>##</code>) para que sigan apareciendo en el menú de navegación de la página.</p>
+<h2 id="generar-podcast-largo">Generar podcast largo</h2>
+<ul>
+<li>La duración final debe ser superior a 10 minutos (al menos 600 segundos). Calcula la duración estimando una velocidad media de locución de 150 palabras por minuto, por lo que el guion debe contener un mínimo de 1.500 palabras.</li>
+<li>Si el resultado es más corto de esa duración estimada, vuelve a generarlo automáticamente añadiendo más explicaciones, ejemplos, contexto histórico, anécdotas y comparaciones hasta superar el mínimo.</li>
+<li>Mantén un tono cercano, claro y ameno, como si estuvieras hablando con una audiencia general interesada en el tema.</li>
+<li>No omitas detalles relevantes y añade información complementaria para facilitar la comprensión, incluso si no está presente en el texto original.</li>
+<li>Organiza el guion con un ritmo natural, transiciones suaves y un desarrollo fluido.</li>
+<li>Si no alcanza los 10 minutos, no entregues el resultado y repite el proceso hasta que sí lo cumpla.</li>
+<li>Asegúrate de que el audio generado tenga un nivel de volumen alto y consistente, optimizado para escucharse claramente en un coche con ruido ambiente, incluso con la radio al máximo.</li>
+</ul>
+<h2 id="notebooklm-presentaciones-basico">NotebookLM presentaciones (básico)</h2>
+<p>Crea una presentación con fondo blanco para principiantes con un estilo llamativo y divertido. Céntrate en las instrucciones paso a paso y sé profesional. Presentación con fondo blanco.</p>
+<h2 id="resumir-canal-de-youtube">Resumir canal de YouTube</h2>
+<p>Añade como fuente los vídeos más relevantes de un canal de YouTube (pegando sus enlaces uno a uno) y pide un resumen conjunto: qué temas trata el canal, qué enfoque tiene, y un listado de los 5-10 vídeos más útiles para el tema que estás preparando, con el motivo por el que cada uno es relevante.</p>
+<hr>
+<h2 id="prompts-mas-famosos-de-la-comunidad-anadidos">Prompts más famosos de la comunidad (añadidos)</h2>
+<p>Búsqueda realizada en julio de 2026 sobre los prompts de NotebookLM más compartidos en comunidades como r/notebooklm y guías especializadas. Se han adaptado al español manteniendo la misma estructura de nivel 2 (<code>##</code>) para que aparezcan igual en el menú.</p>
+<h2 id="cinco-preguntas-esenciales">Cinco preguntas esenciales</h2>
+<p>Fuerza a NotebookLM a extraer una estructura pedagógica en vez de un resumen superficial:</p>
+<div class="highlight"><pre><span></span><code>Analiza todas las fuentes de este cuaderno y genera 5 preguntas esenciales
+que, al responderlas, capturen las ideas principales y el sentido central de
+todas las fuentes. Después responde tú mismo a cada una de esas 5 preguntas
+de forma clara y concisa.
+</code></pre></div>
+<p>Convierte una clase de 2 horas en una guía de estudio enfocada en lo importante, en lugar de un resumen genérico.</p>
+<h2 id="deteccion-de-huecos-y-contradicciones">Detección de huecos y contradicciones</h2>
+<p>Actúa como un auditor: identifica qué falta y dónde las fuentes no están de acuerdo entre sí.</p>
+<div class="highlight"><pre><span></span><code>Actúa como un auditor crítico de estas fuentes. Indica: (1) qué información
+importante parece faltar o quedar sin resolver, (2) en qué puntos las fuentes
+se contradicen entre sí o parten de supuestos distintos, y (3) qué preguntas
+de investigación quedarían abiertas si solo tuviera estas fuentes disponibles.
+</code></pre></div>
+<p>Ideal para investigación de mercado, memorias de proyectos, o para detectar apuntes desactualizados antes de dar una clase con ellos.</p>
+<h2 id="audio-overview-enfocado-version-corta">Audio Overview enfocado (versión corta)</h2>
+<p>El formato de prompt para "Audio Overview" (podcast corto) más compartido en la comunidad:</p>
+<div class="highlight"><pre><span></span><code>Genera un Audio Overview breve, de unos 3 minutos, centrado únicamente en
+[tema concreto, ej. "la diferencia entre RAID 1 y RAID 5"]. Sáltate la
+introducción genérica y ve directamente a los puntos principales. Prioriza
+ejemplos prácticos sobre la teoría.
+</code></pre></div>
+<p>Muy útil cuando el cuaderno es muy amplio pero solo quieres repasar un subtema concreto antes de clase, sin escuchar 15-20 minutos de introducción general.</p>
+<h2 id="concurso-de-preguntas-con-dos-presentadores">Concurso de preguntas con dos presentadores</h2>
+<p>Un formato de podcast "gamificado" muy compartido, pensado para repasar antes de un examen:</p>
+<div class="highlight"><pre><span></span><code>Genera un Audio Overview en formato "concurso": dos presentadores, donde el
+primero examina al segundo sobre [TEMA] con un total de 10 preguntas,
+mezclando opción múltiple y verdadero/falso. El segundo presentador falla
+alguna respuesta de vez en cuando, y el primero le corrige explicando por qué
+la respuesta correcta es esa.
+</code></pre></div>
+<p>Funciona muy bien para que el alumnado repase de forma amena un tema antes de un examen, escuchándolo como si fuera un podcast real.</p>
+<h2 id="sintesis-a-traves-de-las-contradicciones">Síntesis a través de las contradicciones</h2>
+<p>Para temas donde las fuentes no están de acuerdo entre sí (por ejemplo, comparativas de tecnologías o metodologías):</p>
+<div class="highlight"><pre><span></span><code>Sintetiza todas las fuentes de este cuaderno: (1) indica cuál es la postura
+mayoritaria y qué fuentes la respaldan, (2) enumera los puntos de desacuerdo
+y qué fuente defiende cada postura, (3) señala qué huecos no aborda ninguna
+fuente, y (4) resume cuál sería la respuesta más sólida a la pregunta de
+investigación, basándote solo en la evidencia disponible en este cuaderno.
+</code></pre></div>
+<h2 id="mapa-mental-de-repaso-rapido">Mapa mental de repaso rápido</h2>
+<div class="highlight"><pre><span></span><code>Genera un mapa mental de este cuaderno con un máximo de 3 niveles de
+profundidad. El nivel 1 debe tener como mucho 6 ramas principales, cada una
+correspondiente a un bloque temático distinto de las fuentes. No incluyas
+detalles menores que no aparezcan explícitamente en las fuentes.
+</code></pre></div>
+<p>El mapa mental generado por NotebookLM es interactivo y sirve como esquema visual de repaso rápido antes de un examen o de una exposición oral.</p>
+<h2 id="guia-de-estudio-con-autoevaluacion">Guía de estudio con autoevaluación</h2>
+<div class="highlight"><pre><span></span><code>A partir de todas las fuentes de este cuaderno, genera una guía de estudio
+con tres partes: (1) un resumen de los conceptos clave organizado por
+apartados, (2) una lista de términos importantes con su definición breve,
+y (3) 10 preguntas tipo test de autoevaluación con la respuesta correcta
+marcada al final del documento, no junto a cada pregunta.
+</code></pre></div>
+<h2 id="cronologia-para-repasar-la-evolucion-de-una-tecnologia">Cronología para repasar la evolución de una tecnología</h2>
+<div class="highlight"><pre><span></span><code>A partir de las fuentes de este cuaderno, genera una cronología de la
+evolución de [tecnología/tema] ordenada por fecha, indicando en cada hito el
+año, el cambio concreto que se produjo y qué fuente lo respalda. Si dos
+fuentes dan fechas distintas para el mismo hito, señálalo explícitamente en
+vez de elegir una al azar.
+</code></pre></div>
+<h2 id="casos-de-uso-concretos-en-el-aula">Casos de uso concretos en el aula</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://play-lh.googleusercontent.com/qWDLmYCI4Lqzq8J-LhtvWvp1HIPkJb2lqkHjduXM7tnCo7N1tmKxnYdaX7CS2_5pkDuW=w240-h480-rw" data-desc-position="bottom"><img alt="Casos de uso" src="https://play-lh.googleusercontent.com/qWDLmYCI4Lqzq8J-LhtvWvp1HIPkJb2lqkHjduXM7tnCo7N1tmKxnYdaX7CS2_5pkDuW=w240-h480-rw"></a></p>
+<ul>
+<li><strong>Preparación de clase:</strong> sube el temario oficial y tus apuntes propios; pide un mapa mental para estructurar la pizarra y una guía de estudio para no dejarte ningún punto clave.</li>
+<li><strong>Repaso para el alumnado:</strong> comparte un cuaderno de solo lectura con los apuntes de la unidad y sugiéreles generar su propio Audio Overview para repasar de camino a casa.</li>
+<li><strong>Corrección de coherencia:</strong> sube varias fuentes sobre el mismo procedimiento técnico (por ejemplo, distintas guías de instalación de un servicio) y usa el prompt de "detección de huecos y contradicciones" para detectar si alguna está desactualizada.</li>
+<li><strong>Preparación de documentación técnica:</strong> si estás migrando tus apuntes a Markdown para tu web de MkDocs, sube el documento original como fuente y pide un resumen estructurado en apartados como primer borrador antes de reescribirlo tú mismo.</li>
+</ul>
+<h2 id="extension-y-aplicacion-movil">Extensión y aplicación móvil</h2>
+<p>NotebookLM está disponible como aplicación independiente en Android/iOS y como acceso web. También se integra con <strong>Google Drive</strong>, de forma que puedes añadir directamente un documento o una carpeta compartida como fuente sin tener que descargarla y volver a subirla.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://play-lh.googleusercontent.com/qWDLmYCI4Lqzq8J-LhtvWvp1HIPkJb2lqkHjduXM7tnCo7N1tmKxnYdaX7CS2_5pkDuW=w240-h480-rw" data-desc-position="bottom"><img alt="NotebookLM app" src="https://play-lh.googleusercontent.com/qWDLmYCI4Lqzq8J-LhtvWvp1HIPkJb2lqkHjduXM7tnCo7N1tmKxnYdaX7CS2_5pkDuW=w240-h480-rw"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Actualización automática de fuentes de Drive</p>
+<p>Si añades un Google Doc o una Google Slides como fuente (en vez de subir un archivo suelto), NotebookLM detecta cuando actualizas ese documento en Drive y ofrece <strong>resincronizar</strong> la fuente, así no tienes que volver a subirla manualmente cada vez que corriges tus apuntes.</p>
+</div>
+<h2 id="resumen-ejecutivo-para-reuniones-de-departamento">Resumen ejecutivo para reuniones de departamento</h2>
+<p>Otro formato muy compartido, pensado para llevar una propuesta a una reunión de equipo docente sin que nadie tenga que leerse todo el documento original:</p>
+<div class="highlight"><pre><span></span><code>Genera un resumen ejecutivo de una página a partir de estas fuentes, con la
+siguiente estructura: (1) contexto en 2-3 frases, (2) la propuesta o
+conclusión principal destacada en negrita, (3) tres argumentos clave que la
+respaldan, cada uno con su fuente, y (4) los riesgos o puntos a decidir en
+la reunión. No superes las 300 palabras en total.
+</code></pre></div>
+<hr>
+<h2 id="como-elegir-el-prompt-adecuado">Cómo elegir el prompt adecuado</h2>
+<div class="admonition example">
+<p class="admonition-title">Prompt para pedirle ayuda a NotebookLM sobre sí mismo</p>
+<div class="highlight"><pre><span></span><code>Actúa como experto en NotebookLM de Google. Explícame qué tipos de fuentes
+admite este cuaderno, cuántas fuentes puedo añadir en mi plan actual, y qué
+diferencia hay entre generar un "Audio Overview", un "Video Overview" y un
+mapa mental a partir de las mismas fuentes. Recomiéndame cuál usar para
+repasar antes de un examen y cuál para preparar una clase.
+</code></pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Combina varios formatos para la misma unidad didáctica</p>
+<p>Un flujo habitual para un docente: sube los apuntes de la unidad → genera primero una <strong>guía de estudio</strong> para revisar que no falte nada → genera un <strong>mapa mental</strong> para la pizarra el primer día de clase → genera un <strong>Audio Overview</strong> para que el alumnado repase de camino a casa antes del examen.</p>
+</div>
+<h2 id="preguntas-frecuentes">Preguntas frecuentes</h2>
+<div class="admonition question">
+<p class="admonition-title">¿NotebookLM sustituye a Gemini o a ChatGPT?</p>
+<p>No, son complementarios. Gemini/ChatGPT responden con conocimiento general (y pueden inventar si no saben algo); NotebookLM responde solo con lo que hay en tus fuentes, lo que lo hace mucho más fiable para trabajar con apuntes propios, pero no sirve para preguntas generales fuera de esas fuentes.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">¿Puedo compartir un cuaderno con mis compañeros de departamento?</p>
+<p>Sí, igual que un documento de Drive: desde el cuaderno, usa la opción de compartir y añade las cuentas de correo de las personas con las que quieras colaborar, o genera un enlace.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">¿El plan gratuito tiene límites?</p>
+<p>Sí. NotebookLM Plus (incluido en Google AI Pro/Ultra) amplía el número de cuadernos, de fuentes por cuaderno y de generaciones de Audio/Video Overview al día respecto al plan gratuito.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">¿Puedo cambiar el idioma del Audio Overview?</p>
+<p>Sí, se puede generar en varios idiomas distintos al de las fuentes originales; es útil si tus apuntes están en español pero quieres un repaso en inglés para practicar vocabulario técnico, o al revés.</p>
+</div>
+<h2 id="limitaciones-a-tener-en-cuenta">Limitaciones a tener en cuenta</h2>
+<ul>
+<li><strong>No sustituye la verificación humana.</strong> Aunque cita las fuentes, conviene revisar que la cita es fiel al documento original, especialmente en temas técnicos donde un matiz mal interpretado puede llevar a un error de procedimiento.</li>
+<li><strong>Los Audio/Video Overview son generados, no grabados por personas.</strong> El tono es natural pero las voces son sintéticas; avisa a tu alumnado de esto si vas a compartir el audio como material oficial.</li>
+<li><strong>Los cuadernos compartidos heredan los permisos de Drive.</strong> Si revocas el acceso a un documento de Drive usado como fuente, la fuente deja de actualizarse en el cuaderno, aunque el contenido ya generado (resúmenes, audio) puede seguir existiendo.</li>
+</ul>
+<h2 id="recursos">Recursos</h2>
+<ul>
+<li><a href="https://notebooklm.google/" target="_blank">NotebookLM (web oficial)</a></li>
+<li><a href="https://godofprompt.ai/blog/15-notebooklm-prompts-that-actually-work-copy-paste-done/" target="_blank">15 prompts de NotebookLM que funcionan de verdad (God of Prompt)</a></li>
+<li><a href="https://academy.techpresso.co/prompts/notebooklm-prompts" target="_blank">30 mejores prompts de NotebookLM 2026 (Techpresso)</a></li>
+<li><a href="https://www.analyticsvidhya.com/blog/2026/01/notebooklm-super-prompts-for-pro-level-productivity/" target="_blank">10 super prompts de NotebookLM para productividad (Analytics Vidhya)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

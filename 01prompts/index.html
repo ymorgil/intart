@@ -1,0 +1,910 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ymorgil.github.io/intart/01prompts/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../02claude/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Prompts - 🤖 Inteligencia Artificial (ymorgil)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prompting" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="🤖 Inteligencia Artificial (ymorgil)" class="md-header__button md-logo" aria-label="🤖 Inteligencia Artificial (ymorgil)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            🤖 Inteligencia Artificial (ymorgil)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Prompts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo" aria-label="Modo oscuro" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="green" aria-label="Modo claro" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="🤖 Inteligencia Artificial (ymorgil)" class="md-nav__button md-logo" aria-label="🤖 Inteligencia Artificial (ymorgil)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    🤖 Inteligencia Artificial (ymorgil)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompts
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#trucos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trucos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plantilla-y-ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plantilla y ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mis-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mis prompts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mis prompts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creador-de-contenido-big-data-aplicado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creador de contenido Big Data Aplicado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolucion-de-dudas-biu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolución de dudas BIU
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02claude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03gemini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gemini
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04gpt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat GPT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05notebook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NotebookLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06moodle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moodle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07imagenes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imágenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08skills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skills
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#trucos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trucos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plantilla-y-ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plantilla y ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mis-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mis prompts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mis prompts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creador-de-contenido-big-data-aplicado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creador de contenido Big Data Aplicado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolucion-de-dudas-biu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolución de dudas BIU
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="prompting">Prompting</h1>
+<p>Un <strong>prompt</strong> es la instrucción que le das a una IA para indicarle qué quieres que haga. Puede ser una pregunta, una orden o la descripción de una tarea. La calidad de la respuesta depende, sobre todo, de lo clara que sea esa instrucción. La mayoría de los problemas al usar una IA no vienen del modelo, sino de prompts vagos, incompletos o ambiguos. A continuación, se muestran los <strong>elementos clave</strong> que ha de tener un buen prompt:</p>
+<ol>
+<li>🎭<strong>ROL</strong> Asignar un rol o persona ayuda a fijar el tono, el punto de vista y el nivel de detalle de la respuesta.  (ej., "Actúa como un experto en marketing...").</li>
+<li>📋<strong>Contexto</strong>: Añade detalles sobre tu público, tu objetivo o la situación (ej., "Dirigido a jóvenes emprendedores...").</li>
+<li>🎯<strong>Tarea/Objetivo</strong>: Define qué tiene que hacer de forma concisa y directa (ej., "Redacta un post para LinkedIn...").</li>
+<li>📊<strong>Formato</strong>: Indica cómo quieres la salida (ej., "Entrégalo en una lista con viñetas y negritas").</li>
+<li>⚙️<strong>Restricciones</strong>: Limita el resultado (ej., "Máximo 3 párrafos, tono persuasivo, sin usar lenguaje técnico").<div class="highlight"><pre><span></span><code>Actúa como [ROL]. 
+El resultado de esta tarea está dirigido a [CONTEXTO].
+Realiza [TAREA].
+Genera la respuesta en formato [FORMATO]. 
+Ten en cuenta las siguientes condiciones: [RESTRICCIONES].
+</code></pre></div>
+<p><code>Actúa como un [especifica el rol exacto, por ejemplo: Copywriter experto en SEO o Mentor de programación]. 
+El resultado de esta tarea está dirigido a [describe a tu audiencia y su situación actual, por ejemplo: emprendedores que quieren lanzar su primer negocio sin presupuesto].
+Tu objetivo principal es [describe detalladamente qué debe hacer la IA, por ejemplo: redactar un correo de ventas atractivo para promocionar un nuevo servicio].
+Para la entrega, genera la respuesta utilizando [especifica el formato visual que deseas, por ejemplo: una estructura dividida con subtítulos claros y párrafos cortos].
+Para asegurar la calidad del resultado, debes cumplir estrictamente las siguientes directrices: mantén un tono [indica el tono, por ejemplo: persuasivo pero natural], evita por completo [menciona lo que quieres evitar, por ejemplo: palabras demasiado técnicas o jerga compleja] y limita la respuesta a un máximo de [indica el límite, por ejemplo: 300 palabras].</code> </p>
+</li>
+</ol>
+<p><strong>OTROS COMPONENTES</strong></p>
+<ul>
+<li><strong>Dar ejemplos (few-shot)</strong>: mostrar 1-2 ejemplos de lo que esperas como respuesta mejora mucho la precisión, sobre todo en tareas de clasificación, extracción de datos o formatos muy concretos. (ej., "Clasifica el sentimiento de estas frases como positivo o negativo. Ejemplo: "Me encantó el servicio" → positivo.)</li>
+<li><strong>Pedir razonamiento paso a paso</strong>: en tareas complejas (cálculos, análisis, decisiones con varios factores), pedir que la IA explique su razonamiento antes de dar la respuesta final reduce errores. (ej., "Antes de responder, enumera los factores a tener en cuenta y luego da tu conclusión.")</li>
+<li><strong>Dividir tareas complejas en partes</strong>: si la tarea es muy grande (un informe largo, un proyecto completo), es mejor pedirla en pasos en lugar de en un único prompt gigante.</li>
+<li><strong>Iterar</strong>: rara vez el primer prompt es el definitivo. Si la respuesta no es la esperada, ajusta el prompt en lugar de descartar la herramienta.</li>
+</ul>
+<p><strong>ERRORES HABITUALES</strong></p>
+<ul>
+<li>
+<p><strong>Instrucciones demasiado genéricas</strong></p>
+<ul>
+<li>❌ "Háblame de Linux."</li>
+<li>✅ "Explica qué es Linux en tres párrafos y compáralo con Windows, para alguien que solo ha usado Windows."</li>
+</ul>
+</li>
+<li>
+<p><strong>No indicar el público objetivo</strong></p>
+<ul>
+<li>❌ "Explícame Kubernetes."</li>
+<li>✅ "Explica Kubernetes para alguien que nunca ha trabajado con contenedores."</li>
+</ul>
+</li>
+<li>
+<p><strong>No especificar el formato</strong></p>
+<ul>
+<li>❌ "Crea información sobre Proxmox."</li>
+<li>✅ "Crea una guía sobre Proxmox en Markdown, con títulos y subtítulos."</li>
+</ul>
+</li>
+</ul>
+<h2 id="trucos">Trucos</h2>
+<p><strong>Reglas de oro:</strong> cuanto más específico seas en <em>qué</em>, <em>cómo</em> y <em>en qué formato</em> querés la respuesta, menos vueltas y menos tokens necesitarás <code>(token: unidad mínima de texto que un modelo de lenguaje procesa; el uso y costo se miden en tokens)</code>. Para reducir el gasto de tokens debes cumplir:</p>
+<ol>
+<li><strong>Sé breve en el prompt y pedí brevedad en la respuesta.</strong> Frases como "responde en máximo 3 líneas" o "sin introducción ni conclusión" evitan relleno.</li>
+<li><strong>No pegues documentos enteros si solo necesitás una parte.</strong> Recortá el fragmento relevante antes de pegarlo.</li>
+<li><strong>Evitá pedir que el modelo repita tu pregunta o el contexto</strong> antes de responder.</li>
+<li><strong>Usá listas/tablas en vez de prosa</strong> cuando el contenido es comparativo o enumerable: una tabla suele ocupar menos tokens que párrafos explicando lo mismo.</li>
+<li><strong>Desactivá el "modo pensamiento extendido" (thinking/reasoning) cuando no lo necesites.</strong> Sirve para matemáticas o lógica compleja, pero en tareas simples solo añade tokens de razonamiento que no ves pero que sí se cobran/consumen cuota.</li>
+<li><strong>Aprovechá las instrucciones persistentes (system prompt / "Preferencias" / "Proyectos").</strong> Si siempre pedís el mismo tono o formato, configuralo una vez en los ajustes en lugar de repetirlo en cada mensaje.</li>
+<li><strong>Empezá un chat nuevo cuando cambies de tema.</strong> El historial de la conversación se reenvía completo en cada turno; una conversación muy larga hace que cada respuesta nueva sea más cara en tokens, aunque tu pregunta sea corta.</li>
+<li><strong>Subí el archivo en vez de pegar el texto copiado</strong>, cuando la plataforma lo permita: muchas herramientas procesan el archivo de forma más eficiente que un bloque de texto pegado.</li>
+<li><strong>Pedí una sola iteración bien especificada</strong> en vez de "dame algo y lo vamos afinando": cada ida y vuelta de corrección consume tokens nuevos sobre todo el historial anterior.</li>
+<li><strong>Usá el modelo más liviano disponible para tareas simples</strong> (clasificar, traducir, resumir cortito) y reservá el modelo más potente solo para lo que realmente lo necesita.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Ejemplo de prompt "caro" (evitar)</th>
+<th>Versión "barata" equivalente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hola, quería pedirte por favor si podrías ayudarme a resumir este texto tan largo que te voy a pegar a continuación, no hace falta que sea muy formal, gracias de antemano: [texto pegado completo de 5 páginas]</td>
+<td>Resume en 5 viñetas, sin introducción: [solo el párrafo o sección relevante]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PLANES GRATUITOS</strong></p>
+<ol>
+<li><strong>Reservá el modelo "grande/pro" del plan gratuito para lo que realmente lo necesita.</strong> Casi todas las plataformas dan acceso limitado al modelo top y acceso más amplio al modelo liviano (ej. Haiku, Flash, Instant). Usá el liviano para tareas rutinarias y guardá las consultas al modelo potente para lo complejo.</li>
+<li><strong>Planificá el prompt antes de enviarlo.</strong> En el plan gratuito, cada mensaje cuenta; escribir el prompt completo (rol + tarea + formato) de una sola vez evita "gastar" 3-4 mensajes corrigiendo lo que pediste mal.</li>
+<li><strong>Dividí tareas grandes en partes chicas y bien delimitadas</strong>, en lugar de pedir "hazme todo el proyecto" en un solo mensaje: las respuestas gigantes consumen más cuota y tienen más probabilidad de cortarse.</li>
+<li><strong>Aprovechá los reinicios de cuota.</strong> Los planes gratuitos suelen restablecer el límite de mensajes cada pocas horas o cada día: organizá las tareas que más importan para el momento justo después del reinicio.</li>
+<li><strong>Limpiá o iniciá conversaciones nuevas seguido.</strong> Un chat que arrastra mucho historial consume más "presupuesto" por turno que uno corto y enfocado.</li>
+<li><strong>Combiná herramientas gratuitas según la tarea</strong>, ya que cada plataforma reparte distinto el acceso a sus modelos: por ejemplo, usar una para borradores rápidos y otra para la versión final, repartiendo el consumo entre ambas.</li>
+<li><strong>Guardá plantillas propias</strong> (en notas, en un documento, o en la función de "instrucciones personalizadas" si la plataforma la ofrece) para no reescribir cada vez el mismo contexto.</li>
+</ol>
+<p><strong>Checklist rápida antes de enviar un prompt</strong></p>
+<div class="highlight"><pre><span></span><code>[ ] ¿Definí el rol o contexto necesario?
+[ ] ¿La tarea está en un verbo claro (resume, clasifica, genera, ...)?
+[ ] ¿Especifiqué el formato de salida (lista, tabla, JSON, párrafo corto)?
+[ ] ¿Puse un límite de longitud?
+[ ] ¿Pegué solo el fragmento de texto necesario, no todo el documento?
+[ ] ¿Elegí el modelo más liviano que pueda cumplir la tarea?
+</code></pre></div>
+<h2 id="plantilla-y-ejemplos">Plantilla y ejemplos</h2>
+<p>A continuación una plantilla base para estructurar prompts de forma clara y efectiva. No es una fórmula rígida: se puede adaptar a estilo y necesidades. Luego algunos ejemplos prompts</p>
+<p><strong>Rol:</strong> Actúa como [rol/experto específico, ej. "editor técnico con 10 años de experiencia"].</p>
+<p><strong>Contexto:</strong> [Breve descripción de la situación, proyecto o antecedentes relevantes].</p>
+<p><strong>Audiencia:</strong> Está dirigido a [público objetivo, ej. "clientes sin conocimientos técnicos"]</p>
+<p><strong>Objetivo:</strong> Quiero que [petición u objetivo principal] con los siguientes requisitos:
+- [Requisito 1]
+- [Requisito 2]
+- [Requisito 3]</p>
+<p><strong>Tono y estilo:</strong> [Ej. formal, cercano, técnico, persuasivo].</p>
+<p><strong>Formato de salida:</strong> Genera la respuesta en formato [markdown / tabla / lista / código, etc.]. [Especificar si se permiten tablas, imágenes, longitud aproximada, etc.].</p>
+<p><strong>Restricciones:</strong> [Qué evitar, límites de extensión, cosas que NO debe incluir].</p>
+<p><strong>Reglas de interacción:</strong></p>
+<ol>
+<li>Antes de responder, hazme preguntas si falta información o hay dudas, no asumas datos: pregunta primero.</li>
+<li>Si hay más de una interpretación posible, solicita aclaraciones.</li>
+<li>No generes una solución definitiva hasta que no confirmes las restricciones.</li>
+</ol>
+<hr style="height: 1px; background-color: #3aa">
+
+<p>Diseña un menú semanal vegetariano. Está dirigido a una persona que empieza a cocinar. Genera la respuesta en una tabla por días. Ten en cuenta que debe incluir ingredientes fáciles de encontrar y tiempos de preparación cortos.</p>
+<hr style="height: 1px; background-color: #3aa">
+
+<p>Analiza la situación desde múltiples perspectivas, identifica oportunidades, riesgos, errores potenciales y aspectos que podría no haber considerado. Si existen varias soluciones, compáralas y clasifícalas de mejor a peor explicando sus ventajas, desventajas y probabilidad de éxito. </p>
+<p>Recomienda la mejor opción y desarrolla un plan de acción paso a paso con ejemplos concretos, recomendaciones prácticas y mejoras avanzadas. Prioriza la precisión, la claridad y la utilidad. No te limites a responder lo que se solicita; añade información relevante que aporte más valor al resultado final. Si falta información importante, realiza las preguntas mínimas necesarias; en caso contrario, haz las suposiciones más razonables e indícalas antes de continuar.</p>
+<hr style="height: 1px; background-color: #3aa">
+
+<p>A partir de ahora, deja de ser complaciente y actúa como mi asesor brutalmente honesto, de alto nivel, y como mi espejo. No me valides. No endulces la verdad. No me halagues. Desafía mi forma de pensar, cuestiona mis suposiciones y expón los puntos ciegos que estoy evitando. Sé directo, racional y sin filtros. Si mi razonamiento es débil, desmenúzalo y muéstrame por qué. Si me estoy engañando o mintiéndome a mí mismo, señálalo. Si estoy evitando algo incómodo o perdiendo el tiempo, dilo y explícame el costo de oportunidad. Mira mi situación con total objetividad y profundidad estratégica. Muéstrame dónde estoy poniendo excusas, jugando a lo pequeño o subestimando riesgos/esfuerzos. Luego dame un plan preciso y priorizado sobre qué cambiar en mi pensamiento, acciones o mentalidad para llegar al siguiente nivel. No te guardes nada. Trátame como alguien cuyo crecimiento depende de escuchar la verdad, no de sentirse cómodo. Cuando sea posible, fundamenta tus respuestas en la verdad personal que percibas entre mis palabras.</p>
+<h2 id="mis-prompts">Mis prompts</h2>
+<h3 id="creador-de-contenido-big-data-aplicado">Creador de contenido Big Data Aplicado</h3>
+<div class="highlight"><pre><span></span><code># 1. Rol del modelo
+Actúa como un Asistente Académico Senior experto en Big Data y Pedagogía para Educación Superior Técnica. 
+Tu perfil combina un conocimiento técnico profundo sobre arquitecturas de datos, procesamiento masivo y analítica, con la capacidad de estructurar clases magistrales. 
+Tu objetivo es ayudarme a preparar material docente de alto nivel.
+
+# 2. Contexto
+Soy profesor de informática especializado en Big Data.
+- **La asignatura:** "Big Data Aplicado" dentro de un Curso de Especialización.
+- **La audiencia:** Estudiantes adultos que ya poseen títulos de Técnico Superior en Informática.Tienen base técnica y están aprendiendo a aplicar tecnologías de Big Data en entornos productivos.
+- **Entrada:** Te proporcionaré un tema específico, un listado de puntos clave o subiré un documento/presentación técnica (PDF/PPT).
+- **Uso:** El texto generado será el contenido de una presentación de clase (formato 16:9).
+
+# 3. Tareas específicas
+Debes seguir este flujo de trabajo estrictamente:
+
+1.  **Análisis preliminar:** Si te adjunto un documento, léelo en su totalidad. Realiza un resumen mental (interno, no me lo muestres) para asegurar que comprendes la totalidad del tema.
+2.  **Validación (Paso Crítico):** Antes de generar cualquier diapositiva, si detectas lagunas en la información o ambigüedades en mi petición, **hazme las preguntas necesarias**. Si no hay dudas, procede al paso 3.
+3.  **Estructuración:** Organiza la información en exactamente **7 diapositivas** lógicas que cubran todo el contenido del documento o tema proporcionado.
+4.  **Generación de contenido:** Redacta el título y el cuerpo de texto para cada diapositiva. El texto debe ser explicativo y denso, diseñado para ser leído y estudiado, no solo como soporte visual.
+
+# 4. Formato de salida
+La respuesta debe seguir estrictamente esta estructura para cada una de las 7 diapositivas:
+
+---
+**Diapositiva [N]**
+**Título:** [Título técnico y descriptivo]
+**Contenido:**
+[Párrafos de texto explicativo, si fuese necesario añadir alguna lista. Aquí debes desarrollar los conceptos con profundidad técnica. El espacio está pensado para formato 16:9, así que aprovecha el ancho para explicar el "porqué" y el "cómo".]
+---
+
+# 5. Restricciones y estilo
+- **Longitud:** Cada diapositiva debe tener un contenido de texto en torno a las **100 palabras**.
+- **Profundidad:** Evita frases sueltas, eslóganes. Redactados con vocabulario técnico preciso.
+- **Consistencia:** Si te paso un documento, asegúrate de que el esquema de las 7 diapositivas abarca todos los puntos clave del archivo original.
+- **Estilo visual:** Ten en cuenta que algunas diapositivas llevarán fotos, así que el texto debe complementar la parte visual sin depender de ella.
+- **Tono:** Académico, profesional y dirigido a colegas técnicos (adultos), no a niños.
+</code></pre></div>
+<h3 id="resolucion-de-dudas-biu">Resolución de dudas BIU</h3>
+<div class="highlight"><pre><span></span><code># 1. Rol del modelo
+Actúa como un Arquitecto de Datos Senior y compañero docente. Eres un experto en Big Data que habla "de tú a tú" con otro experto (yo). 
+No necesitas explicarme conceptos básicos de informática, pero sí profundizar en matices complejos de arquitecturas o herramientas específicas. 
+Además, tienes una gran capacidad de síntesis pedagógica para traducir esos conceptos complejos en material didáctico.
+
+# 2. Contexto
+Yo soy profesor de informática (especialista en Big Data).
+- **Situación:** Estoy preparando una clase y tengo una duda específica o quiero refinar cómo explicar un concepto complejo.
+- **Audiencia final:** Mis alumnos del curso de especialización (adultos con titulación técnica previa). Entienden código y sistemas, pero están aprendiendo la aplicación específica en Big Data.
+- **Entrada:** Te escribiré una duda, un concepto o una comparativa técnica.
+
+# 3. Tareas específicas
+1.  **Resolución de la duda (Nivel Experto):** Explícame el concepto como lo harías con un compañero de trabajo. Ve al grano, usa terminología técnica precisa y, si aporta valor, incluye pequeños ejemplos de código (Python/Scala/SQL) o esquemas en texto.
+2.  **Generación de recurso didáctico:** Una vez aclarada la duda, redacta el contenido para **UNA sola diapositiva** que yo pueda proyectar en clase para explicar este concepto a los alumnos de forma comprensible pero rigurosa.
+
+# 4. Formato de salida
+Estructura la respuesta en dos bloques claramente diferenciados:
+
+---
+### 💬 Aclaración entre colegas
+[Aquí tu explicación técnica para mí. Tono profesional, directo y colaborativo. Incluye ejemplos breves si son necesarios.]
+
+### 🖥️ Diapositiva para clase
+**Título:** [Título atractivo y descriptivo del concepto]
+**Texto de la diapositiva:**
+[Redacción del contenido para la diapositiva. Debe ser un texto cohesionado (aprox. 100 palabras) que explique el concepto, el caso de uso o la ventaja técnica. Evita el exceso de viñetas; prioriza la narrativa técnica.]
+---
+
+# 5. Restricciones y estilo
+- **Estilo de la explicación (Parte 1):** No seas condescendiente. Asume que sé de lo que hablo. Céntrate en las diferencias sutiles, rendimiento o casos de uso en producción.
+- **Estilo de la diapositiva (Parte 2):** Lenguaje académico apropiado para Técnicos Superiores. La diapositiva debe ser capaz de "sostenerse sola" si el alumno la lee después de clase. Formato pensado para pantalla 16:9.
+- **Extensión:** La diapositiva debe rondar las 100 palabras para no saturar visualmente, pero explicando bien el concepto.
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

@@ -1,0 +1,1966 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ymorgil.github.io/intart/02claude/">
+      
+      
+        <link rel="prev" href="../01prompts/">
+      
+      
+        <link rel="next" href="../03gemini/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Claude - 🤖 Inteligencia Artificial (ymorgil)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-anthropic" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="🤖 Inteligencia Artificial (ymorgil)" class="md-header__button md-logo" aria-label="🤖 Inteligencia Artificial (ymorgil)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            🤖 Inteligencia Artificial (ymorgil)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Claude
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo" aria-label="Modo oscuro" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="green" aria-label="Modo claro" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="🤖 Inteligencia Artificial (ymorgil)" class="md-nav__button md-logo" aria-label="🤖 Inteligencia Artificial (ymorgil)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    🤖 Inteligencia Artificial (ymorgil)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#claude-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claude WEB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modalidades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plan-de-pago" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan de pago
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plan de pago">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Token
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skills-habilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills (habilidades)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proyectos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proyectos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artefactos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Artefactos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-jul" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁📁📁 3 jul
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personalizar-customize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personalizar (Customize)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-el-apartado-personalizar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué es el apartado Personalizar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mecanismo-tecnico-de-cada-capa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mecanismo técnico de cada capa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo práctico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-sacarles-el-maximo-rendimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo sacarles el máximo rendimiento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-llevar-a-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para llevar a clase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Recursos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ## 📁📁📁
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="## 📁📁📁">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22-zona-de-conversacion-centro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Zona de conversación (centro)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-el-icono-de-herramientas-debajo-de-la-caja-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 El icono de herramientas (debajo de la caja de texto)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-configuracion-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Configuración (⚙️ Settings)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-creacion-de-agentes-y-asistentes-en-claude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Creación de agentes y asistentes en Claude
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Creación de agentes y asistentes en Claude">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-sin-programar-los-proyectos-de-claudeai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Sin programar: los Proyectos de Claude.ai
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-para-ir-mas-alla-agentes-de-programacion-con-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Para ir más allá: agentes de programación con Claude Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-las-skills-habilidades-que-son-y-como-se-usan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Las Skills (habilidades): qué son y cómo se usan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Las Skills (habilidades): qué son y cómo se usan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-que-es-exactamente-una-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 ¿Qué es exactamente una Skill?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-como-funcionan-internamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 ¿Cómo funcionan internamente?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-como-usar-una-skill-ya-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Cómo usar una Skill ya existente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-como-crear-tu-propia-skill-sin-programar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Cómo crear tu propia Skill (sin programar)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-ejemplos-practicos-para-un-aula-de-sistemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Ejemplos prácticos para un aula de Sistemas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-instalacion-de-claude-en-el-equipo-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Instalación de Claude en el equipo local
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Instalación de Claude en el equipo local">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-primera-aclaracion-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Primera aclaración importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-pasos-para-instalar-la-app-de-escritorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Pasos para instalar la app de escritorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-ventajas-de-usar-la-app-de-escritorio-frente-a-la-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Ventajas de usar la app de escritorio frente a la web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-como-afecta-esto-a-tu-equipo-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 ¿Cómo afecta esto a tu equipo real?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-glosario-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Glosario rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-preguntas-frecuentes-faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Preguntas frecuentes (FAQ)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03gemini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gemini
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04gpt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat GPT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05notebook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NotebookLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06moodle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moodle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07imagenes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imágenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08skills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skills
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#claude-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claude WEB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modalidades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plan-de-pago" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan de pago
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plan de pago">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Token
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skills-habilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills (habilidades)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proyectos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proyectos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artefactos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Artefactos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-jul" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁📁📁 3 jul
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personalizar-customize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personalizar (Customize)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-el-apartado-personalizar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué es el apartado Personalizar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mecanismo-tecnico-de-cada-capa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mecanismo técnico de cada capa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo práctico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-sacarles-el-maximo-rendimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo sacarles el máximo rendimiento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-llevar-a-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para llevar a clase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Recursos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ## 📁📁📁
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="## 📁📁📁">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22-zona-de-conversacion-centro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Zona de conversación (centro)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-el-icono-de-herramientas-debajo-de-la-caja-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 El icono de herramientas (debajo de la caja de texto)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-configuracion-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Configuración (⚙️ Settings)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-creacion-de-agentes-y-asistentes-en-claude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Creación de agentes y asistentes en Claude
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Creación de agentes y asistentes en Claude">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-sin-programar-los-proyectos-de-claudeai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Sin programar: los Proyectos de Claude.ai
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-para-ir-mas-alla-agentes-de-programacion-con-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Para ir más allá: agentes de programación con Claude Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-las-skills-habilidades-que-son-y-como-se-usan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Las Skills (habilidades): qué son y cómo se usan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Las Skills (habilidades): qué son y cómo se usan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-que-es-exactamente-una-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 ¿Qué es exactamente una Skill?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-como-funcionan-internamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 ¿Cómo funcionan internamente?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-como-usar-una-skill-ya-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Cómo usar una Skill ya existente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-como-crear-tu-propia-skill-sin-programar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Cómo crear tu propia Skill (sin programar)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-ejemplos-practicos-para-un-aula-de-sistemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Ejemplos prácticos para un aula de Sistemas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-instalacion-de-claude-en-el-equipo-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Instalación de Claude en el equipo local
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Instalación de Claude en el equipo local">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-primera-aclaracion-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Primera aclaración importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-pasos-para-instalar-la-app-de-escritorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Pasos para instalar la app de escritorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-ventajas-de-usar-la-app-de-escritorio-frente-a-la-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Ventajas de usar la app de escritorio frente a la web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-como-afecta-esto-a-tu-equipo-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 ¿Cómo afecta esto a tu equipo real?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-glosario-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Glosario rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-preguntas-frecuentes-faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Preguntas frecuentes (FAQ)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="claude-anthropic">📘 Claude (Anthropic)</h1>
+<blockquote>
+<p>Documento actualizado a <strong>julio de 2026</strong>. Como los modelos, precios y funciones de Claude cambian con frecuencia, conviene revisar periódicamente para confirmar que los datos siguen vigentes.</p>
+</blockquote>
+<h2 id="claude-web">Claude  <a href="https://claude.ai/new" target="_blank">WEB</a></h2>
+<p>Asistente de inteligencia artificial creado por la empresa <strong>Anthropic</strong>. Funciona de forma parecida a un chat: tú escribes una pregunta o una tarea (un "prompt") y Claude te responde con texto, código, documentos, imágenes esquemáticas o incluso acciones automatizadas, según lo que le pidas.</p>
+<blockquote>
+<p>💡 <strong>Importante</strong> Claude <strong>no es un programa que "vive" dentro de tu ordenador</strong>. El modelo se ejecuta en los servidores de Anthropic (nube). Lo que instalamos en nuestro equipo —ya sea el navegador, la app de escritorio o una herramienta como Claude Code— es solo una <strong>puerta de entrada</strong> para comunicarnos con esos servidores.</p>
+</blockquote>
+<p><strong>FORMATOS</strong></p>
+<table>
+<thead>
+<tr>
+<th>Producto</th>
+<th>Qué es y para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claude.ai</strong></td>
+<td>Un asistente de chat general basado en conversación. Ideal para redactar textos, analizar archivos adjuntos, generar gráficos y responder consultas en tiempo real.</td>
+</tr>
+<tr>
+<td><strong>App de escritorio</strong></td>
+<td>La versión instalada en Windows/Mac que ofrece las mismas funciones del chat web, pero integrada en el sistema operativo del computador para un acceso más cómodo.</td>
+</tr>
+<tr>
+<td><strong>App móvil</strong></td>
+<td>La versión adaptada para teléfonos celulares que permite usar las funciones del chat a través de texto o mediante dictado por voz estés donde estés.</td>
+</tr>
+<tr>
+<td><strong>Claude Cowork</strong></td>
+<td>Un agente autónomo integrado en la <strong>app de escritorio</strong> diseñado para trabajadores no técnicos. Se conecta a tus carpetas locales para realizar tareas complejas de múltiples pasos por ti, como organizar archivos masivos, procesar datos (OCR) y automatizar flujos de trabajo en bucle.</td>
+</tr>
+<tr>
+<td><strong>Claude Code</strong></td>
+<td>Un agente enfocado en desarrolladores que se ejecuta desde la terminal. Está especializado en programar de forma autónoma, buscar y corregir errores, y gestionar proyectos de código complejos.</td>
+</tr>
+<tr>
+<td><strong>API de Claude</strong></td>
+<td>Una interfaz técnica diseñada para programadores que permite conectar los modelos de inteligencia artificial de Claude directamente dentro de aplicaciones y sistemas propios.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>App de escritorio</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/img/cla/cla-01.png" data-desc-position="bottom"><img alt="Claude" src="../assets/img/cla/cla-01.png"></a> </p>
+<h2 id="modelos">Modelos</h2>
+<p>Anthropic organiza sus modelos en niveles (tiers) según velocidad, coste e inteligencia: <strong>Haiku</strong> (rápido/económico), <strong>Sonnet</strong> (equilibrado), <strong>Opus</strong> (máxima capacidad "clásica") y, por encima de Opus, el nuevo nivel <strong>Mythos</strong>, cuya versión de uso general se llama <strong>Fable 5</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>Mes/Año de salida</th>
+<th>Uso principal</th>
+<th>Tokens de contexto / Precio (por millón de tokens, entrada-salida)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mythos 5</strong></td>
+<td>9 de junio de 2026</td>
+<td>Acceso restringido a organizaciones de confianza (Project Glasswing), orientado a ciberseguridad defensiva; no autoservicio</td>
+<td>No disponible públicamente (contacto directo con Anthropic/AWS/Google Cloud)</td>
+</tr>
+<tr>
+<td><strong>Fable 5</strong> (nivel Mythos, versión pública)</td>
+<td>9 de junio de 2026 (restablecido el 1 de julio de 2026)</td>
+<td>El modelo más potente disponible de forma general: tareas que requieren la máxima capacidad, contextos muy largos, trabajo agente exigente</td>
+<td>Ventana de contexto de 1M de tokens · <cite index="10-1">Precio de 10,00 $ / 50,00 $ por millón de tokens</cite></td>
+</tr>
+<tr>
+<td><strong>Opus 4.8</strong></td>
+<td>Mayo 2026</td>
+<td>Razonamiento complejo, programación agente de alto nivel, tareas largas y autónomas, uso de ordenador (computer use)</td>
+<td><cite index="5-1">Ventana de contexto de 1M de tokens</cite> · <cite index="10-1">Precio de 5,00 $ / 25,00 $ por millón de tokens</cite></td>
+</tr>
+<tr>
+<td><strong>Sonnet 4.6</strong></td>
+<td>Febrero 2026</td>
+<td>Uso diario equilibrado: programación, redacción, análisis, flujos de trabajo de oficina; es el "punto dulce" coste-rendimiento</td>
+<td><cite index="5-1">Ventana de contexto de 1M de tokens</cite> · <cite index="9-1">Precio de 3,00 $ / 15,00 $ por millón de tokens</cite></td>
+</tr>
+<tr>
+<td><strong>Haiku 4.5</strong></td>
+<td>Octubre 2025</td>
+<td>Tareas rápidas y de gran volumen: clasificación, etiquetado, enrutamiento, chatbots, primeras versiones de código</td>
+<td><cite index="5-1">Ventana de contexto de 200K tokens</cite> · <cite index="9-1">Precio de 1,00 $ / 5,00 $ por millón de tokens de entrada/salida</cite></td>
+</tr>
+</tbody>
+</table>
+<h2 id="modalidades">Modalidades</h2>
+<p><strong>Chat, Cowork y Code no son modelos de IA</strong>, son tres formas distintas de interactuar con los mismos modelos (Haiku, Sonnet, Opus...), cada una pensada para un tipo de trabajo diferente.</p>
+<table>
+<thead>
+<tr>
+<th>Superficie</th>
+<th>Qué es</th>
+<th>Para qué sirve</th>
+<th>Dónde está disponible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Chat</strong></td>
+<td>La app conversacional clásica de Claude</td>
+<td>Preguntas puntuales, redacción, análisis, lluvia de ideas; tú guías la conversación turno a turno</td>
+<td>Web, móvil y escritorio; disponible en cualquier plan</td>
+</tr>
+<tr>
+<td><strong>Cowork</strong></td>
+<td>Agente autónomo para trabajo de oficina/conocimiento</td>
+<td>Le das una carpeta y describes un resultado; planifica y ejecuta los pasos, y te entrega un producto terminado en lugar de instrucciones (informes, hojas de cálculo, investigación, acciones en el navegador)</td>
+<td>Solo en la app de escritorio (<strong>Claude Desktop</strong>); requiere un plan de <strong>pago</strong> (Pro/Max/Team/Enterprise)</td>
+</tr>
+<tr>
+<td><strong>Code</strong></td>
+<td>Entorno de programación agente</td>
+<td>Se ejecuta en tu terminal o IDE junto a tus herramientas de desarrollo habituales; entiende tu código, ejecuta pruebas, hace commits y usa herramientas como Git o servidores MCP</td>
+<td>Terminal, VS Code, JetBrains y también una pestaña dentro de Claude Desktop; incluido en los <strong>planes Pro y Max</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Claude Chat es para pensar, Cowork es para delegar tareas de oficina, y Code es para construir/depurar software</strong>. Comparten el mismo "motor", pero resuelven trabajos distintos: Code vive en la terminal para quien programa, mientras que Cowork vive en el escritorio para quien hace trabajo de conocimiento sin usar la línea de comandos. No es necesario elegir uno solo: muchos usuarios avanzados combinan los tres según la tarea del momento.</p>
+</blockquote>
+<h2 id="plan-de-pago">Plan de pago</h2>
+<p>Actualmente una cuenta <strong>gratuita</strong>, incluye funciones potentes como <strong>Proyectos</strong>, <strong>Artefactos</strong>, memoria entre chats y, si activas la ejecución de código, incluso Skills — aunque con límites de uso y con acceso limitado a los modelos más avanzados (en el plan gratuito normalmente trabajas con <strong>Sonnet</strong>, mientras que <strong>Opus</strong> y los niveles superiores quedan reservados a los planes de pago). </p>
+<p>Para pasarte a un plan de pago entras en la app, pulsas tus iniciales en la esquina inferior izquierda, vas a "Settings" (Configuración) → "Billing" (Facturación) y eliges "Upgrade plan". </p>
+<ul>
+<li>El plan más habitual para un usuario individual es <strong>Pro</strong>, que cuesta 15€ al mes, y que ya te da acceso a Opus, a un límite de uso semanal más amplio y a Claude Code incluido en la misma suscripción. </li>
+<li>El plan <strong>Max</strong>, disponible en dos niveles, <strong>Max 5x</strong> (unos 90€/mes, pensado para uso diario en proyectos medianos) y <strong>Max 20x</strong> (unos 180€/mes, para usuarios muy intensivos), que multiplican el uso disponible respecto a Pro e incluyen acceso prioritario a Cowork y a las novedades.</li>
+</ul>
+<p>Puedes cancelarlo cuando quieras sin penalización, manteniendo el acceso hasta el final del periodo ya pagado. Si en algún momento necesitas más uso del que tu plan permite, Anthropic ofrece la opción de activar "<strong>créditos de uso</strong>" (usage credits) que se cobran a precio de API una vez agotado el límite incluido en tu suscripción, algo especialmente relevante si usas Claude Code de forma intensiva.</p>
+<h3 id="token">Token</h3>
+<p>Unidad de medida básica que utilizan los modelos de Inteligencia Artificial para procesar y calcular el volumen de la información. A diferencia de los humanos, que contamos y leemos palabras completas, una IA divide el texto en fragmentos más pequeños llamados tokens, los cuales pueden ser sílabas, caracteres o palabras enteras según el idioma. Para que te hagas una idea aproximada de esta equivalencia, un grupo de 100 palabras en español suele representar alrededor de 130 o 140 tokens.</p>
+<p>En el entorno de los desarrolladores y las plataformas de IA, el coste de los tokens se divide estrictamente entre <strong>tokens de entrada</strong> (lo que tú le escribes o subes a la IA) y <strong>tokens de salida</strong> (el texto que la IA genera como respuesta). Una regla financiera estándar en la industria actual es que los tokens de salida son hasta 5 veces más caros que los de entrada; esto se debe a que el esfuerzo técnico y la capacidad de cómputo que requiere el servidor para "pensar" y redactar una respuesta desde cero es sumamente superior al coste de simplemente leer y analizar las instrucciones que el usuario ha introducido.</p>
+<p>Para optimizar estos costes, existen herramientas como el caché de prompts (prompt caching), que almacena la información pesada o repetitiva en la memoria a corto plazo del sistema, logrando reducir hasta un 90% el coste de procesar textos que no cambian entre una consulta y otra. Asimismo, el procesamiento por lotes (Batch API) ofrece un 50% de descuento al permitir que las tareas que no son urgentes se procesen de forma asíncrona cuando los servidores están menos saturados. Finalmente, cabe destacar que este sistema de cobro por token aplica exclusivamente a los programadores que consumen la API para crear aplicaciones, ya que los usuarios finales que utilizan plataformas web o móviles suelen pagar una suscripción fija mensual con un uso integrado.</p>
+<h2 id="skills-habilidades">Skills (habilidades)</h2>
+<p>Paquetes de instrucciones y conocimiento especializado (documentos, scripts, procedimientos) que Claude carga automáticamente solo cuando son relevantes para la tarea que le pides, en lugar de tener que explicárselo todo cada vez. Representan la capacidad de la IA para entender lo que necesitas, elegir el conector o plugin adecuado para el trabajo y ejecutar la acción de forma autónoma.</p>
+<ul>
+<li>
+<p><strong>Conectores</strong>
+Son los puentes que unen a Claude con tus fuentes de datos. Le permiten leer, buscar y analizar información en tiempo real directamente desde plataformas como Google Drive, Notion o Salesforce, evitando que tengas que copiar y pegar archivos manualmente.</p>
+</li>
+<li>
+<p><strong>Plugins</strong>
+Son los programas externos que le dan superpoderes a Claude. Funcionan como aplicaciones de terceros que le permiten realizar tareas que una IA de texto no puede hacer sola, como resolver cálculos complejos con Wolfram Alpha o automatizar correos a través de Zapier.</p>
+</li>
+</ul>
+<p>A diferencia de un Proyecto —que carga contexto de fondo siempre que abres un chat dentro de él— una Skill es específica de una tarea y se activa dinámicamente cuando hace falta, funcionando en cualquier lugar de Claude.</p>
+<p><strong>¿Dónde se encuentra las skills?</strong> </p>
+<p>1) Dentro de la propia app: pulsa <strong>"Customize"</strong> (Personalizar) en el menú de tu cuenta y ahí encontrarás el <strong>directorio de Skills</strong>, con habilidades creadas por Anthropic (por ejemplo, generación mejorada de documentos Word, Excel, PowerPoint y PDF) y también las que suben partners como Notion, Figma o Atlassian, pensadas para funcionar junto con sus respectivos conectores. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/img/cla/cla-02.png" data-desc-position="bottom"><img alt="Claude" src="../assets/img/cla/cla-02.png"></a> </p>
+<p>Desde consola podemos ver el listado pulsando <code>/</code></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/img/cla/cla-03.png" data-desc-position="bottom"><img alt="Claude" src="../assets/img/cla/cla-03.png"></a> </p>
+<p>2) Fuera de la app también existen directorios comunitarios de código abierto (<a href="https://awesome-skills.com/" target="blank">Awesome Claude Skills</a>) donde cualquiera puede publicar y descargar skills gratuitas, aunque conviene instalar solo las de fuentes de confianza, ya que una skill puede llegar a ejecutar código.</p>
+<h2 id="proyectos">Proyectos</h2>
+<p>Son espacios de trabajo dedicados que organizan archivos, conversaciones e instrucciones, preservando el contexto entre sesiones, para que no tengas que volver a explicar tu estilo, tus datos o tus reglas cada vez que abres un chat nuevo. Un Proyecto típicamente incluye:</p>
+<ul>
+<li><strong>Archivos base</strong>: PDFs, hojas de cálculo, código, ejemplos de tu estilo de escritura, etc.</li>
+<li><strong>Instrucciones personalizadas</strong>: le dices a Claude qué rol adoptar y qué reglas seguir dentro de ese proyecto en concreto.</li>
+<li><strong>Historial de chats</strong>: todas las conversaciones relacionadas con ese tema quedan agrupadas.</li>
+</ul>
+<p><strong>Ejemplos de cuándo usarlo:</strong> </p>
+<ul>
+<li>Proyecto "Búsqueda de empleo": subes tu CV y notas sobre empresas objetivo, y Claude genera cartas de presentación y mensajes adaptados.</li>
+<li>Proyecto "Voz de marca": subes publicaciones anteriores para que todo el contenido nuevo mantenga tu tono.</li>
+<li>Proyecto por asignatura, cliente o área de trabajo, para que el contexto de cada uno nunca se mezcle con el de otro.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/img/cla/cla-04.png" data-desc-position="bottom"><img alt="Claude" src="../assets/img/cla/cla-04.png"></a> </p>
+<h2 id="artefactos">Artefactos</h2>
+<p>Un <strong>Artifact</strong> es un panel lateral, independiente del hilo de chat, donde Claude renderiza contenido sustancial y autocontenido: código, documentos, diagramas o aplicaciones interactivas. La lógica de fondo no es "todo lo que genera Claude es un artefacto": el modelo decide crear uno cuando el contenido cumple una serie de criterios —tiene más de 15 líneas aproximadamente, es algo que previsiblemente vas a querer editar, iterar o reutilizar fuera de la conversación, y tiene sentido por sí mismo sin el contexto del chat. Los artefactos pueden incluso llamar a la API de Claude internamente, permitiendo crear microaplicaciones con inteligencia integrada, y admiten conexión con servidores MCP externos como Google Calendar, Gmail o Slack</p>
+<blockquote>
+<p>Un fragmento corto de código o una respuesta conversacional normal se queda en el chat; un componente React completo o un informe en Markdown se abre en el panel.</p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/img/cla/cla-05.png" data-desc-position="bottom"><img alt="Claude" src="../assets/img/cla/cla-05.png"></a> </p>
+<p><strong>Ejemplos</strong></p>
+<ul>
+<li>Pides un dashboard interactivo de gastos a partir de una hoja de cálculo que subiste → Claude genera un Artefacto navegable, no solo texto.</li>
+<li>Necesitas un componente de código reutilizable o un prototipo web → se abre como Artefacto con vista previa en vivo.</li>
+<li>Quieres compartir el resultado con otra persona mediante un enlace público, sin que tenga que copiar/pegar nada del chat.</li>
+</ul>
+<h2 id="3-jul">📁📁📁 3 jul</h2>
+<h2 id="personalizar-customize">Personalizar (Customize)</h2>
+<p>La sección <strong>Customize</strong> es donde configuras cómo quieres que Claude se comporte y qué "sabe" de ti de forma permanente, en varias capas que se combinan entre sí:</p>
+<ol>
+<li><strong>Instrucciones para Claude (Instructions for Claude)</strong>: <cite index="49-1">un prompt de sistema a nivel de cuenta, que configuras una sola vez en Settings y que Claude tiene en cuenta en todos tus chats nuevos</cite> — por ejemplo, tu profesión, tu terminología habitual o cómo prefieres que te respondan.</li>
+<li><strong>Instrucciones de proyecto</strong>: las mismas ideas pero limitadas a un Proyecto concreto, para casos donde necesitas un comportamiento distinto según el contexto de trabajo.</li>
+<li><strong>Estilos (Styles)</strong>: <cite index="47-1">ajustan cómo Claude formatea y entrega sus respuestas</cite> (más conciso, más explicativo, más formal, etc.); ten en cuenta que, según la documentación más reciente, <cite index="48-1">los estilos se están migrando hacia el sistema de Skills</cite>, así que es posible que en tu app ya aparezcan como una skill activable en lugar de un menú de "Styles" independiente.</li>
+<li><strong>Skills</strong>: como vimos en el punto 4, también se gestionan desde Customize → Skills.</li>
+</ol>
+<p>En la práctica, estas capas se aplican en orden: primero tus preferencias generales de cuenta, luego las instrucciones del proyecto concreto en el que estás, y por último el estilo o skill activa en ese chat — así consigues que Claude "ya te conozca" sin tener que repetir el contexto cada vez.</p>
+<hr>
+<h2 id="que-es-el-apartado-personalizar">Qué es el apartado Personalizar</h2>
+<p><strong>Personalizar</strong> es la sección de Configuración de Claude.ai donde se agrupan los mecanismos de adaptación persistente del asistente a un usuario o a un contexto de trabajo. No es una única función, sino un conjunto de cuatro capas independientes, cada una con un alcance distinto:</p>
+<ul>
+<li><strong>Preferencias de perfil</strong>: instrucciones de cuenta que se inyectan en <em>todas</em> las conversaciones, tengan o no un proyecto asociado.</li>
+<li><strong>Estilos</strong> (<em>Styles</em>): controlan <em>cómo</em> Claude formatea y entrega la respuesta (tono, extensión, estructura), no <em>qué</em> sabe o qué contexto tiene.</li>
+<li><strong>Instrucciones de proyecto</strong>: mismo mecanismo que las preferencias de perfil, pero acotado a los chats de un Proyecto concreto.</li>
+<li><strong>Skills</strong>: comportamientos predefinidos y reutilizables (rol, reglas, formato de salida) que se activan explícitamente, en lugar de aplicarse siempre.</li>
+</ul>
+<p>La diferencia clave entre las cuatro es el <strong>alcance de activación</strong>: perfil y proyecto se aplican de forma automática y continua según el ámbito (cuenta o proyecto); estilos y Skills requieren selección activa por tu parte en cada conversación (aunque un estilo puede fijarse como predeterminado).</p>
+<h2 id="mecanismo-tecnico-de-cada-capa">Mecanismo técnico de cada capa</h2>
+<ul>
+<li><strong>Preferencias de perfil</strong>: en Configuración → Perfil, el campo "¿Qué preferencias debe considerar Claude en las respuestas?" se concatena como contexto de sistema en cada nueva conversación. No consume espacio de la ventana de contexto de forma perceptible salvo que el texto sea muy extenso.</li>
+<li><strong>Estilos</strong>: se definen mediante (1) objetivos, (2) audiencia, (3) voz/tono, (4) descripción general, o (5) "instrucciones personalizadas (avanzado)" —un campo de texto libre sin asistente, equivalente a un system prompt parcial centrado en formato—. Un estilo puede además entrenarse subiendo un texto de muestra: Claude infiere estructura, léxico y tono a partir de ese ejemplo y los replica.</li>
+<li><strong>Instrucciones de proyecto</strong>: mismo formato que el perfil, pero el scope es el Proyecto; útil cuando necesitas reglas distintas para trabajos distintos (p. ej. un tono para el repositorio docente y otro para comunicación profesional) sin que se pisen entre sí.</li>
+<li><strong>Skills</strong>: se crean desde Personalizar → Skills, con nombre, descripción y un bloque de "instrucciones detalladas" (rol, tono, objetivo, restricciones). A diferencia de perfil/proyecto, una Skill no se aplica sola: la activas explícitamente en el chat, lo que permite tener varias Skills especializadas y contradictorias entre sí sin conflicto, porque nunca coexisten activas por defecto.</li>
+</ul>
+<h2 id="ejemplo-practico">Ejemplo práctico</h2>
+<p>Un ejemplo real de instrucciones avanzadas de estilo, tal como se configuran en el campo de texto libre:</p>
+<blockquote>
+<p>"Actúa como experto en Inteligencia Artificial y LLM. Tono técnico, sin relleno. Usa solo H2 y excepcionalmente H3. Entrega el resultado en un bloque <code>markdown</code>. Si la petición es ambigua, pregunta antes de generar."</p>
+</blockquote>
+<p>Esto es exactamente lo que tú ya tienes activo en este repositorio: son <em>instrucciones de perfil o de proyecto</em> (según dónde las hayas pegado), no un Estilo con asistente guiado ni una Skill independiente. La diferencia práctica: si las pusieras como Estilo, tendrías que seleccionar ese estilo cada vez (o fijarlo por defecto); como preferencia de perfil o de proyecto, se aplican solas sin que tengas que activarlas.</p>
+<h2 id="como-sacarles-el-maximo-rendimiento">Cómo sacarles el máximo rendimiento</h2>
+<ul>
+<li><strong>No mezcles capas con el mismo propósito.</strong> Si defines tono en preferencias de perfil y además en un Estilo activo, compiten por prioridad y el comportamiento deja de ser predecible; elige una capa por tipo de instrucción.</li>
+<li><strong>Usa proyecto en lugar de perfil cuando el contexto no deba filtrarse a otros chats.</strong> Las instrucciones de perfil se aplican también fuera del proyecto; si tienes instrucciones específicas de este repositorio (como las que me has dado), van mejor en instrucciones de Proyecto que en preferencias de cuenta.</li>
+<li><strong>Reserva las Skills para tareas repetibles y bien delimitadas</strong>, no para tu comportamiento general: una Skill de "corrector de estilo académico" tiene sentido; una Skill de "sé útil" no aporta nada que el perfil no cubra ya.</li>
+<li><strong>Sé específico, no genérico.</strong> Una instrucción como "sé preciso" no cambia el comportamiento; una instrucción como la del ejemplo anterior (rol + restricciones de formato + condición de cuándo preguntar) sí, porque es verificable y accionable turno a turno.</li>
+<li><strong>Revisa periódicamente el campo de perfil.</strong> Al aplicarse a todas las conversaciones, instrucciones obsoletas de un proyecto antiguo pueden degradar respuestas en contextos nuevos sin que sea evidente por qué.</li>
+</ul>
+<h2 id="para-llevar-a-clase">Para llevar a clase</h2>
+<p>Síntesis: "Personalizar" no es una casilla única, sino cuatro mecanismos con alcance distinto (cuenta, proyecto, sesión seleccionada, tarea activada); elegir la capa correcta para cada tipo de instrucción es más importante que la redacción del propio prompt.</p>
+<p>Ejercicio propuesto: pedir al alumnado que reproduzca el mismo objetivo de personalización (p. ej. "que Claude responda siempre citando fuentes") en las cuatro capas —perfil, estilo, proyecto y Skill— y que compare en qué casos cada una sería la elección correcta según si el comportamiento debe ser permanente, opcional, acotado a un proyecto o activable bajo demanda.</p>
+<h2 id="recursos">📚 Recursos</h2>
+<ul>
+<li><a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="blank">Modelos de Claude – documentación oficial</a></li>
+<li><a href="https://platform.claude.com/docs/en/about-claude/pricing" target="blank">Precios de la API de Claude</a></li>
+<li><a href="https://claude.com/pricing" target="blank">Planes y precios de la app Claude</a></li>
+<li><a href="https://support.claude.com/en/articles/8325606-what-is-the-pro-plan" target="blank">Centro de ayuda: ¿Qué es el plan Pro?</a></li>
+<li><a href="https://support.claude.com/en/articles/11049741-what-is-the-max-plan" target="blank">Centro de ayuda: ¿Qué es el plan Max?</a></li>
+<li><a href="https://support.claude.com/en/articles/12512176-what-are-skills" target="blank">Centro de ayuda: ¿Qué son las Skills?</a></li>
+<li><a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude" target="blank">Centro de ayuda: Usar Skills en Claude</a></li>
+<li><a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them" target="blank">Centro de ayuda: ¿Qué son los Artefactos y cómo se usan?</a></li>
+<li><a href="https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features" target="blank">Centro de ayuda: Personalización de Claude</a></li>
+<li><a href="https://claude.com/resources/tutorials/choosing-between-claude-cowork-or-chat" target="blank">Elegir entre Claude Cowork o Chat</a></li>
+<li><a href="https://claude.com/product/claude-code" target="blank">Claude Code – producto oficial</a></li>
+</ul>
+<h2 id="_1"></h2>
+<h2 id="_2">## 📁📁📁</h2>
+<h3 id="22-zona-de-conversacion-centro">2.2 Zona de conversación (centro)</h3>
+<p>Es el área principal donde escribes tus mensajes y lees las respuestas. Algunos detalles útiles:</p>
+<ul>
+<li>Puedes <strong>adjuntar archivos</strong> (PDF, Word, Excel, imágenes, código) haciendo clic en el icono del clip 📎 junto a la caja de texto.</li>
+<li>Puedes <strong>regenerar una respuesta</strong> si no te convence, pulsando el icono de "reintentar".</li>
+<li>Puedes <strong>editar tu propio mensaje</strong> y Claude generará una respuesta nueva a partir de ahí, sin perder el resto de la conversación.</li>
+</ul>
+<h3 id="23-el-icono-de-herramientas-debajo-de-la-caja-de-texto">2.3 El icono de herramientas (debajo de la caja de texto)</h3>
+<p>Junto a la caja de texto suele haber un pequeño menú (a veces un icono de "+" o de control deslizante) donde puedes <strong>activar o desactivar funciones</strong> para esa conversación:</p>
+<ul>
+<li>🔎 <strong>Búsqueda web:</strong> permite que Claude busque información actual en internet antes de responder.</li>
+<li>📊 <strong>Ejecutar código / crear archivos:</strong> permite que Claude escriba y ejecute código, o genere archivos descargables (Word, Excel, PowerPoint, PDF...).</li>
+<li>🧩 <strong>Skills:</strong> activa habilidades guardadas (apartado 5).</li>
+<li>🧠 <strong>Pensamiento extendido:</strong> en algunos modelos, hace que Claude "piense" más despacio y a fondo antes de responder, útil para problemas complejos.</li>
+</ul>
+<h3 id="24-configuracion-settings">2.4 Configuración (⚙️ Settings)</h3>
+<p>Haciendo clic en tu <strong>foto de perfil</strong> (arriba a la derecha) accederás al menú de configuración, donde encontrarás, entre otras, estas opciones:</p>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Qué controla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Modelo (Model)</strong></td>
+<td>Qué versión de Claude usar por defecto (apartado 3)</td>
+</tr>
+<tr>
+<td><strong>Estilo de escritura (Styles)</strong></td>
+<td>El tono de las respuestas: formal, conciso, creativo...</td>
+</tr>
+<tr>
+<td><strong>Preferencias del usuario</strong></td>
+<td>Notas permanentes sobre ti que Claude tendrá en cuenta siempre (p. ej. "soy estudiante de FP de Sistemas, explica con ejemplos prácticos")</td>
+</tr>
+<tr>
+<td><strong>Memoria / Historial de chats</strong></td>
+<td>Activar que Claude recuerde información relevante entre conversaciones distintas</td>
+</tr>
+<tr>
+<td><strong>Conectores / Integraciones</strong></td>
+<td>Conectar Claude con otras herramientas (Google Drive, calendario, etc.)</td>
+</tr>
+<tr>
+<td><strong>Privacidad y datos</strong></td>
+<td>Controlar si tus conversaciones se pueden usar para mejorar el modelo</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🎓 <strong>Consejo para clase:</strong> configura tus <strong>preferencias de usuario</strong> indicando tu nivel de conocimientos (por ejemplo, "estoy en 2º de FP de Administración de Sistemas, no programo casi nada, explícame los conceptos técnicos con analogías sencillas"). Así todas tus conversaciones futuras se adaptarán automáticamente a tu nivel.</p>
+</blockquote>
+<h2 id="4-creacion-de-agentes-y-asistentes-en-claude">4. Creación de agentes y asistentes en Claude</h2>
+<p>Cuando hablamos de <strong>"agentes"</strong> en el mundo de la IA, nos referimos a un asistente que no solo responde preguntas, sino que puede <strong>seguir instrucciones fijas, usar herramientas y completar tareas de varios pasos por sí mismo</strong>. En Claude existen dos formas de crear esto, una sencilla (sin programar) y otra más avanzada (orientada a programación). Vamos a ver ambas.</p>
+<h3 id="41-sin-programar-los-proyectos-de-claudeai">4.1 Sin programar: los Proyectos de Claude.ai</h3>
+<p>Un <strong>Proyecto</strong> es la forma más sencilla de crear tu propio "asistente personalizado" dentro de Claude.ai, sin escribir ni una línea de código.</p>
+<p><strong>Pasos para crear un Proyecto:</strong></p>
+<ol>
+<li>En la barra lateral, pulsa <strong>Proyectos → Crear proyecto</strong>.</li>
+<li>Dale un nombre claro, por ejemplo: <em>"Ayudante de Redes y Sistemas"</em>.</li>
+<li>En el apartado de <strong>instrucciones personalizadas</strong>, escribe el "rol" que quieres que tenga Claude dentro de ese proyecto. Por ejemplo:</li>
+</ol>
+<blockquote>
+<p><em>"Actúa como profesor de apoyo en Administración de Sistemas Informáticos en Red. Cuando te pregunte sobre configuración de servidores, redes o sistemas operativos, responde siempre con pasos numerados, comandos exactos y explicando qué hace cada uno."</em></p>
+</blockquote>
+<ol>
+<li>Sube <strong>documentos de referencia</strong> a la sección de archivos del proyecto: apuntes de clase, manuales del módulo, plantillas de prácticas... Claude los tendrá en cuenta en todas las conversaciones de ese proyecto.</li>
+<li>A partir de ahí, cada chat que abras <strong>dentro de ese Proyecto</strong> ya "sabe" cómo comportarse, sin que tengas que repetir las instrucciones cada vez.</li>
+</ol>
+<p><strong>¿En qué se diferencia esto de un chat normal?</strong> En un chat normal, cada conversación nueva empieza "desde cero": Claude no recuerda instrucciones de chats anteriores (salvo la memoria general). Un Proyecto soluciona esto creando un contexto persistente y reutilizable, como si fuera tu propio asistente especializado.</p>
+<h3 id="42-para-ir-mas-alla-agentes-de-programacion-con-claude-code">4.2 Para ir más allá: agentes de programación con Claude Code</h3>
+<p><strong>Claude Code</strong> es una herramienta de Anthropic pensada para tareas de programación. Se ejecuta desde un <strong>terminal</strong> (la línea de comandos que seguro ya conoces de tus prácticas de sistemas) o desde extensiones para editores como VS Code.</p>
+<p>A diferencia del chat normal, Claude Code puede actuar como un <strong>agente autónomo</strong>: no solo te dice qué código escribir, sino que puede:</p>
+<ul>
+<li>Leer y modificar archivos de un proyecto completo.</li>
+<li>Ejecutar comandos en la terminal.</li>
+<li>Crear y probar pequeños programas o scripts de automatización.</li>
+<li>Encadenar varios pasos (planificar → escribir → probar → corregir) sin que tengas que intervenir en cada uno.</li>
+</ul>
+<p><strong>¿Por qué lo incluimos en un manual para gente que "no programa"?</strong> Porque en un ciclo de Sistemas es muy probable que en algún momento tengáis que tocar pequeños scripts (instalación automática, configuración de red, copias de seguridad). Claude Code permite describir en lenguaje normal lo que quieres conseguir ("haz un script que comprima esta carpeta cada noche y la guarde con la fecha") y el propio agente genera, prueba y ajusta el resultado. No hace falta saber programar de antemano para empezar a experimentar, aunque sí ayuda entender comandos básicos de terminal.</p>
+<blockquote>
+<p>🔑 <strong>Idea clave para recordar:</strong> un <em>Proyecto</em> en Claude.ai es un "agente" en el sentido de <strong>asistente con contexto e instrucciones fijas</strong>; <em>Claude Code</em> es un "agente" en el sentido de <strong>sistema que ejecuta tareas técnicas de varios pasos de forma autónoma</strong>. Ambos parten de la misma base (el modelo de Claude), pero están pensados para necesidades distintas.</p>
+</blockquote>
+<hr>
+<h2 id="5-las-skills-habilidades-que-son-y-como-se-usan">5. Las Skills (habilidades): qué son y cómo se usan</h2>
+<p>Las <strong>Skills</strong> (en español, "habilidades") son una de las funciones más potentes y menos conocidas de Claude. Son la solución al problema de tener que repetir siempre las mismas instrucciones detalladas en cada conversación nueva.</p>
+<h3 id="51-que-es-exactamente-una-skill">5.1 ¿Qué es exactamente una Skill?</h3>
+<p>Una Skill es, básicamente, un <strong>paquete de instrucciones reutilizable</strong> (normalmente un archivo de texto llamado <code>SKILL.md</code>, que puede ir acompañado de otros archivos o pequeños scripts). Le enseña a Claude <strong>cómo realizar una tarea concreta, paso a paso y siempre de la misma forma</strong>, sin que tengas que volver a explicarlo cada vez.</p>
+<p>Piensa en una Skill como una <strong>receta de cocina guardada</strong>: en vez de explicarle a alguien cómo hacer una tortilla de patatas cada vez que se la pides, le entregas la receta escrita una sola vez. A partir de ahí, cada vez que pidas "una tortilla", esa persona ya sabe exactamente qué pasos seguir.</p>
+<h3 id="52-como-funcionan-internamente">5.2 ¿Cómo funcionan internamente?</h3>
+<ol>
+<li>Tú (o la comunidad de Anthropic, o tu centro educativo) creáis una Skill con un <strong>nombre</strong> y una <strong>descripción</strong> clara de cuándo debe usarse.</li>
+<li>Cuando escribes un mensaje, Claude revisa rápidamente los nombres y descripciones de las Skills disponibles.</li>
+<li>Si una Skill encaja con lo que has pedido, Claude <strong>carga automáticamente</strong> sus instrucciones completas antes de responder.</li>
+<li>Si la Skill no encaja con tu petición, Claude simplemente no la usa, así no se "satura" la conversación con información innecesaria.</li>
+</ol>
+<h3 id="53-como-usar-una-skill-ya-existente">5.3 Cómo usar una Skill ya existente</h3>
+<ol>
+<li>Ve al menú de <strong>herramientas</strong> junto a la caja de texto (o a Configuración → Capacidades/Skills, según la versión de la interfaz).</li>
+<li>Busca la Skill que necesites en la lista disponible (Anthropic publica algunas oficiales, como las relacionadas con documentos Word, Excel o PDF) o sube la tuya.</li>
+<li>Actívala para esa conversación o para el Proyecto en el que estés trabajando.</li>
+<li>Escribe tu petición con normalidad: Claude detectará que la Skill es relevante y la aplicará automáticamente.</li>
+</ol>
+<h3 id="54-como-crear-tu-propia-skill-sin-programar">5.4 Cómo crear tu propia Skill (sin programar)</h3>
+<p>No necesitas saber programación para crear una Skill sencilla, basta con explicarle a Claude lo que quieres:</p>
+<ol>
+<li>Dile a Claude algo como: <em>"Quiero crear una Skill que revise informes de prácticas de redes y compruebe que incluyen: topología, direccionamiento IP, tabla de subredes y conclusiones. Ayúdame a crearla."</em></li>
+<li>Claude generará el contenido de la Skill (nombre, descripción y las instrucciones).</li>
+<li>Guarda esa Skill desde la propia interfaz (normalmente hay un botón de "Guardar como Skill" o similar).</li>
+<li>A partir de ese momento, podrás activarla en cualquier conversación.</li>
+</ol>
+<h3 id="55-ejemplos-practicos-para-un-aula-de-sistemas">5.5 Ejemplos prácticos para un aula de Sistemas</h3>
+<table>
+<thead>
+<tr>
+<th>Skill de ejemplo</th>
+<th>Para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>"Corrector de prácticas de redes"</em></td>
+<td>Revisa que un informe de prácticas siga siempre la misma estructura y nomenclatura</td>
+</tr>
+<tr>
+<td><em>"Generador de documentación técnica"</em></td>
+<td>Convierte notas sueltas en un documento con formato estándar (introducción, requisitos, pasos, conclusión)</td>
+</tr>
+<tr>
+<td><em>"Plantilla de incidencias de soporte"</em></td>
+<td>Redacta partes de incidencia con el mismo formato cada vez (síntoma, diagnóstico, solución)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 La gran ventaja de las Skills frente a copiar y pegar instrucciones largas cada vez es que <strong>se mantienen organizadas, son reutilizables, y se pueden compartir</strong> con el resto de la clase o del centro.</p>
+</blockquote>
+<hr>
+<h2 id="6-instalacion-de-claude-en-el-equipo-local">6. Instalación de Claude en el equipo local</h2>
+<h3 id="61-primera-aclaracion-importante">6.1 Primera aclaración importante</h3>
+<p>Como se explicaba en la introducción, <strong>Claude no es un modelo de IA que se descargue y ejecute en tu ordenador</strong>, como sí ocurre con otros modelos de código abierto. El "cerebro" de Claude siempre se ejecuta en los servidores de Anthropic, en la nube. Por tanto, <strong>"instalar Claude en local" significa instalar la aplicación de escritorio</strong>, que es simplemente una ventana de acceso más cómoda que el navegador, pero que <strong>sigue necesitando conexión a internet</strong> para funcionar.</p>
+<h3 id="62-pasos-para-instalar-la-app-de-escritorio">6.2 Pasos para instalar la app de escritorio</h3>
+<ol>
+<li>Accede a la página oficial de descargas: <strong><a href="https://claude.ai/download">claude.ai/download</a></strong>.</li>
+<li>Selecciona tu sistema operativo (Windows o macOS).</li>
+<li>Descarga el instalador y ejecútalo, igual que harías con cualquier otro programa (siguiente, siguiente, aceptar términos, finalizar).</li>
+<li>Abre la aplicación e inicia sesión con tu cuenta de Claude (la misma que usas en la web).</li>
+<li>Listo: ya tienes Claude como aplicación independiente, sin depender de tener el navegador abierto.</li>
+</ol>
+<h3 id="63-ventajas-de-usar-la-app-de-escritorio-frente-a-la-web">6.3 Ventajas de usar la app de escritorio frente a la web</h3>
+<table>
+<thead>
+<tr>
+<th>Ventaja</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Acceso rápido</strong></td>
+<td>Se puede abrir con un atajo de teclado, sin buscar la pestaña del navegador</td>
+</tr>
+<tr>
+<td><strong>Menos distracciones</strong></td>
+<td>Funciona en su propia ventana, separada de las demás pestañas del navegador</td>
+</tr>
+<tr>
+<td><strong>Integración con el sistema</strong></td>
+<td>Permite arrastrar archivos directamente desde el escritorio o el explorador de archivos</td>
+</tr>
+<tr>
+<td><strong>Notificaciones nativas</strong></td>
+<td>Avisos del sistema operativo cuando una tarea larga termina</td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>No se ve afectada si el navegador se cuelga o tienes demasiadas pestañas abiertas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="64-como-afecta-esto-a-tu-equipo-real">6.4 ¿Cómo afecta esto a tu equipo real?</h3>
+<p>Es una de las preguntas más importantes desde el punto de vista de Sistemas, y la respuesta es tranquilizadora:</p>
+<ul>
+<li><strong>Consumo de hardware:</strong> la app de escritorio es ligera. Todo el "trabajo pesado" (ejecutar el modelo de IA) ocurre en los servidores de Anthropic, no en tu CPU o GPU. Tu equipo solo necesita potencia para mostrar la interfaz, similar a tener una pestaña de navegador abierta.</li>
+<li><strong>Requisitos:</strong> no necesitas una tarjeta gráfica potente ni mucha RAM libre, a diferencia de lo que ocurriría si quisieras ejecutar un modelo de IA de código abierto en local.</li>
+<li><strong>Conexión a internet:</strong> es imprescindible. Sin conexión, la app no podrá comunicarse con los servidores y no funcionará (salvo para revisar conversaciones ya cargadas previamente en caché).</li>
+<li><strong>Almacenamiento:</strong> ocupa poco espacio en disco, ya que no almacena el modelo de IA, solo la propia aplicación.</li>
+<li><strong>Privacidad y datos:</strong> al usar la app, tus mensajes y archivos adjuntos se envían a los servidores de Anthropic para ser procesados, igual que ocurre con la versión web. Conviene revisar la configuración de privacidad (apartado 2.4) antes de subir documentación sensible o con datos personales, especialmente en un contexto educativo.</li>
+<li><strong>Permisos del sistema:</strong> al instalar la app, el sistema operativo puede pedir permisos básicos (acceso a archivos para poder adjuntarlos, notificaciones, inicio automático). Son permisos estándar de cualquier aplicación de escritorio, no privilegios especiales sobre el sistema.</li>
+</ul>
+<blockquote>
+<p>✅ <strong>En resumen:</strong> instalar la app de escritorio de Claude es una operación segura y ligera para tu equipo, comparable a instalar cualquier aplicación de mensajería o de productividad. No transforma tu ordenador en un "servidor de IA" ni exige hardware especial, porque toda la inteligencia artificial sigue funcionando en la nube.</p>
+</blockquote>
+<hr>
+<h2 id="7-glosario-rapido">7. Glosario rápido</h2>
+<table>
+<thead>
+<tr>
+<th>Término</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prompt</strong></td>
+<td>El mensaje o instrucción que le escribes a Claude</td>
+</tr>
+<tr>
+<td><strong>Modelo</strong></td>
+<td>La versión concreta de la IA que procesa tu petición (Haiku, Sonnet, Opus)</td>
+</tr>
+<tr>
+<td><strong>Token</strong></td>
+<td>Unidad mínima de texto que procesa el modelo (aproximadamente, un trozo de palabra)</td>
+</tr>
+<tr>
+<td><strong>Proyecto</strong></td>
+<td>Espacio de trabajo en Claude.ai con instrucciones y archivos fijos</td>
+</tr>
+<tr>
+<td><strong>Artefacto</strong></td>
+<td>Documento, código o gráfico generado por Claude que se muestra en ventana aparte</td>
+</tr>
+<tr>
+<td><strong>Skill / Habilidad</strong></td>
+<td>Paquete reutilizable de instrucciones que Claude carga cuando es relevante</td>
+</tr>
+<tr>
+<td><strong>Agente</strong></td>
+<td>Sistema de IA capaz de seguir instrucciones y ejecutar tareas de varios pasos por sí mismo</td>
+</tr>
+<tr>
+<td><strong>API</strong></td>
+<td>Forma de conectar Claude dentro de programas propios, mediante código</td>
+</tr>
+<tr>
+<td><strong>Claude Code</strong></td>
+<td>Herramienta de Anthropic para usar Claude como agente de programación desde la terminal</td>
+</tr>
+<tr>
+<td><strong>Nube / Cloud</strong></td>
+<td>Servidores de Anthropic donde realmente se ejecuta el modelo de IA</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-preguntas-frecuentes-faq">8. Preguntas frecuentes (FAQ)</h2>
+<p><strong>¿Necesito saber programar para usar Claude?</strong>
+No. La mayoría de funciones (chat, Proyectos, Skills, app de escritorio) están pensadas para usarse sin escribir código. Solo Claude Code y la API requieren conocimientos técnicos, y son opcionales.</p>
+<p><strong>¿Puedo usar Claude sin pagar?</strong>
+Sí, existe un plan gratuito (Free) con límites de uso. Para uso académico habitual, el plan Pro suele ofrecer una experiencia más fluida, pero no es obligatorio.</p>
+<p><strong>¿Mis conversaciones se guardan para siempre?</strong>
+Puedes consultar y borrar tu historial desde Configuración. También puedes decidir si tus conversaciones se usan o no para mejorar el modelo, según las opciones de privacidad disponibles en tu cuenta.</p>
+<p><strong>¿Qué pasa si Claude se equivoca?</strong>
+Como cualquier IA, Claude puede cometer errores o dar información incorrecta (esto se llama "alucinación"). Es importante revisar siempre la información importante, especialmente en tareas técnicas o académicas, y contrastarla con fuentes oficiales.</p>
+<p><strong>¿Puedo usar Claude en el móvil?</strong>
+Sí, existen aplicaciones oficiales para iOS y Android con prácticamente las mismas funciones que la web.</p>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

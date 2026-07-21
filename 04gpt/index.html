@@ -1,0 +1,1426 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ymorgil.github.io/intart/04gpt/">
+      
+      
+        <link rel="prev" href="../03gemini/">
+      
+      
+        <link rel="next" href="../05notebook/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Chat GPT - 🤖 Inteligencia Artificial (ymorgil)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chatgpt-openai" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="🤖 Inteligencia Artificial (ymorgil)" class="md-header__button md-logo" aria-label="🤖 Inteligencia Artificial (ymorgil)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            🤖 Inteligencia Artificial (ymorgil)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chat GPT
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo" aria-label="Modo oscuro" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="green" aria-label="Modo claro" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="🤖 Inteligencia Artificial (ymorgil)" class="md-nav__button md-logo" aria-label="🤖 Inteligencia Artificial (ymorgil)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    🤖 Inteligencia Artificial (ymorgil)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02claude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03gemini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gemini
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat GPT
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat GPT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#chatgpt-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChatGPT WEB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-se-usa-y-como-se-paga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Cómo se usa y cómo se paga?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpts-personalizados-custom-gpts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPTs personalizados (Custom GPTs)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GPTs personalizados (Custom GPTs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-crear-un-gpt-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo crear un GPT paso a paso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-un-gpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de un GPT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-real-de-instrucciones-para-un-gpt-docente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo real de instrucciones para un GPT docente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probar-el-gpt-antes-de-compartirlo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probar el GPT antes de compartirlo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-compartir-un-gpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo compartir un GPT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publicar-en-el-gpt-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publicar en el GPT Store
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-frecuentes-sobre-gpts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preguntas frecuentes sobre GPTs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preguntas frecuentes sobre GPTs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explorar-gpts-de-otros-usuarios-gpt-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explorar GPTs de otros usuarios (GPT Store)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-research-y-sora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Research y Sora
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codex-programacion-agentica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Codex (programación agéntica)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Codex (programación agéntica)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#otro-ejemplo-de-instrucciones-gpt-de-soporte-de-redes-y-sistemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Otro ejemplo de instrucciones: GPT de soporte de redes y sistemas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencia-entre-acciones-y-apps-en-un-gpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferencia entre Acciones y Apps en un GPT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-frecuentes-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preguntas frecuentes adicionales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparativa-rapida-con-claude-y-gemini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa rápida con Claude y Gemini
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05notebook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NotebookLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06moodle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moodle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07imagenes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imágenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08skills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skills
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#chatgpt-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChatGPT WEB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-se-usa-y-como-se-paga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Cómo se usa y cómo se paga?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpts-personalizados-custom-gpts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPTs personalizados (Custom GPTs)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GPTs personalizados (Custom GPTs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-crear-un-gpt-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo crear un GPT paso a paso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-un-gpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de un GPT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-real-de-instrucciones-para-un-gpt-docente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo real de instrucciones para un GPT docente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probar-el-gpt-antes-de-compartirlo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probar el GPT antes de compartirlo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-compartir-un-gpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo compartir un GPT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publicar-en-el-gpt-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publicar en el GPT Store
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-frecuentes-sobre-gpts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preguntas frecuentes sobre GPTs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preguntas frecuentes sobre GPTs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explorar-gpts-de-otros-usuarios-gpt-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explorar GPTs de otros usuarios (GPT Store)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-research-y-sora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Research y Sora
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codex-programacion-agentica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Codex (programación agéntica)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Codex (programación agéntica)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#otro-ejemplo-de-instrucciones-gpt-de-soporte-de-redes-y-sistemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Otro ejemplo de instrucciones: GPT de soporte de redes y sistemas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencia-entre-acciones-y-apps-en-un-gpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferencia entre Acciones y Apps en un GPT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-frecuentes-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preguntas frecuentes adicionales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparativa-rapida-con-claude-y-gemini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa rápida con Claude y Gemini
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chatgpt-openai">🧠 ChatGPT (OpenAI)</h1>
+<blockquote>
+<p>Documento actualizado a <strong>julio de 2026</strong>. OpenAI publica modelos y cambia precios/planes con mucha frecuencia; conviene revisar periódicamente en las webs oficiales para confirmar que los datos siguen vigentes.</p>
+</blockquote>
+<h2 id="chatgpt-web">ChatGPT <a href="https://chatgpt.com/" target="_blank">WEB</a></h2>
+<p>Asistente conversacional de <strong>OpenAI</strong>, uno de los productos de IA generativa más usados del mundo. Permite chatear, generar imágenes, analizar documentos, navegar por internet, escribir y depurar código (a través de Codex) y ejecutar tareas de varios pasos de forma semiautónoma ("modo agente"). Se apoya en la familia de modelos <strong>GPT</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://commons.wikimedia.org/wiki/Special:FilePath/ChatGPT-Logo.svg" data-desc-position="bottom"><img alt="ChatGPT" src="https://commons.wikimedia.org/wiki/Special:FilePath/ChatGPT-Logo.svg"></a></p>
+<div class="admonition note">
+<p class="admonition-title">ChatGPT tampoco vive en tu ordenador</p>
+<p>Igual que Claude o Gemini, el modelo se ejecuta en los servidores de OpenAI. La web, la app de escritorio o la app móvil son solo la puerta de entrada para hablar con esos modelos en la nube.</p>
+</div>
+<p><strong>FORMATOS</strong></p>
+<table>
+<thead>
+<tr>
+<th>Producto</th>
+<th>Qué es y para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ChatGPT (web/app)</strong></td>
+<td>Asistente de chat general en <a href="https://chatgpt.com/" target="_blank">chatgpt.com</a> y en apps de escritorio/móvil.</td>
+</tr>
+<tr>
+<td><strong>GPTs personalizados</strong></td>
+<td>Versiones a medida de ChatGPT con instrucciones, conocimiento y herramientas propias (ver sección dedicada más abajo).</td>
+</tr>
+<tr>
+<td><strong>GPT Store</strong></td>
+<td>Directorio público donde cualquier usuario puede publicar y descubrir GPTs creados por otros.</td>
+</tr>
+<tr>
+<td><strong>Codex</strong></td>
+<td>Agente de programación de OpenAI, integrado en ChatGPT, en la terminal y en editores como VS Code.</td>
+</tr>
+<tr>
+<td><strong>API de OpenAI</strong></td>
+<td>Interfaz técnica de pago por token para integrar los modelos GPT en aplicaciones propias.</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg" data-desc-position="bottom"><img alt="OpenAI" src="https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg"></a></p>
+<h2 id="modelos">Modelos</h2>
+<p>En julio de 2026, OpenAI acaba de completar el despliegue público de su generación <strong>GPT-5.6</strong> (lanzada el 10 de julio de 2026), que convive todavía con la generación anterior <strong>GPT-5.5</strong> en algunos planes.</p>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>Categoría</th>
+<th>Precio API aprox. (entrada / salida por 1M tokens)</th>
+<th>Disponibilidad en ChatGPT</th>
+<th>Uso principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPT-5.6 Sol</strong></td>
+<td>Razonamiento máximo especializado</td>
+<td>5 $ / 30 $</td>
+<td>Planes Pro y superiores</td>
+<td>Afinado específicamente para biología, química y ciberseguridad; máximo rendimiento en modo agente</td>
+</tr>
+<tr>
+<td><strong>GPT-5.6 Terra</strong></td>
+<td>Equilibrado</td>
+<td>2,50 $ / 15 $</td>
+<td>Plus, Pro, Business, Enterprise</td>
+<td>Mejor relación rendimiento-coste para la mayoría de casos de uso en producción</td>
+</tr>
+<tr>
+<td><strong>GPT-5.6 Luna</strong></td>
+<td>Económico</td>
+<td>1 $ / 6 $</td>
+<td>Todos los planes, incluido el gratuito</td>
+<td>Clasificación, enrutamiento y generación estándar de alto volumen</td>
+</tr>
+<tr>
+<td><strong>GPT-5.5 Instant</strong></td>
+<td>Modelo por defecto (generación anterior)</td>
+<td>5 $ / 30 $</td>
+<td>Todos los planes</td>
+<td>Uso cotidiano: rapidez y comprensión de intención</td>
+</tr>
+<tr>
+<td><strong>GPT-5.4-Codex</strong></td>
+<td>Programación agéntica</td>
+<td>Según uso en Codex</td>
+<td>Codex / planes de pago</td>
+<td>Generación y refactorización de código de forma autónoma</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Modelos retirados</p>
+<p>Desde el 13 de febrero de 2026, OpenAI retiró de ChatGPT los modelos GPT-4o, GPT-4.1, GPT-4.1 mini, o4-mini y GPT-5 (Instant y Thinking): si tienes automatizaciones o documentación antigua que los mencione, revísalas porque ya no están disponibles en la interfaz de chat (el acceso por API no se ha visto afectado).</p>
+</div>
+<h3 id="como-se-usa-y-como-se-paga">¿Cómo se usa y cómo se paga?</h3>
+<ul>
+<li><strong>Planes de ChatGPT:</strong> <strong>Free</strong> (gratis, con límites estrictos), <strong>Go</strong> (~8 $/mes, más mensajes), <strong>Plus</strong> (~20 $/mes: modelos avanzados, Deep Research limitado, generación de imágenes y Sora), <strong>Pro</strong> (~200 $/mes: acceso ilimitado a los modelos de razonamiento Pro), <strong>Business</strong> (25 $/usuario/mes) y <strong>Enterprise</strong> (precio a medida).</li>
+<li><strong>API de OpenAI:</strong> facturación por token (entrada y salida por separado), igual que en Anthropic o Google.</li>
+<li><strong>Codex:</strong> consume el mismo sistema de tokens/planes que ChatGPT, con cuotas específicas según el plan.</li>
+</ul>
+<hr>
+<h2 id="gpts-personalizados-custom-gpts">GPTs personalizados (Custom GPTs)</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://commons.wikimedia.org/wiki/Special:FilePath/ChatGPT-Logo.svg" data-desc-position="bottom"><img alt="Crear GPT" src="https://commons.wikimedia.org/wiki/Special:FilePath/ChatGPT-Logo.svg"></a></p>
+<p>Un <strong>GPT</strong> es una versión personalizada de ChatGPT que combina <strong>instrucciones, conocimiento adicional y cualquier combinación de habilidades</strong> (búsqueda web, generación de imágenes, código, conexión a apps externas). Es el equivalente directo de los <strong>Gems</strong> de Gemini o los <strong>Proyectos/Skills</strong> de Claude.</p>
+<div class="admonition example">
+<p class="admonition-title">Definición corta</p>
+<p>Un GPT es "una instancia configurada de ChatGPT": mismo modelo, pero con un rol, un tono y unas herramientas fijadas de antemano, para no tener que repetir el contexto cada vez que lo usas.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Requiere un plan de pago</p>
+<p>Crear y compartir GPTs propios requiere <strong>ChatGPT Plus o superior</strong>. Con la cuenta gratuita, al pulsar "Crear" en la sección GPTs aparece un aviso para mejorar el plan — solo se puede <strong>usar</strong> GPTs ya publicados por otros (por ejemplo, desde el GPT Store), no crear ni compartir los propios.</p>
+</div>
+<h3 id="como-crear-un-gpt-paso-a-paso">Cómo crear un GPT paso a paso</h3>
+<ol>
+<li>Abre <strong>Explorar GPTs</strong> en la barra lateral de ChatGPT o entra directamente en <a href="https://chatgpt.com/gpts" target="_blank">chatgpt.com/gpts</a>.</li>
+<li>Pulsa <strong><code>+ Crear</code></strong>, arriba a la derecha.</li>
+<li>Elige cómo quieres construirlo:<ul>
+<li><strong>Creación conversacional:</strong> describes lo que quieres y ChatGPT redacta el GPT por ti, haciéndote preguntas.</li>
+<li><strong>Vista de configuración:</strong> rellenas directamente los campos (nombre, instrucciones, conocimiento...).</li>
+</ul>
+</li>
+<li>Prueba el GPT en el panel de <strong>Vista previa</strong>, a la derecha, antes de darlo por terminado.</li>
+<li>Pulsa <strong>Crear</strong> (o <strong>Actualizar</strong>, si ya existe) para guardar los cambios.</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Lo que vimos en la propia cuenta al entrar en /gpts</p>
+<p>La sección "Explorar GPT" muestra primero destacados de la semana y "Tendencias" (los GPTs más usados de la comunidad, como <em>Scholar GPT</em> o <em>Consensus</em>), organizados por pestañas: La mejor selección, Educación, Productividad, Investigación y análisis, Escritura, DALL·E... El botón <strong><code>+ Crear</code></strong> aparece siempre arriba a la derecha.</p>
+</div>
+<h3 id="estructura-de-un-gpt">Estructura de un GPT</h3>
+<table>
+<thead>
+<tr>
+<th>Campo/sección</th>
+<th>Obligatorio</th>
+<th>Qué contiene</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nombre</strong></td>
+<td>Sí</td>
+<td>Título que ven los usuarios en resultados de búsqueda, en el GPT Store, en enlaces compartidos y en la parte superior del chat.</td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>Sí</td>
+<td>Resumen corto del propósito del GPT, para quién es y qué tipo de tareas resuelve; aparece en las vistas previas y en el GPT Store.</td>
+</tr>
+<tr>
+<td><strong>Conversation starters (mensajes de ejemplo)</strong></td>
+<td>No</td>
+<td>Prompts de ejemplo que se muestran al abrir el GPT, para orientar al usuario sobre cómo interactuar con él.</td>
+</tr>
+<tr>
+<td><strong>Instrucciones</strong></td>
+<td>Sí</td>
+<td>Define cómo debe comportarse: qué debe hacer, cómo responder y qué evitar. Se aplican en cada conversación.</td>
+</tr>
+<tr>
+<td><strong>Conocimiento</strong></td>
+<td>No</td>
+<td>Archivos que el GPT usa como material de referencia (hasta 20 archivos, 512 MB cada uno). No sustituye a las instrucciones: el conocimiento es la fuente, las instrucciones son las reglas de comportamiento.</td>
+</tr>
+<tr>
+<td><strong>Modelo recomendado</strong></td>
+<td>No</td>
+<td>El modelo que se sugiere por defecto al usuario al iniciar conversación con el GPT.</td>
+</tr>
+<tr>
+<td><strong>Capacidades</strong></td>
+<td>No</td>
+<td>Activa funciones integradas: búsqueda web, generación de imágenes, Canvas, Code Interpreter y análisis de datos, o Apps (herramientas externas conectadas).</td>
+</tr>
+<tr>
+<td><strong>Acciones</strong></td>
+<td>No</td>
+<td>Conexión a APIs externas definidas por ti, para que el GPT pueda consultar o modificar datos en sistemas externos (excluyente con "Apps").</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Buenas prácticas al redactar instrucciones (recomendación oficial de OpenAI)</p>
+<ul>
+<li>En flujos de varios pasos, usa una estructura explícita: "Cuando ocurra X → haz Y", separando bien las secciones.</li>
+<li>Prefiere instrucciones en positivo ("Haz X") frente a listas largas de prohibiciones ("No hagas Y").</li>
+<li>Si el GPT debe aplicar definiciones o clasificaciones concretas, incluye ejemplos breves de salidas aceptables e inaceptables.</li>
+<li>Usa encabezados y listas para que las prioridades y los pasos se distingan visualmente.</li>
+</ul>
+</div>
+<h3 id="ejemplo-real-de-instrucciones-para-un-gpt-docente">Ejemplo real de instrucciones para un GPT docente</h3>
+<div class="highlight"><pre><span></span><code>Eres un asistente experto en Sistemas y Aplicaciones Informáticas para un
+Ciclo Formativo de Grado Superior de Formación Profesional.
+
+Cuando el profesor te pida generar un cuestionario de evaluación:
+1. Pregunta primero el tema, el número de preguntas y el nivel de dificultad
+   si no te lo ha indicado.
+2. Genera las preguntas en formato GIFT (compatible con Moodle), con cuatro
+   opciones por pregunta y solo una correcta.
+3. Entrega el resultado en un único bloque de código, listo para copiar y
+   pegar en un archivo .txt e importarlo en Moodle.
+
+No inventes datos técnicos incorrectos: si no estás seguro de un detalle
+concreto (por ejemplo, un número de puerto o una versión de software),
+dilo explícitamente en vez de inventarlo.
+</code></pre></div>
+<h3 id="probar-el-gpt-antes-de-compartirlo">Probar el GPT antes de compartirlo</h3>
+<p>Antes de compartir o publicar en el GPT Store, usa la <strong>Vista previa</strong> integrada para probar prompts reales, revisar el tono y la precisión, y afinar la configuración. Suele ser más eficaz ajustar primero las instrucciones y añadir ejemplos que añadir más herramientas de golpe.</p>
+<h3 id="como-compartir-un-gpt">Cómo compartir un GPT</h3>
+<ol>
+<li>Abre el GPT en el editor (desde "Mis GPTs" → selecciona el GPT → <strong>Editar GPT</strong>).</li>
+<li>Pulsa <strong>Compartir</strong>.</li>
+<li>Elige el <strong>nivel de compartición</strong>:<ul>
+<li><strong>Solo por invitación:</strong> en cuentas personales, solo tú; en workspaces gestionados, también usuarios o grupos concretos.</li>
+<li><strong>Cualquiera del workspace con el enlace</strong> / <strong>Tu workspace entero</strong> (solo en cuentas de empresa/educación).</li>
+<li><strong>Cualquiera con el enlace:</strong> disponible también en cuentas personales, si la compartición pública está habilitada.</li>
+<li><strong>GPT Store:</strong> lo publica de forma pública en el directorio de GPTs.</li>
+</ul>
+</li>
+<li>Elige el <strong>nivel de permiso</strong>: <em>Puede chatear</em>, <em>Puede ver la configuración</em> o <em>Puede editar</em> (no todos los niveles de compartición admiten los tres permisos).</li>
+<li>Pulsa <strong>Guardar</strong> para aplicar los cambios de compartición.</li>
+<li>Copia el enlace del GPT si quieres enviarlo directamente (menú de tres puntos ••• → "Copiar enlace del GPT").</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Enlace de ejemplo</p>
+<p>Un GPT compartido por enlace tiene una forma parecida a <code>https://chatgpt.com/g/g-&lt;identificador&gt;-&lt;nombre-del-gpt&gt;</code>. Si compartes el GPT directamente con una persona (en cuentas de empresa/educación), esa persona recibe además una notificación por correo con el enlace.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">En cuentas personales, solo dos opciones reales</p>
+<p>Para una cuenta personal (como la mayoría del profesorado usa fuera de un Workspace de empresa), solo existen dos formas reales de compartir un GPT con otras personas: <strong>"Cualquiera con el enlace"</strong> o publicarlo en el <strong>GPT Store</strong>. La compartición dirigida a usuarios/grupos concretos solo existe dentro de workspaces gestionados (ChatGPT Edu/Enterprise).</p>
+</div>
+<h3 id="publicar-en-el-gpt-store">Publicar en el GPT Store</h3>
+<p>Publicar hace que el GPT sea públicamente localizable dentro de ChatGPT. Al publicar, es posible que se te pida elegir una categoría, revisar cómo aparece tu nombre de creador y confirmar que el GPT cumple las políticas de OpenAI. Un GPT puede no ser apto para publicación pública si usa conexiones de apps no soportadas, si usa acciones sin una URL de política de privacidad válida, o si el workspace tiene la publicación pública desactivada.</p>
+<h2 id="preguntas-frecuentes-sobre-gpts">Preguntas frecuentes sobre GPTs</h2>
+<div class="admonition question">
+<p class="admonition-title">¿Puedo editar un GPT después de publicarlo?</p>
+<p>Sí. Los cambios se guardan primero como borrador; pulsa <strong>Actualizar</strong> para aplicarlos a la versión pública ya compartida.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">¿Puedo ver versiones anteriores de mi GPT?</p>
+<p>Sí, desde el menú de tres puntos (•••) del editor puedes acceder al <strong>historial de versiones</strong> y restaurar una anterior si algo salió mal.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">¿Un GPT puede usar Acciones (APIs externas) y Apps al mismo tiempo?</p>
+<p>No. Un GPT puede usar <strong>Apps</strong> (herramientas que el usuario ya tiene conectadas) o <strong>Acciones</strong> (APIs que tú defines), pero no ambas combinadas en el mismo GPT.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">¿Necesito verificar mi perfil de creador para publicar en el GPT Store?</p>
+<p>Para publicar de forma totalmente pública, sí: OpenAI puede pedir verificar tu nombre, un enlace de sitio web de un dominio verificado o perfiles sociales confirmados.</p>
+</div>
+<h3 id="explorar-gpts-de-otros-usuarios-gpt-store">Explorar GPTs de otros usuarios (GPT Store)</h3>
+<p>Aunque tengas cuenta gratuita y no puedas crear GPTs propios, sí puedes <strong>usar</strong> cualquier GPT ya publicado por otros. La sección "Explorar GPT" organiza los GPTs por pestañas (La mejor selección, Educación, Productividad, Investigación y análisis, Escritura, DALL·E...) y muestra rankings de "Tendencias" con los más usados por la comunidad.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://commons.wikimedia.org/wiki/Special:FilePath/ChatGPT-Logo.svg" data-desc-position="bottom"><img alt="GPT Store" src="https://commons.wikimedia.org/wiki/Special:FilePath/ChatGPT-Logo.svg"></a></p>
+<div class="admonition example">
+<p class="admonition-title">GPTs educativos habituales en el Store</p>
+<p>Buscando por la categoría "Educación" suelen aparecer GPTs orientados a resumir papers académicos, generar rúbricas de evaluación, practicar idiomas con corrección de errores, o resolver dudas de una asignatura concreta citando fuentes. Antes de usar uno con datos de alumnos, revisa su descripción y quién lo ha publicado — al ser contenido de terceros, OpenAI no garantiza la exactitud de sus instrucciones internas.</p>
+</div>
+<h2 id="deep-research-y-sora">Deep Research y Sora</h2>
+<p><strong>Deep Research</strong> es el modo de investigación autónoma de ChatGPT (disponible en Plus y superiores, con cuota limitada en Free): el modelo navega por internet de forma autónoma, contrasta varias fuentes y entrega un informe extenso con referencias, de forma similar a Deep Research en Gemini.</p>
+<p><strong>Sora</strong> es el modelo de generación de vídeo de OpenAI, integrado en los planes Plus y superiores: permite generar clips cortos a partir de una descripción en texto, y también remezclar o extender vídeos ya generados.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg" data-desc-position="bottom"><img alt="Sora / generación de vídeo" src="https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg"></a></p>
+<h2 id="codex-programacion-agentica">Codex (programación agéntica)</h2>
+<p><strong>Codex</strong> es el agente de programación de OpenAI: entiende una base de código, ejecuta pruebas, corrige errores y puede trabajar de forma semiautónoma sobre tareas de varios pasos, de forma parecida a Claude Code. Está disponible dentro de ChatGPT (pestaña Codex), como extensión en editores como VS Code, y en la terminal.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de instrucción para Codex</p>
+<div class="highlight"><pre><span></span><code>Revisa el script scripts/generate_pptx.py de este repositorio. Quiero que
+añadas un parámetro --dry-run que muestre por consola cuántas diapositivas
+se generarían, sin escribir el archivo .pptx final. No cambies el
+comportamiento por defecto cuando no se pase ese parámetro.
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Prompt para preguntarle a ChatGPT cómo compartir tu propio GPT</p>
+<div class="highlight"><pre><span></span><code>Actúa como experto en la plataforma de GPTs de OpenAI. Tengo un GPT ya creado
+para [tarea concreta, ej. "generar cuestionarios GIFT para Moodle"]. Explícame
+paso a paso cómo compartirlo solo con el equipo docente de mi ciclo (sin
+publicarlo en el GPT Store), qué opción de "nivel de compartición" debo
+elegir en mi caso al tener una cuenta personal, y qué diferencia práctica hay
+entre los permisos "Puede chatear" y "Puede ver la configuración".
+</code></pre></div>
+</div>
+<h3 id="otro-ejemplo-de-instrucciones-gpt-de-soporte-de-redes-y-sistemas">Otro ejemplo de instrucciones: GPT de soporte de redes y sistemas</h3>
+<div class="highlight"><pre><span></span><code>Eres un técnico senior de sistemas y redes para un ciclo de Formación
+Profesional (Administración de Sistemas Informáticos en Red).
+
+Cuando un alumno te describa una avería o un comportamiento anómalo:
+1. Pide los datos mínimos si faltan: sistema operativo, versión, y el mensaje
+   de error exacto (cópialo tal cual, no lo resumas).
+2. Propón un diagnóstico por descarte, de la causa más probable a la menos
+   probable, explicando brevemente por qué.
+3. Da los comandos exactos a ejecutar para comprobar cada hipótesis, con el
+   resultado esperado si todo va bien.
+4. Si el problema implica borrar datos o reiniciar un servicio en producción,
+   avisa explícitamente antes de dar ese paso.
+
+Responde siempre en español, con bloques de código separados por cada
+comando, y nunca inventes un comando que no existe en el sistema indicado.
+</code></pre></div>
+<h3 id="diferencia-entre-acciones-y-apps-en-un-gpt">Diferencia entre Acciones y Apps en un GPT</h3>
+<p>Es fácil confundir estas dos formas de ampliar un GPT:</p>
+<ul>
+<li><strong>Apps</strong> — el GPT usa herramientas que el propio usuario final ya tiene conectadas (por ejemplo, su cuenta de Google Drive o Gmail). El control de permisos recae en el usuario que chatea con el GPT.</li>
+<li><strong>Acciones</strong> — tú, como creador del GPT, defines una conexión a una API externa concreta (por ejemplo, consultar el estado de un servidor o crear una incidencia en un sistema de tickets). El control de qué API se llama y cómo lo defines tú, no el usuario final.</li>
+</ul>
+<p>Un GPT puede usar una de las dos, nunca ambas combinadas en la misma configuración.</p>
+<h2 id="preguntas-frecuentes-adicionales">Preguntas frecuentes adicionales</h2>
+<div class="admonition question">
+<p class="admonition-title">¿Puedo duplicar un GPT de otro usuario para adaptarlo?</p>
+<p>Solo si el creador ha dado el permiso "Puede ver la configuración" o "Puede editar" al compartirlo. Con el permiso básico "Puede chatear", solo puedes conversar con él, no ver ni copiar sus instrucciones.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">¿Qué pasa si el GPT usa datos de mi organización (ChatGPT Edu/Enterprise)?</p>
+<p>Los administradores del workspace pueden restringir qué opciones de compartición están disponibles (por ejemplo, bloquear "Cualquiera con el enlace" para forzar que todo quede dentro del dominio educativo).</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">¿El GPT Store es gratuito para publicar?</p>
+<p>Sí, publicar en el GPT Store no tiene coste adicional más allá de tu suscripción Plus/Pro/Business, pero debes completar tu perfil de creador y cumplir las políticas de contenido de OpenAI.</p>
+</div>
+<h2 id="comparativa-rapida-con-claude-y-gemini">Comparativa rápida con Claude y Gemini</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>ChatGPT</th>
+<th>Claude</th>
+<th>Gemini</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Personalización persistente</td>
+<td><strong>GPTs</strong></td>
+<td>Proyectos / Skills</td>
+<td>Gems</td>
+</tr>
+<tr>
+<td>Directorio público</td>
+<td><strong>GPT Store</strong></td>
+<td>No (skills se instalan, no se "publican" igual)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Requiere plan de pago para crear</td>
+<td>Sí (Plus o superior)</td>
+<td>No (Free ya permite Proyectos)</td>
+<td>No (Free ya permite Gems)</td>
+</tr>
+<tr>
+<td>Agente de programación propio</td>
+<td>Codex</td>
+<td>Claude Code</td>
+<td>— (usa Gemini vía Antigravity/IDE)</td>
+</tr>
+<tr>
+<td>Punto fuerte</td>
+<td>Ecosistema, modo agente, adopción masiva</td>
+<td>Razonamiento, seguridad y uso de ordenador</td>
+<td>Integración con Google y multimodalidad</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recursos">Recursos</h2>
+<ul>
+<li><a href="https://help.openai.com/en/articles/8554397-creating-and-editing-gpts" target="_blank">Ayuda oficial: crear y editar GPTs</a></li>
+<li><a href="https://help.openai.com/en/articles/8798878-sharing-and-publishing-gpts" target="_blank">Ayuda oficial: compartir y publicar GPTs</a></li>
+<li><a href="https://chatgpt.com/gpts" target="_blank">GPT Store</a></li>
+<li><a href="https://openai.com/api/pricing/" target="_blank">Precios de la API de OpenAI</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
