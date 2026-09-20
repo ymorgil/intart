@@ -243,6 +243,81 @@ la reunión. No superes las 300 palabras en total.
 - **Los Audio/Video Overview son generados, no grabados por personas.** El tono es natural pero las voces son sintéticas; avisa a tu alumnado de esto si vas a compartir el audio como material oficial.
 - **Los cuadernos compartidos heredan los permisos de Drive.** Si revocas el acceso a un documento de Drive usado como fuente, la fuente deja de actualizarse en el cuaderno, aunque el contenido ya generado (resúmenes, audio) puede seguir existiendo.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Presentaciones de presentaciones
+
+Actúa como un diseñador instruccional experto. Usando todas las fuentes cargadas en este cuaderno, crea el contenido completo de una presentación sobre el módulo documentado, organizada de la siguiente manera:
+
+Portada: título del módulo y una frase que resuma su propósito general.
+Introducción / Objetivo del módulo: qué es, para qué sirve y en qué contexto se usa.
+Estructura general: enumera las secciones, componentes o funcionalidades principales que cubre la documentación.
+Desarrollo por sección: para cada componente o funcionalidad clave, crea una diapositiva con:
+Título claro
+3-5 bullets explicando qué hace y cómo funciona
+Si existe, un ejemplo práctico o caso de uso extraído de las fuentes
+Requisitos o dependencias (si la documentación los menciona): configuración previa, permisos, integraciones necesarias.
+Flujo de uso / proceso paso a paso: si la documentación describe un flujo o procedimiento, resúmelo en pasos numerados.
+Puntos clave a recordar: un resumen final con las 5-7 ideas más importantes del módulo.
+Preguntas frecuentes o problemas comunes (si están documentados): 3-5 preguntas con respuesta breve.
+
+Reglas:
+
+Usa solo información contenida en las fuentes, sin inventar datos.
+Cita o indica de qué fuente/documento proviene cada bloque de información relevante.
+Redacta en un tono claro, profesional y didáctico, apto para una audiencia que no conoce el módulo en profundidad.
+Entrega el contenido en formato de diapositivas (título + bullets por cada una), listo para copiar a PowerPoint o Google Slides.
+
+
+
+---
+
+Actúa como un diseñador instruccional experto en formación de adultos en el ámbito informático. Usando exclusivamente la información contenida en [nombre del documento o fuente específica cargada en el cuaderno] sobre [tema específico a presentar], crea el contenido completo de una presentación profesional para impartir clase.
+
+Público objetivo: personas adultas con conocimientos previos de informática. Evita explicaciones básicas o infantilizadas; puedes usar terminología técnica propia del sector sin necesidad de simplificarla en exceso, pero explica bien los conceptos nuevos o específicos del documento.
+
+Estilo visual: diseño profesional, sobrio y corporativo, con fondo blanco, tipografía clara y sin elementos decorativos innecesarios. Nada de colores llamativos ni diseños infantiles.
+
+Organiza la presentación así:
+
+Portada: título de la sesión (relacionado con [tema específico]) y una línea de subtítulo con el contexto o el nombre del módulo/curso.
+Índice / Objetivos de la sesión: qué se va a tratar y qué se espera que el alumno sepa hacer al terminar.
+Desarrollo por bloques temáticos: divide el contenido de [nombre del documento o tema] en secciones lógicas. Para cada bloque, crea una diapositiva con:
+Título claro y técnico
+3-5 bullets con la información clave (conceptos, procedimientos, comandos, configuraciones, etc., según corresponda)
+Ejemplos prácticos o casos de uso si aparecen en la fuente
+Procedimientos paso a paso (si el documento describe instalaciones, configuraciones o procesos): numera los pasos con claridad.
+Errores comunes o buenas prácticas (si están documentados): qué evitar y por qué.
+Resumen final: 5-7 puntos clave que el alumno debe recordar de la sesión.
+Preguntas para repasar en clase (opcional): 3-5 preguntas breves para comprobar comprensión, sin dar la respuesta en la misma diapositiva.
+
+Reglas:
+
+Usa solo información de la fuente indicada, sin inventar ni mezclar con otros documentos del cuaderno salvo que te lo indique expresamente.
+Indica de qué apartado o sección de la fuente procede cada bloque de contenido relevante.
+Redacta en un tono profesional, directo y técnico, propio de formación para adultos, evitando un tono excesivamente didáctico o condescendiente.
+Entrega el contenido en formato de diapositivas (título + bullets por diapositiva), listo para pasar a PowerPoint o Google Slides con fondo blanco.
+
+
+
+
 ## Recursos
 
 - [NotebookLM (web oficial)](https://notebooklm.google/){target="_blank"}
