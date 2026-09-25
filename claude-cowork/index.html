@@ -1,0 +1,898 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ymorgil.github.io/intart/claude-cowork/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Claude trabajando sobre carpetas locales (antes "Cowork") - 🤖 Inteligencia Artificial (ymorgil)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-trabajando-sobre-carpetas-locales-antes-cowork" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="🤖 Inteligencia Artificial (ymorgil)" class="md-header__button md-logo" aria-label="🤖 Inteligencia Artificial (ymorgil)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            🤖 Inteligencia Artificial (ymorgil)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Claude trabajando sobre carpetas locales (antes "Cowork")
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo" aria-label="Modo oscuro" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="green" aria-label="Modo claro" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="🤖 Inteligencia Artificial (ymorgil)" class="md-nav__button md-logo" aria-label="🤖 Inteligencia Artificial (ymorgil)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    🤖 Inteligencia Artificial (ymorgil)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02claude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03gemini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gemini
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04gpt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat GPT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05notebook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NotebookLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06moodle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moodle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07imagenes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imágenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08skills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skills
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-y-como-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Qué es y cómo funciona
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-requisitos-previos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Requisitos previos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-paso-a-paso-conectar-una-carpeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Paso a paso: conectar una carpeta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-permisos-que-controlas-tu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Permisos: qué controlas tú
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-regla-personalizada-de-seguridad-para-borrados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Regla personalizada de seguridad para borrados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-ejemplos-de-prompts-para-trabajar-con-una-carpeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Ejemplos de prompts para trabajar con una carpeta
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Ejemplos de prompts para trabajar con una carpeta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentacion-y-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentación y MkDocs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#materiales-didacticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materiales didácticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administracion-de-sistemas-y-automatizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Administración de sistemas y automatización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organización
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ventajas-y-desventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Ventajas y desventajas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-recomendaciones-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Recomendaciones de seguridad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="claude-trabajando-sobre-carpetas-locales-antes-cowork">Claude trabajando sobre carpetas locales (antes "Cowork")</h1>
+<blockquote>
+<p><strong>Nota:</strong> las funciones que antes se conocían como <em>Claude Cowork</em> ahora forman parte de Claude directamente. Este manual explica cómo darle acceso a una carpeta de tu equipo para que Claude trabaje sobre ella (leer, crear, modificar archivos y ejecutar código).</p>
+</blockquote>
+<hr>
+<h2 id="1-que-es-y-como-funciona">1. Qué es y cómo funciona</h2>
+<ul>
+<li>Claude trabaja en un <strong>entorno aislado y temporal en la nube</strong> que se crea para cada sesión y se elimina al terminarla.</li>
+<li>Para llegar a los archivos de tu ordenador usa la <strong>app de escritorio de Claude</strong> como puente, y <strong>solo</strong> en las carpetas que tú hayas conectado.</li>
+<li>Puede <strong>leer, crear y modificar</strong> archivos dentro de esas carpetas y <strong>ejecutar código</strong> sobre ellos.</li>
+<li><strong>Protección ante borrados:</strong> antes de eliminar cualquier archivo, Claude necesita tu permiso explícito (aparece un aviso y debes pulsar <em>Permitir</em>).</li>
+<li>La sesión sigue funcionando aunque cierres la app, pero <strong>si la tarea usa archivos locales, la app de escritorio debe estar abierta</strong> y el equipo encendido y con conexión.</li>
+</ul>
+<hr>
+<h2 id="2-requisitos-previos">2. Requisitos previos</h2>
+<table>
+<thead>
+<tr>
+<th>Requisito</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App de escritorio</td>
+<td>Claude Desktop instalada (Windows o macOS) desde <code>claude.ai/download</code></td>
+</tr>
+<tr>
+<td>Cuenta</td>
+<td>Sesión iniciada con tu cuenta de Claude</td>
+</tr>
+<tr>
+<td>Carpeta de trabajo</td>
+<td>Una carpeta dedicada, preferiblemente una <strong>copia</strong> de tus materiales o un repositorio Git</td>
+</tr>
+<tr>
+<td>Conexión</td>
+<td>El equipo encendido, en línea y con la app abierta mientras Claude trabaje en local</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-paso-a-paso-conectar-una-carpeta">3. Paso a paso: conectar una carpeta</h2>
+<ol>
+<li><strong>Prepara la carpeta.</strong> Crea una carpeta de trabajo, por ejemplo <code>~/Docencia/apuntes-mkdocs</code>. Si es un proyecto MkDocs, asegúrate de que está bajo Git (<code>git init</code> o clonado de GitHub) para poder deshacer cambios.</li>
+<li><strong>Abre la app de escritorio de Claude</strong> e inicia una conversación nueva.</li>
+<li><strong>Conecta la carpeta</strong> desde las opciones de la conversación (selector de carpetas/espacio de trabajo). Selecciona solo la carpeta que Claude necesita, no tu carpeta personal completa.</li>
+<li><strong>Concede los permisos del sistema</strong> si el sistema operativo los pide (en macOS: <em>Ajustes del sistema → Privacidad y seguridad → Archivos y carpetas</em>).</li>
+<li><strong>Comprueba el acceso</strong> con un prompt sencillo:
+   <div class="highlight"><pre><span></span><code>Lista el contenido de la carpeta conectada y dime qué tipo de proyecto es.
+</code></pre></div></li>
+<li><strong>Fija tus reglas de trabajo</strong> al inicio de la conversación (ver apartado 5).</li>
+<li><strong>Revisa los cambios</strong> al terminar: <code>git status</code> y <code>git diff</code> son tus aliados.</li>
+</ol>
+<blockquote>
+<p>💡 También puedes abrir la misma conversación desde la web o el móvil para seguir el progreso; mientras la app de escritorio esté abierta, Claude seguirá llegando a la carpeta conectada.</p>
+</blockquote>
+<hr>
+<h2 id="4-permisos-que-controlas-tu">4. Permisos: qué controlas tú</h2>
+<table>
+<thead>
+<tr>
+<th>Acción</th>
+<th>Comportamiento por defecto</th>
+<th>Recomendación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Leer archivos</td>
+<td>Permitido en carpetas conectadas</td>
+<td>Conecta solo lo necesario</td>
+</tr>
+<tr>
+<td>Crear / modificar</td>
+<td>Permitido en carpetas conectadas</td>
+<td>Trabaja con Git para poder revertir</td>
+</tr>
+<tr>
+<td>Ejecutar código</td>
+<td>Se ejecuta en el entorno aislado sobre tus archivos</td>
+<td>Revisa scripts antes de ejecutarlos sobre datos reales</td>
+</tr>
+<tr>
+<td>Eliminar archivos</td>
+<td><strong>Requiere tu permiso explícito</strong> (aviso "Permitir")</td>
+<td>Añade además una regla propia (ver abajo)</td>
+</tr>
+<tr>
+<td>Acceso a red</td>
+<td>Sigue la configuración de salida de red</td>
+<td>No amplíes permisos sin necesidad</td>
+</tr>
+<tr>
+<td>Conectores / MCP</td>
+<td>Solo los que tú conectes</td>
+<td>Evalúa la confianza de cada uno</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-regla-personalizada-de-seguridad-para-borrados">5. Regla personalizada de seguridad para borrados</h2>
+<p>Además del aviso de la app, puedes pedir una confirmación extra al principio de cada conversación:</p>
+<div class="highlight"><pre><span></span><code>Tienes permiso de lectura, escritura y ejecución en la carpeta conectada.
+Para ELIMINAR cualquier archivo o carpeta debes:
+1. Decirme exactamente qué vas a borrar (ruta completa).
+2. Esperar a que yo escriba DELETE en mayúsculas.
+Si no escribo DELETE, no borres nada; en su lugar, mueve los archivos a una
+subcarpeta _to_delete/ y avísame.
+</code></pre></div>
+<blockquote>
+<p>Para que la regla se aplique siempre, guárdala en tus <strong>preferencias personales</strong> (Ajustes → Perfil) o en un archivo de instrucciones dentro del proyecto (por ejemplo <code>CLAUDE.md</code>).</p>
+</blockquote>
+<hr>
+<h2 id="6-ejemplos-de-prompts-para-trabajar-con-una-carpeta">6. Ejemplos de prompts para trabajar con una carpeta</h2>
+<h3 id="documentacion-y-mkdocs">Documentación y MkDocs</h3>
+<div class="highlight"><pre><span></span><code>Revisa todos los .md de la carpeta docs/ y genera el bloque nav: de mkdocs.yml
+ordenado por unidades. No modifiques los archivos, solo mkdocs.yml.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Convierte el archivo Tema3-Redes.docx a Markdown limpio y guárdalo en
+docs/redes/tema3.md. Extrae las imágenes a docs/redes/img/ y enlázalas.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Busca enlaces rotos e imágenes que no existan en toda la carpeta docs/
+y dame un informe en informe-enlaces.md con archivo, línea y enlace.
+</code></pre></div>
+<h3 id="materiales-didacticos">Materiales didácticos</h3>
+<div class="highlight"><pre><span></span><code>A partir de docs/linux/permisos.md crea una práctica con 10 apartados
+numerados y guárdala como practicas/SP2.3-permisos.md.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Genera un banco de 20 preguntas tipo test sobre el tema de virtualización
+(docs/virtualizacion/) con la respuesta correcta y una breve explicación.
+</code></pre></div>
+<h3 id="administracion-de-sistemas-y-automatizacion">Administración de sistemas y automatización</h3>
+<div class="highlight"><pre><span></span><code>Revisa los scripts de la carpeta scripts/ y añade comentarios, control de
+errores (set -euo pipefail) y un bloque de ayuda con -h en cada uno.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Crea un docker-compose.yml en lab-wordpress/ con WordPress, MariaDB y
+volúmenes persistentes, más un README.md explicando cómo levantarlo.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Analiza los logs de logs/auth.log y resume los intentos de acceso fallidos
+por IP en una tabla ordenada de mayor a menor.
+</code></pre></div>
+<h3 id="organizacion">Organización</h3>
+<div class="highlight"><pre><span></span><code>Renombra todas las imágenes de docs/img/ a minúsculas y sin espacios,
+y actualiza las referencias en los .md. Antes de hacerlo, muéstrame
+la lista de cambios propuestos.
+</code></pre></div>
+<blockquote>
+<p>✅ <strong>Buenas prácticas en los prompts:</strong> indica la carpeta exacta, el formato de salida, qué <strong>no</strong> debe tocar y pide que te enseñe el plan antes de cambios masivos.</p>
+</blockquote>
+<hr>
+<h2 id="7-ventajas-y-desventajas">7. Ventajas y desventajas</h2>
+<table>
+<thead>
+<tr>
+<th>Ventajas</th>
+<th>Desventajas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trabaja directamente sobre tus archivos: no hace falta subir ni descargar</td>
+<td>Los archivos que abre se procesan en los servidores de Anthropic, no se quedan solo en tu equipo</td>
+</tr>
+<tr>
+<td>Acceso limitado a las carpetas que tú conectas</td>
+<td>Si conectas una carpeta demasiado amplia, expones más datos de los necesarios</td>
+</tr>
+<tr>
+<td>Ejecuta código en un entorno aislado y temporal</td>
+<td>Necesita la app de escritorio abierta y el equipo encendido para tocar archivos locales</td>
+</tr>
+<tr>
+<td>Borrados protegidos con confirmación explícita</td>
+<td>Puede modificar muchos archivos en poco tiempo: un prompt ambiguo causa cambios masivos</td>
+</tr>
+<tr>
+<td>Ideal para tareas repetitivas: conversiones, renombrados, informes, índices</td>
+<td>Conviene revisar siempre el resultado; puede equivocarse</td>
+</tr>
+<tr>
+<td>Puedes seguir y corregir la tarea desde web o móvil</td>
+<td>No es recomendable para datos sensibles (datos de alumnado, notas, datos personales) sin valorar la normativa (RGPD)</td>
+</tr>
+<tr>
+<td>Combina archivos locales con web y conectores (Drive, Gmail…)</td>
+<td>Más conectores = más superficie de riesgo (inyección de instrucciones desde contenido externo)</td>
+</tr>
+<tr>
+<td>Muy útil para mantener documentación MkDocs y materiales de clase</td>
+<td>Depende de conexión a internet y de la disponibilidad del servicio</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-recomendaciones-de-seguridad">8. Recomendaciones de seguridad</h2>
+<ul>
+<li>Usa <strong>Git</strong> en la carpeta conectada y haz <em>commit</em> antes de cada sesión.</li>
+<li>Conecta <strong>carpetas específicas</strong>, nunca tu carpeta de usuario completa.</li>
+<li><strong>No conectes</strong> carpetas con datos personales del alumnado.</li>
+<li>Pide siempre <strong>un plan antes de cambios masivos</strong>.</li>
+<li>Si Claude se comporta de forma extraña (temas no relacionados, accesos inesperados), <strong>detén la tarea</strong> y repórtalo.</li>
+</ul>
+<hr>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork">Get started with Claude Cowork – Claude Help Center</a></li>
+<li><a href="https://support.claude.com/en/articles/13364135-use-claude-cowork-safely">Use Claude Cowork safely – Claude Help Center</a></li>
+<li><a href="https://claude.com/docs/third-party/claude-desktop/local-access">Desktop and filesystem access – Claude Docs</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

@@ -1,0 +1,1475 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ymorgil.github.io/intart/03gemini/">
+      
+      
+        <link rel="prev" href="../02claude/">
+      
+      
+        <link rel="next" href="../04gpt/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Gemini - 🤖 Inteligencia Artificial (ymorgil)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gemini-google" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="🤖 Inteligencia Artificial (ymorgil)" class="md-header__button md-logo" aria-label="🤖 Inteligencia Artificial (ymorgil)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            🤖 Inteligencia Artificial (ymorgil)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gemini
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo" aria-label="Modo oscuro" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="green" aria-label="Modo claro" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="🤖 Inteligencia Artificial (ymorgil)" class="md-nav__button md-logo" aria-label="🤖 Inteligencia Artificial (ymorgil)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    🤖 Inteligencia Artificial (ymorgil)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02claude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gemini
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gemini
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#gemini-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gemini WEB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nano-banana-generacion-de-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nano Banana (generación de imágenes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Research
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-se-usa-y-como-se-paga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Cómo se usa y cómo se paga?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve-crear-un-gem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Para qué sirve crear un Gem?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-crear-un-gem-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo crear un Gem paso a paso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-un-gem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de un Gem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-real-de-instrucciones-para-un-gem-docente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo real de instrucciones para un Gem docente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-compartir-un-gem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo compartir un Gem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencia-entre-un-gem-y-una-conversacion-con-archivos-adjuntos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferencia entre un Gem y una conversación con archivos adjuntos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gems-predisenados-por-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gems prediseñados por Google
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas-de-privacidad-para-gems-en-un-centro-educativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas de privacidad para Gems en un centro educativo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracion-con-google-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integración con Google Workspace
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensiones-apps-conectadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extensiones (Apps conectadas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-ai-studio-para-desarrollo-y-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google AI Studio (para desarrollo y pruebas)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Google AI Studio (para desarrollo y pruebas)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#otro-ejemplo-de-instrucciones-gem-de-automatizacion-de-redes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Otro ejemplo de instrucciones: Gem de automatización de redes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-frecuentes-sobre-gems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preguntas frecuentes sobre Gems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparativa-rapida-con-claude-y-chatgpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa rápida con Claude y ChatGPT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04gpt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat GPT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05notebook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NotebookLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06moodle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moodle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07imagenes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Imágenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08skills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skills
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#gemini-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gemini WEB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nano-banana-generacion-de-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nano Banana (generación de imágenes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Research
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-se-usa-y-como-se-paga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Cómo se usa y cómo se paga?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve-crear-un-gem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Para qué sirve crear un Gem?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-crear-un-gem-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo crear un Gem paso a paso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-un-gem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de un Gem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-real-de-instrucciones-para-un-gem-docente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo real de instrucciones para un Gem docente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-compartir-un-gem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo compartir un Gem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencia-entre-un-gem-y-una-conversacion-con-archivos-adjuntos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferencia entre un Gem y una conversación con archivos adjuntos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gems-predisenados-por-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gems prediseñados por Google
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas-de-privacidad-para-gems-en-un-centro-educativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas de privacidad para Gems en un centro educativo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracion-con-google-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integración con Google Workspace
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensiones-apps-conectadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extensiones (Apps conectadas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-ai-studio-para-desarrollo-y-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google AI Studio (para desarrollo y pruebas)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Google AI Studio (para desarrollo y pruebas)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#otro-ejemplo-de-instrucciones-gem-de-automatizacion-de-redes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Otro ejemplo de instrucciones: Gem de automatización de redes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-frecuentes-sobre-gems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preguntas frecuentes sobre Gems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparativa-rapida-con-claude-y-chatgpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa rápida con Claude y ChatGPT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="gemini-google">💎 Gemini (Google)</h1>
+<blockquote>
+<p>Documento actualizado a <strong>julio de 2026</strong>. Google actualiza modelos, precios y funciones de Gemini con mucha frecuencia (a veces varias veces al trimestre), conviene revisar periódicamente para confirmar que los datos siguen vigentes.</p>
+</blockquote>
+<h2 id="gemini-web">Gemini <a href="https://gemini.google.com/" target="_blank">WEB</a></h2>
+<p>Asistente de inteligencia artificial multimodal creado por <strong>Google DeepMind</strong>. A diferencia de otros chatbots que nacieron centrados solo en texto, Gemini se diseñó desde el principio para entender y combinar texto, imagen, audio, vídeo y código en la misma conversación. Está integrado de forma nativa en el buscador de Google, en Android, en Google Workspace (Gmail, Docs, Drive, Sheets) y disponible también como app independiente (web y móvil).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/gemini-color.png" data-desc-position="bottom"><img alt="Gemini" src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/gemini-color.png"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Gemini no es solo un chat</p>
+<p>Como Claude o ChatGPT, Gemini no "vive" en tu ordenador ni en tu móvil: el modelo se ejecuta en los centros de datos de Google. La app, la web o la integración dentro de Gmail son solo la puerta de entrada para hablar con esos modelos en la nube.</p>
+</div>
+<p><strong>FORMATOS</strong></p>
+<table>
+<thead>
+<tr>
+<th>Producto</th>
+<th>Qué es y para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gemini (app/web)</strong></td>
+<td>Asistente de chat general, equivalente a Claude.ai o ChatGPT. Disponible en <a href="https://gemini.google.com/" target="_blank">gemini.google.com</a> y en la app móvil de Android/iOS.</td>
+</tr>
+<tr>
+<td><strong>Integración en Google Workspace</strong></td>
+<td>Gemini aparece como barra lateral o botón "✨" dentro de Gmail, Docs, Sheets, Slides y Meet, usando el contexto del documento o correo abierto.</td>
+</tr>
+<tr>
+<td><strong>Google AI Studio</strong></td>
+<td>Herramienta gratuita para desarrolladores y docentes que permite probar los modelos Gemini, ajustar parámetros (temperatura, instrucciones de sistema) y generar código de integración, sin necesidad de programar una app completa.</td>
+</tr>
+<tr>
+<td><strong>API de Gemini (Vertex AI / AI Studio)</strong></td>
+<td>Interfaz técnica de pago por token para integrar los modelos Gemini en aplicaciones propias.</td>
+</tr>
+<tr>
+<td><strong>Gemini en Android</strong></td>
+<td>Sustituye al antiguo Asistente de Google en muchos dispositivos; se activa manteniendo pulsado el botón de encendido o diciendo "Hey Google".</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://wpforms.com/wp-content/uploads/2024/08/google-ai-studio-logo.png" data-desc-position="bottom"><img alt="Google AI Studio" src="https://wpforms.com/wp-content/uploads/2024/08/google-ai-studio-logo.png"></a></p>
+<h2 id="modelos">Modelos</h2>
+<p>Google organiza la familia Gemini en función de la relación velocidad/coste/razonamiento. La generación vigente en julio de 2026 es <strong>Gemini 3</strong>, que convive todavía con algunos modelos <strong>2.5</strong> en el plan gratuito.</p>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>Categoría</th>
+<th>Precio API aprox. (por 1M tokens)</th>
+<th>Contexto</th>
+<th>Uso principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gemini 3 Deep Think</strong></td>
+<td>Razonamiento extendido</td>
+<td>Solo incluido en plan <strong>Ultra</strong></td>
+<td>Muy amplio</td>
+<td>Investigación científica, demostraciones matemáticas y problemas lógicos de varios pasos donde el modelo "piensa" antes de responder</td>
+</tr>
+<tr>
+<td><strong>Gemini 3 Pro</strong></td>
+<td>Razonamiento avanzado</td>
+<td>~2-4 $</td>
+<td>1.000.000 tokens</td>
+<td>Análisis profundo, generación de vídeo (Veo), tareas profesionales complejas</td>
+</tr>
+<tr>
+<td><strong>Gemini 3 Flash</strong></td>
+<td>Rápido y agéntico</td>
+<td>~0,50 $</td>
+<td>Amplio</td>
+<td>Suele igualar a Pro en muchas tareas ejecutándose unas 3 veces más rápido; ideal para uso diario y flujos agénticos</td>
+</tr>
+<tr>
+<td><strong>Gemini 3 Flash-Lite</strong></td>
+<td>Económico</td>
+<td>Tarifa reducida</td>
+<td>Amplio</td>
+<td>Clasificación, resumen y <em>embeddings</em> en grandes volúmenes de texto</td>
+</tr>
+<tr>
+<td><strong>Gemini 2.5 Flash</strong></td>
+<td>Plan gratuito</td>
+<td>—</td>
+<td>32.000 tokens</td>
+<td>Versión incluida por defecto en la cuenta gratuita cuando no hay cuota de los modelos 3 disponible</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Los precios cambian por región y por endpoint</p>
+<p>Desde el 1 de julio de 2026 la tarificación de la familia Gemini 3 varía según el endpoint (global vs. regional) en la API. Antes de presupuestar un proyecto con la API, consulta siempre la <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank">página oficial de precios</a>.</p>
+</div>
+<h3 id="nano-banana-generacion-de-imagenes">Nano Banana (generación de imágenes)</h3>
+<p>Dentro del ecosistema Gemini, <strong>Nano Banana</strong> (nombre coloquial del modelo de generación y edición de imágenes de Google, actualmente en su versión Pro) permite crear y editar imágenes de forma conversacional: puedes pedir cambios sobre una imagen ya generada ("quita el fondo", "cambia la hora del día") sin tener que reescribir el prompt completo.</p>
+<h3 id="deep-research">Deep Research</h3>
+<p><strong>Deep Research</strong> es el modo de investigación autónoma de Gemini: en lugar de responder directamente, el modelo planifica una serie de búsquedas en internet, navega por decenas de páginas, contrasta fuentes y entrega un informe largo y estructurado con enlaces a las fuentes originales.</p>
+<div class="admonition example">
+<p class="admonition-title">Cuándo usar Deep Research en clase</p>
+<p>Es especialmente útil para pedirle al alumnado (o para prepararte tú mismo) un estado del arte sobre un tema técnico amplio, por ejemplo: <em>"Investiga el estado actual de la virtualización de contenedores frente a máquinas virtuales en entornos de producción, con ejemplos reales de empresas y comparativas de rendimiento de 2025-2026."</em> El informe final suele tardar varios minutos en generarse porque el modelo está navegando de verdad, no respondiendo de memoria.</p>
+</div>
+<p>Disponible en los planes <strong>Google AI Pro</strong> y <strong>Google AI Ultra</strong>; el plan gratuito tiene un número muy limitado de usos al mes. El plan AI Pro también incluye <strong>NotebookLM Plus</strong> (ver la página <a href="../05notebook/">NotebookLM</a>), la otra gran herramienta de investigación de Google basada en documentos propios.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://play-lh.googleusercontent.com/qWDLmYCI4Lqzq8J-LhtvWvp1HIPkJb2lqkHjduXM7tnCo7N1tmKxnYdaX7CS2_5pkDuW=w240-h480-rw" data-desc-position="bottom"><img alt="NotebookLM" src="https://play-lh.googleusercontent.com/qWDLmYCI4Lqzq8J-LhtvWvp1HIPkJb2lqkHjduXM7tnCo7N1tmKxnYdaX7CS2_5pkDuW=w240-h480-rw"></a></p>
+<h2 id="como-se-usa-y-como-se-paga">¿Cómo se usa y cómo se paga?</h2>
+<ul>
+<li><strong>App Gemini / Google AI:</strong> plan <strong>Free</strong> (usa Gemini 2.5 Flash con contexto limitado), <strong>Google AI Pro</strong> (~20 $/mes: acceso a Gemini 3 Pro, 1M de tokens de contexto, Deep Research, NotebookLM Plus y 2 TB en Google One) y <strong>Google AI Ultra</strong> (dos niveles, aprox. 100 $ y 200 $/mes, que añaden Deep Think y cuotas de uso mucho más altas).</li>
+<li><strong>API (Vertex AI / Google AI Studio):</strong> pago por token, con tarifas distintas de entrada y salida; si el contexto supera los 200.000 tokens se aplican tarifas de "contexto largo".</li>
+<li><strong>Integración gratuita y con límites</strong> dentro de productos de Google como Search (resúmenes con IA), Gmail (redacción asistida) o Android.</li>
+</ul>
+<hr>
+<h2 id="gems">Gems</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://commons.wikimedia.org/wiki/Special:FilePath/Google_Workspace_Logo.svg" data-desc-position="bottom"><img alt="Google Workspace" src="https://commons.wikimedia.org/wiki/Special:FilePath/Google_Workspace_Logo.svg"></a></p>
+<p>Los <strong>Gems</strong> son la forma que tiene Gemini de crear <strong>versiones personalizadas del asistente</strong>: un mismo modelo (por ejemplo, Gemini 3 Flash) al que le añades instrucciones fijas, un rol concreto y, opcionalmente, documentos de referencia, para que se comporte siempre igual sin tener que repetir el contexto en cada conversación nueva. Es el equivalente directo de los <strong>Proyectos</strong> de Claude o los <strong>GPTs</strong> de ChatGPT.</p>
+<div class="admonition example">
+<p class="admonition-title">Definición corta</p>
+<p>Un Gem es "un empleado especializado" dentro de Gemini: en vez de explicarle a un asistente genérico quién eres y qué necesitas cada vez, configuras un Gem una sola vez (por ejemplo, "Corrector de exámenes de FP") y lo reutilizas siempre que haga falta.</p>
+</div>
+<h3 id="para-que-sirve-crear-un-gem">¿Para qué sirve crear un Gem?</h3>
+<ul>
+<li><strong>Ahorra repetir contexto.</strong> Si siempre le pides lo mismo a Gemini (corregir exámenes con la misma rúbrica, redactar actas de reunión con el mismo formato), un Gem elimina la necesidad de copiar y pegar esas instrucciones en cada chat.</li>
+<li><strong>Fija un tono y una estructura de respuesta consistentes.</strong> Puedes indicar que la respuesta empiece siempre con un resumen y continúe con una lista, por ejemplo.</li>
+<li><strong>Da acceso a documentos concretos.</strong> Puedes anexar archivos (apuntes, rúbricas, normativa del centro) para que el Gem los use como base de conocimiento en lugar de depender solo del conocimiento general del modelo.</li>
+<li><strong>Es privado por defecto.</strong> Un Gem que creas solo lo ves tú, salvo que decidas compartirlo (ver más abajo).</li>
+</ul>
+<h3 id="como-crear-un-gem-paso-a-paso">Cómo crear un Gem paso a paso</h3>
+<ol>
+<li>Entra en <a href="https://gemini.google.com/" target="_blank">gemini.google.com</a> con tu cuenta de Google.</li>
+<li>En la barra lateral izquierda, pulsa <strong>Gems</strong>.</li>
+<li>Pulsa el botón <strong><code>+ Nuevo Gem</code></strong>.</li>
+<li>Rellena los campos del formulario de creación (ver estructura detallada abajo).</li>
+<li>Pulsa <strong>Guardar</strong>. El Gem aparece automáticamente en tu lista de "Mis Gems".</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Captura real del formulario de creación (gestor de Gems del usuario)</p>
+<p>El "Gestor de Gems" muestra primero los Gems prediseñados por Google (Storybook, Exploración de ideas, Orientación profesional, Asistente de programación) y, debajo, la sección <strong>Mis Gems</strong> con los que ha creado el propio usuario, cada uno con sus iconos de compartir, editar y más opciones.</p>
+</div>
+<h3 id="estructura-de-un-gem">Estructura de un Gem</h3>
+<p>El formulario de creación de un Gem ("Nuevo Gem") tiene siempre los mismos campos, con una vista previa en directo a la derecha:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Obligatorio</th>
+<th>Qué contiene</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nombre</strong></td>
+<td>Sí</td>
+<td>El título corto que identifica al Gem en tu lista y en la vista previa (ej. "Corrector de prácticas SAI").</td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>No</td>
+<td>Un resumen de una frase de qué hace el Gem; ayuda a recordar para qué lo creaste cuando tengas varios.</td>
+</tr>
+<tr>
+<td><strong>Instrucciones</strong></td>
+<td>Sí</td>
+<td>El equivalente al <em>system prompt</em>: aquí defines el rol, el tono, el formato de salida y las reglas que debe seguir siempre. Es el campo más importante — cuanto más concreto, más consistente será el comportamiento.</td>
+</tr>
+<tr>
+<td><strong>Herramienta predeterminada</strong></td>
+<td>No</td>
+<td>Permite fijar de antemano una herramienta para que el Gem la use por defecto sin que tengas que activarla cada vez.</td>
+</tr>
+<tr>
+<td><strong>Conocimientos</strong></td>
+<td>No</td>
+<td>Aquí adjuntas archivos (PDF, Docs, hojas de cálculo) para que el Gem los use como fuente de referencia en lugar de fiarse solo de su conocimiento general.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Buena práctica al redactar las instrucciones</p>
+<p>Sigue la misma estructura que un buen prompt (ver la página <a href="../01prompts/">Prompts</a>): rol + contexto + tarea + formato + restricciones. Por ejemplo: <em>"Eres un profesor experto en Sistemas y Aplicaciones Informáticas de un ciclo de FP. Cuando te pase un enunciado de examen, corrígelo siguiendo esta rúbrica: [pega la rúbrica]. Responde siempre con una tabla: pregunta, nota, comentario."</em></p>
+</div>
+<h3 id="ejemplo-real-de-instrucciones-para-un-gem-docente">Ejemplo real de instrucciones para un Gem docente</h3>
+<div class="highlight"><pre><span></span><code>Eres un asistente experto en Sistemas y Aplicaciones Informáticas dentro de un
+Ciclo Formativo de Grado Superior. Actúas como corrector de prácticas técnicas
+(Linux, redes, virtualización, contenedores).
+
+Cuando te pegue el enunciado de una práctica y la solución de un alumno:
+1. Compara paso a paso la solución con el enunciado.
+2. Señala qué apartados están correctos, incompletos o mal resueltos.
+3. Puntúa sobre 10, mostrando el desglose por apartado.
+4. Redacta un comentario breve y constructivo para el alumno, en español,
+   sin tecnicismos innecesarios.
+
+Formato de salida: tabla con columnas Apartado | Estado | Nota | Comentario,
+y al final la nota total en negrita.
+</code></pre></div>
+<h3 id="como-compartir-un-gem">Cómo compartir un Gem</h3>
+<p>Un Gem se puede compartir igual que un documento de Google Drive: por enlace, con niveles de acceso configurables.</p>
+<p><strong>Pasos para compartir (ordenador):</strong></p>
+<ol>
+<li>Ve a <a href="https://gemini.google.com/" target="_blank">gemini.google.com</a> y abre la barra lateral.</li>
+<li>Pulsa <strong>Gems</strong> para ver "Mis Gems".</li>
+<li>Junto al Gem que quieras compartir, pulsa el icono de <strong>Compartir</strong> (🔗).</li>
+<li>En el cuadro <strong>"Compartir «Nombre del Gem»"</strong> elige el nivel de <strong>acceso general</strong>:<ul>
+<li><strong>Restringido</strong> — solo las personas con acceso explícito pueden abrirlo con el enlace.</li>
+<li><strong>Cualquiera con el enlace</strong> — cualquier persona que reciba el enlace puede usar el Gem (sin poder verlo en buscadores).</li>
+<li><strong>Público</strong> — cualquiera puede encontrar el Gem buscándolo en Google.</li>
+</ul>
+</li>
+<li>Pulsa <strong>Copiar enlace</strong> y pega ese enlace donde quieras compartirlo (correo, Classroom, Moodle, chat del equipo docente...). Pulsa <strong>Hecho</strong> para cerrar el cuadro de diálogo.</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Cuadro de diálogo real de compartición</p>
+<p>El diálogo se titula <strong>"Compartir «Nombre del Gem»"</strong> y tiene tres partes: un buscador para "Añadir personas, grupos y eventos de calendario", la lista de "Personas con acceso" (tú apareces siempre como Propietario) y, debajo, el desplegable de "Acceso general" con el candado 🔒 y el botón <strong>Copiar enlace</strong>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Enlace de ejemplo</p>
+<p>Un enlace de Gem compartido tiene una forma parecida a <code>https://gemini.google.com/gem/&lt;identificador-unico&gt;</code>. El identificador es único por Gem y no se puede elegir manualmente: lo genera Google al compartirlo.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Antes de compartir un Gem públicamente</p>
+<p>Si el Gem tiene archivos de "Conocimientos" adjuntos (por ejemplo, un examen con soluciones, datos de alumnos), revisa qué nivel de acceso eliges: "Público" permite que cualquiera lo encuentre buscando en Google, no solo que lo use quien tenga el enlace.</p>
+</div>
+<h3 id="diferencia-entre-un-gem-y-una-conversacion-con-archivos-adjuntos">Diferencia entre un Gem y una conversación con archivos adjuntos</h3>
+<p>Es fácil confundir "subir un archivo a un chat normal" con "crear un Gem". La diferencia clave es la <strong>persistencia</strong>: un archivo subido a un chat suelto de Gemini solo vale para esa conversación; un Gem con "Conocimientos" adjuntos mantiene ese contexto disponible en <strong>todas</strong> las conversaciones nuevas que abras con él, sin tener que volver a subir nada.</p>
+<h3 id="gems-predisenados-por-google">Gems prediseñados por Google</h3>
+<p>Antes de crear uno propio desde cero, merece la pena revisar los Gems que Google ya ofrece prediseñados en el "Gestor de Gems", porque cubren necesidades habituales y sirven de inspiración de estructura:</p>
+<table>
+<thead>
+<tr>
+<th>Gem prediseñado</th>
+<th>Para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Storybook</strong></td>
+<td>Crea un libro ilustrado personalizado para niños o adultos a partir de un tema.</td>
+</tr>
+<tr>
+<td><strong>Exploración de ideas</strong></td>
+<td>Encuentra inspiración fácilmente: ideas para fiestas, regalos, proyectos.</td>
+</tr>
+<tr>
+<td><strong>Orientación profesional</strong></td>
+<td>Ayuda a desarrollar tu potencial en la carrera, con un plan detallado de mejora.</td>
+</tr>
+<tr>
+<td><strong>Asistente de programación</strong></td>
+<td>Mejora tus habilidades de programación con ayuda contextual paso a paso.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Duplícalos como punto de partida</p>
+<p>Si un Gem prediseñado se parece a lo que necesitas, es más rápido abrirlo, revisar sus instrucciones (icono de editar ✏️) y adaptarlas a tu caso, que empezar un Gem nuevo en blanco.</p>
+</div>
+<h3 id="buenas-practicas-de-privacidad-para-gems-en-un-centro-educativo">Buenas prácticas de privacidad para Gems en un centro educativo</h3>
+<div class="admonition warning">
+<p class="admonition-title">Datos de alumnado</p>
+<p>Si vas a adjuntar archivos de "Conocimientos" que contengan datos personales de alumnos (notas, nombres, DNI, informes), mantén el Gem en modo <strong>Restringido</strong> o, como mucho, <strong>Cualquiera con el enlace</strong> dentro de un grupo cerrado (por ejemplo, solo el equipo docente del ciclo). Nunca lo publiques como <strong>Público</strong>, porque eso lo hace indexable y buscable por cualquiera.</p>
+</div>
+<ul>
+<li>Revisa periódicamente la lista de "Personas con acceso" de tus Gems compartidos: quitar el acceso a quien ya no lo necesite es tan sencillo como añadirlo.</li>
+<li>Si el Gem se comparte con todo un departamento, documenta en la propia descripción del Gem quién es el responsable de mantenerlo actualizado.</li>
+<li>Antes de compartir un Gem con contenido de examen, comprueba que las "Instrucciones" no revelan sin querer las respuestas correctas si un alumno intenta hacerse pasar por profesor.</li>
+</ul>
+<h2 id="integracion-con-google-workspace">Integración con Google Workspace</h2>
+<p>Gemini aparece de forma nativa (botón "✨" o barra lateral) dentro de:</p>
+<ul>
+<li><strong>Gmail:</strong> redactar, resumir hilos largos y sugerir respuestas.</li>
+<li><strong>Docs:</strong> generar borradores, resumir o reescribir secciones seleccionadas.</li>
+<li><strong>Sheets:</strong> generar fórmulas a partir de una descripción en lenguaje natural y crear tablas o gráficos.</li>
+<li><strong>Meet:</strong> transcripción y resumen automático de reuniones ("Take notes for me").</li>
+<li><strong>Slides:</strong> generación de imágenes o borradores de presentación a partir de un guion.</li>
+</ul>
+<p>Esta integración usa la misma cuenta y el mismo plan (Free/AI Pro/AI Ultra) que la app de Gemini.</p>
+<h2 id="extensiones-apps-conectadas">Extensiones (Apps conectadas)</h2>
+<p>Además de Workspace, Gemini puede conectarse a otras <strong>apps de Google y de terceros</strong> para completar tareas reales en vez de solo dar información: Maps (rutas y recomendaciones de sitios), YouTube (buscar y resumir vídeos), Calendar (consultar y crear eventos), Google Home (controlar dispositivos domésticos) y servicios de terceros como Spotify o determinadas agencias de viaje.</p>
+<div class="admonition example">
+<p class="admonition-title">Cómo activarlas</p>
+<p>Se activan desde el icono de ajustes ⚙️ → "Apps" dentro de la propia conversación de Gemini. Una vez activadas, basta con pedirle algo como <em>"resérvame ruta en coche hasta el centro para mañana a las 8:00 y añádelo a mi calendario"</em> para que Gemini combine varias apps en una sola respuesta.</p>
+</div>
+<p>Gemini en Android sustituye al Asistente de Google clásico en muchos dispositivos y comparte cuota con la app/web:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/gemini-color.png" data-desc-position="bottom"><img alt="Gemini en Android" src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/gemini-color.png"></a></p>
+<h2 id="google-ai-studio-para-desarrollo-y-pruebas">Google AI Studio (para desarrollo y pruebas)</h2>
+<p><a href="https://aistudio.google.com/" target="_blank">Google AI Studio</a> es la puerta de entrada gratuita para probar los modelos Gemini sin límites tan estrictos como en la app de consumo, pensada para desarrolladores, pero también muy útil para un docente que quiera:</p>
+<ul>
+<li>Probar cómo responde un modelo concreto (Pro, Flash, Deep Think) antes de decidir cuál usar en un Gem.</li>
+<li>Ajustar la "instrucción de sistema" y ver el resultado en tiempo real.</li>
+<li>Generar el código (Python, JavaScript) necesario para integrar ese comportamiento en una aplicación propia, por ejemplo un chatbot para la web del centro.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Prompt para pedirle ayuda a Gemini sobre sus propios Gems</p>
+<div class="highlight"><pre><span></span><code>Actúa como experto en Google Gemini. Explícame paso a paso cómo crear un Gem
+para [tarea concreta, ej. "generar rúbricas de evaluación de prácticas de
+Linux"], qué debería escribir en el campo de instrucciones y qué archivos de
+"Conocimientos" me conviene adjuntar. Después, dime cómo compartir ese Gem
+con el resto del equipo docente del ciclo con acceso restringido solo a
+quienes tengan el enlace.
+</code></pre></div>
+</div>
+<h3 id="otro-ejemplo-de-instrucciones-gem-de-automatizacion-de-redes">Otro ejemplo de instrucciones: Gem de automatización de redes</h3>
+<div class="highlight"><pre><span></span><code>Eres un técnico senior en redes y sistemas, especializado en entornos de
+Formación Profesional con equipos Cisco, MikroTik y servidores Linux/Windows
+Server.
+
+Cuando te pida ayuda con un guion de automatización (Bash, PowerShell o
+Ansible):
+1. Pregunta primero el sistema operativo/objetivo si no está claro.
+2. Entrega el script comentado línea a línea en español.
+3. Añade al final una sección "Cómo probarlo" con los pasos para validarlo
+   en un entorno de laboratorio antes de tocar producción.
+4. Si detectas un riesgo (borrado de datos, cambios de red en caliente),
+   avisa explícitamente antes del bloque de código.
+
+No uses anglicismos innecesarios y explica cualquier comando poco habitual
+con un comentario breve.
+</code></pre></div>
+<h2 id="preguntas-frecuentes-sobre-gems">Preguntas frecuentes sobre Gems</h2>
+<div class="admonition question">
+<p class="admonition-title">¿Un Gem consume más cuota que un chat normal?</p>
+<p>No. Un Gem usa el mismo modelo y la misma cuota que una conversación normal; lo único que cambia es que las instrucciones y los archivos de "Conocimientos" se envían automáticamente al principio de cada conversación nueva.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">¿Puedo editar un Gem después de compartirlo?</p>
+<p>Sí. Los cambios que hagas en las instrucciones o en los archivos adjuntos se aplican automáticamente a todas las personas que ya tengan el enlace, sin necesidad de volver a compartirlo.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">¿Puedo borrar un Gem que ya compartí?</p>
+<p>Sí, desde el menú de tres puntos (⋮) junto al Gem, en "Mis Gems". Al borrarlo, el enlace deja de funcionar para todas las personas con las que lo compartiste.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">¿Los Gems de Workspace para centros educativos son distintos?</p>
+<p>Si tu centro usa Google Workspace for Education, un administrador puede activar o desactivar la posibilidad de compartir Gems fuera de la organización desde la consola de administración, igual que ocurre con los documentos de Drive.</p>
+</div>
+<h2 id="comparativa-rapida-con-claude-y-chatgpt">Comparativa rápida con Claude y ChatGPT</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Gemini</th>
+<th>Claude</th>
+<th>ChatGPT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Personalización persistente</td>
+<td><strong>Gems</strong></td>
+<td>Proyectos / Skills</td>
+<td>GPTs</td>
+</tr>
+<tr>
+<td>Integración nativa en ofimática</td>
+<td>Google Workspace</td>
+<td>— (vía conectores)</td>
+<td>Microsoft 365 (a través de Copilot)</td>
+</tr>
+<tr>
+<td>Generación de vídeo integrada</td>
+<td>Sí (Veo)</td>
+<td>No</td>
+<td>Sí (Sora, planes de pago)</td>
+</tr>
+<tr>
+<td>Contexto máximo (plan Pro)</td>
+<td>1.000.000 tokens</td>
+<td>1.000.000 tokens</td>
+<td>Variable según modelo</td>
+</tr>
+<tr>
+<td>Punto fuerte</td>
+<td>Multimodalidad e integración con el ecosistema Google</td>
+<td>Razonamiento, seguridad y uso de ordenador</td>
+<td>Ecosistema y adopción masiva</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recursos">Recursos</h2>
+<ul>
+<li><a href="https://support.google.com/gemini/answer/16504957" target="_blank">Ayuda oficial: crear Gems personalizados</a></li>
+<li><a href="https://blog.google/products-and-platforms/products/gemini/sharing-gems/" target="_blank">Blog de Google: compartir Gems</a></li>
+<li><a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank">Precios de la API de Gemini</a></li>
+<li><a href="https://aistudio.google.com/" target="_blank">Google AI Studio</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
